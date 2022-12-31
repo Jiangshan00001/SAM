@@ -9,6 +9,9 @@ extern int debug;
 
 static unsigned char inputtemp[256];   // secure copy of input tab36096
 
+
+
+
 /* Retrieve flags for character at mem59-1 */
 unsigned char Code37055(unsigned char npos, unsigned char mask)
 {

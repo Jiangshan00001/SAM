@@ -40,7 +40,8 @@ char *buffer = NULL;
 
 void SetInput(unsigned char *_input)
 {
-	int i, l;
+    int i;
+    size_t  l;
 	l = strlen((char*)_input);
 	if (l > 254) l = 254;
 	for(i=0; i<l; i++)
@@ -632,7 +633,7 @@ void AdjustLengths() {
 			index = phonemeindex[X];
 
 			// test for fricative/unvoiced or not voiced
-			if(!(flags[index] & FLAG_FRICATIVE) || (flags[index] & FLAG_VOICED)) {     //nochmal überprüfen
+			if(!(flags[index] & FLAG_FRICATIVE) || (flags[index] & FLAG_VOICED)) {     //nochmal é»šerpré»¤en
 				unsigned char A = phonemeLength[X];
 				// change phoneme length to (length * 1.5) + 1
                 drule_pre("Lengthen <FRICATIVE> or <VOICED> between <VOWEL> and <PUNCTUATION> by 1.5",X);
