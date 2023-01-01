@@ -12,58 +12,68 @@ CHAR_P phoneme;
 //https://mp.weixin.qq.com/s?__biz=MzAxNjkxOTk2OA==&mid=2247570887&idx=3&sn=008882f45590368e99b022118a396561&chksm=9beee908ac99601efb48a689e8fb313536ff3ce7305622278ee32f1b81b080a583fb05e6cdcf&scene=27
 //http://www.retrobits.net/atari/sam.shtml#ch5.7
 PINYIN_S g_pinyin_table[]={
+
+    {"ANG", "AEN"},
+    {"ENG", "EHN"},
+    {"ING", "IYN"},
+    {"ONG", "WUN"},
+
+    {"AI", "EH"},
+    {"EI", "IX"},
+    {"UI", "V"},
+    {"AO", "AO"}, //AO AW
+    {"OU", "AA"},
+    {"IU", "IHUX"},
+    {"IE", "IHEH"},
+    {"VE", "IYUW"},
+    {"ER", "ER"},
+
+    {"AN", "AE"},//AX
+    {"EN", "NX"},
+    {"IN", "IH"},
+    {"UN", "UX"},
+    {"VN", "UX"},
+
+
+    {"ZH", "Z"}, //???
+    {"CH", "CH"},
+    {"SH", "SH"},
+
+
     //23个: bpmfdtnlgkhjqxzhchshrzcsyw
     {"B", "B"},
     {"P", "P"},
-    {"M","M"},
-    {"F","F"},
-    {"D","D"},
-    {"T","T"},
-    {"N","N"},
-    {"L","L"},
-    {"G","G"},
-    {"K","K"},
-    {"H","/H"},
+    {"M", "M"},
+    {"F", "F"},
+    {"D", "D"},
+    {"T", "T"},
+    {"N", "N"},
+    {"L", "L"},
+    {"G", "G"},
+    {"K", "K"},
+    {"H", "/H"},
     {"J", "J"},
-    {"Q","Q"},
-    {"X","TH"}, //???
-    {"ZH","Z"}, //???
-    {"CH","CH"},
-    {"SH","SH"},
-    {"R","R"},
-    {"Z","Z"},//Z--zoo DH-->then
-    {"C","S"},
-    {"S","ZH"},
-    {"Y","IY"},
-    {"W","UH"},
+    {"Q", "Q"},
+    {"X", "TH"}, //???
+
+
+    {"R", "R"},
+    {"Z", "Z"},//Z--zoo DH-->then
+    {"C", "S"},
+    {"S", "S"},
+    {"Y", "IY"},
+    {"W", "UH"},
     ///韵母表24个. aoeiuü aieiui aoouiu ieüeer aneninun ang engingong
-    {"A","AH"},
-    {"O","AA"},
-    {"E","ER"},
-    {"I","IY"},
-    {"U","V"},
-    {"V","IYV"},
+    {"A", "AH"},
+    {"O", "AA"},
+    {"E", "ER"},
+    {"I", "IY"},
+    {"U", "V"},
+    {"V", "IYV"},
 
-    {"AI","EH"},
-    {"EI","IX"},
-    {"UI","V"},
-    {"AO","AO"}, //AO AW
-    {"OU","AA"},
-    {"IU","IHUX"},
-    {"IE","IHEH"},
-    {"VE","IYUW"},
-    {"ER","ER"},
 
-    {"AN","AE"},//AX
-    {"EN","NX"},
-    {"IN","IH"},
-    {"UN","UX"},
-    {"VN","UX"},
 
-    {"ANG","AEN"},
-    {"ENG","EHN"},
-    {"ING","IYN"},
-    {"ONG","WHN"},
+
 
 };
 int g_pinyin_table_len = sizeof(g_pinyin_table)/sizeof(g_pinyin_table[0]);
@@ -89,6 +99,7 @@ int PinyinToPhonemes(char *inpu)
                 //此处匹配。直接翻译
                 match_len = str_len;
                 strcat(inpu, g_pinyin_table[i].phoneme);
+                break;
             }
         }
         if(match_len==0)

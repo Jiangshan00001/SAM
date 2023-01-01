@@ -8,7 +8,7 @@ void SetMouth(unsigned char _mouth);
 void SetThroat(unsigned char _throat);
 void EnableSingmode();
 
-int SAMMain();
+int SAMMain(int is_english);
 
 char* GetBuffer();
 int GetBufferLength();

@@ -251,7 +251,12 @@ int main(int argc, char **argv)
 	}
     if(pinyin)
     {
+        if (debug)
+            printf("pinyin input: %s\n", inpu);
+
         PinyinToPhonemes((char*)inpu);
+        if (debug)
+            printf("pinyin phoneme: %s\n", inpu);
     }
     else if (!phonetic)
 	{
@@ -271,7 +276,7 @@ int main(int argc, char **argv)
 #endif
 
     SetInput(inpu);
-	if (!SAMMain())
+    if (!SAMMain(!pinyin))
 	{
 		PrintUsage();
 		return 1;
