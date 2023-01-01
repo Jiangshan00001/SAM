@@ -29,6 +29,7 @@ how to say chinese:
 =======
 
 ./sam.exe -pinyin ni1hao4a2 -debug -wav nihao.wav
+
 will speak 你好啊
 
 
