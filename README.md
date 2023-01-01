@@ -16,6 +16,23 @@ For immediate output it uses the SDL-library, otherwise it can save .wav files.
 
 An online version and executables for Windows can be found on the web site: http://simulationcorner.net/index.php?page=sam
 
+
+
+changes:
+=======
+1. change some code name for readablity.
+2. add doxygen doc.
+3. add chinese pinyin support.
+
+
+how to say chinese:
+=======
+
+./sam.exe -pinyin ni1hao4a2 -debug -wav nihao.wav
+will speak 你好啊
+
+
+
 Compile
 =======
 

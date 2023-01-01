@@ -4,6 +4,12 @@
 #include <string.h>
 #include "WriteWav.h"
 
+
+void my_fopen_s(FILE ** f, const char * filename, const char * mode) {
+    *f = fopen(filename,mode);
+}
+
+
 void WriteWav(char* filename, char* buffer, int bufferlength)
 {
     unsigned int filesize;
@@ -15,7 +21,7 @@ void WriteWav(char* filename, char* buffer, int bufferlength)
     unsigned short int bitspersample=8;
 
     FILE *file;
-    fopen_s(&file, filename, "wb");
+    my_fopen_s(&file, filename, "wb");
     if (file == NULL) return;
     //RIFF header
     fwrite("RIFF", 4, 1,file);

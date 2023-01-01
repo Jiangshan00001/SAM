@@ -231,7 +231,7 @@ int GetBufferLength(){return bufferpos;};
 void Init();
 int PhonemeStr2PhonemeIdx();
 void PhonemeidxChangeAccordRuleA();
-int SAMMain();
+int SAMMain(int is_english);
 void CopyStress();
 void SetPhonemeLength();
 void AdjustLengthsAccordRuleb();
@@ -266,7 +266,7 @@ void Init() {
 /// \brief SAMMain
 /// \return
 /// main process
-int SAMMain() {
+int SAMMain(int is_english) {
 	unsigned char X = 0; //!! is this intended like this?
 	Init();
     /* FIXME: At odds with assignment in Init() */
@@ -274,12 +274,12 @@ int SAMMain() {
 
     if (!PhonemeStr2PhonemeIdx()) return 0;
 	if (debug) PrintPhonemes(phonemeindex, phonemeLength, stress);
-    PhonemeidxChangeAccordRuleA();
+    if(is_english)PhonemeidxChangeAccordRuleA();
 	CopyStress();
 	SetPhonemeLength();
-    AdjustLengthsAccordRuleb();
+    if(is_english)AdjustLengthsAccordRuleb();
 
-    CopyStopConsFrame();
+    if(is_english)CopyStopConsFrame();
 
     do {
         if (phonemeindex[X] > 80)
@@ -288,7 +288,8 @@ int SAMMain() {
 			break; // error: delete all behind it
 		}
 	} while (++X != 0);
-	InsertBreath();
+
+    if(is_english)InsertBreath();
 
 	if (debug) PrintPhonemes(phonemeindex, phonemeLength, stress);
 

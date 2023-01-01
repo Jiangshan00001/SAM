@@ -1,0 +1,133 @@
+#include "string.h"
+#include "pinyintophonemes.h"
+
+static char inputtemp[256];   // secure copy of input tab36096
+
+typedef char * CHAR_P;
+typedef struct PINYIN_S_TAG{
+CHAR_P pinyin;
+CHAR_P phoneme;
+}PINYIN_S;
+
+//https://mp.weixin.qq.com/s?__biz=MzAxNjkxOTk2OA==&mid=2247570887&idx=3&sn=008882f45590368e99b022118a396561&chksm=9beee908ac99601efb48a689e8fb313536ff3ce7305622278ee32f1b81b080a583fb05e6cdcf&scene=27
+//http://www.retrobits.net/atari/sam.shtml#ch5.7
+PINYIN_S g_pinyin_table[]={
+    //23个: bpmfdtnlgkhjqxzhchshrzcsyw
+    {"B", "B"},
+    {"P", "P"},
+    {"M","M"},
+    {"F","F"},
+    {"D","D"},
+    {"T","T"},
+    {"N","N"},
+    {"L","L"},
+    {"G","G"},
+    {"K","K"},
+    {"H","/H"},
+    {"J", "J"},
+    {"Q","Q"},
+    {"X","TH"}, //???
+    {"ZH","Z"}, //???
+    {"CH","CH"},
+    {"SH","SH"},
+    {"R","R"},
+    {"Z","Z"},//Z--zoo DH-->then
+    {"C","S"},
+    {"S","ZH"},
+    {"Y","IY"},
+    {"W","UH"},
+    ///韵母表24个. aoeiuü aieiui aoouiu ieüeer aneninun ang engingong
+    {"A","AH"},
+    {"O","AA"},
+    {"E","ER"},
+    {"I","IY"},
+    {"U","V"},
+    {"V","IYV"},
+
+    {"AI","EH"},
+    {"EI","IX"},
+    {"UI","V"},
+    {"AO","AO"}, //AO AW
+    {"OU","AA"},
+    {"IU","IHUX"},
+    {"IE","IHEH"},
+    {"VE","IYUW"},
+    {"ER","ER"},
+
+    {"AN","AE"},//AX
+    {"EN","NX"},
+    {"IN","IH"},
+    {"UN","UX"},
+    {"VN","UX"},
+
+    {"ANG","AEN"},
+    {"ENG","EHN"},
+    {"ING","IYN"},
+    {"ONG","WHN"},
+
+};
+int g_pinyin_table_len = sizeof(g_pinyin_table)/sizeof(g_pinyin_table[0]);
+
+int PinyinToPhonemes(char *inpu)
+{
+    int X=0;
+    //unsigned char A;
+    inputtemp[0] = ' ';
+    int input_len = strlen((char*)inpu);
+    strcpy((char*)inputtemp, inpu);
+    inputtemp[255] = 27;
+    memset(inpu,0, 256);
+
+    for(X=0;X<input_len;++X)
+    {
+        int match_len=0;
+        for(int i=0;i<g_pinyin_table_len;++i)
+        {
+            int str_len = strlen(g_pinyin_table[i].pinyin);
+            if(strncmp(g_pinyin_table[i].pinyin, inputtemp+X, str_len)==0)
+            {
+                //此处匹配。直接翻译
+                match_len = str_len;
+                strcat(inpu, g_pinyin_table[i].phoneme);
+            }
+        }
+        if(match_len==0)
+        {
+            //no match. just stress???
+            if((inputtemp[X]>='1')&&(inputtemp[X]<='8'))
+            {
+                char tmp[4]={0,0,0,0};
+                /// 1--一声 ->5
+                /// 2--二声 7
+                /// 3--三声 3
+                /// 4--四声 1
+                /// 5--轻声 8
+                ///
+//                if(inputtemp[X]=='1')tmp[0]='5';
+//                else if(inputtemp[X]=='2')tmp[0]='7';
+//                else if(inputtemp[X]=='3')tmp[0]='3';
+//                else if(inputtemp[X]=='4')tmp[0]='1';
+//                else if(inputtemp[X]=='5')tmp[0]='8';
+                tmp[0]=inputtemp[X];
+
+                strcat(inpu,tmp );
+                match_len=1;
+            }
+            else
+            {
+                //skip this char?
+                match_len=1;
+                strcat(inpu, " ");
+            }
+        }
+
+        //因为默认X每次加1，如果一次匹配多余1个字符，则此处要加上
+        if(match_len>1)X+= match_len-1;
+    }
+
+    input_len=strlen(inpu);
+    inpu[input_len]=155u;//end of line marker
+    inpu[input_len+1]=0;//end of str marker
+
+    return 1;
+}

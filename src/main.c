@@ -7,6 +7,7 @@
 #include "sam.h"
 #include "debug.h"
 #include "WriteWav.h"
+#include "pinyintophonemes.h"
 
 #ifdef USESDL
 #include <SDL.h>
@@ -14,18 +15,12 @@
 #endif
 
 static int my_min(int l, int r) { return l < r ? l : r; }
-
-// Approximations of some Windows functions to ease portability
-#if defined __GNU_LIBRARY__ || defined __GLIBC__
-static void strcat_s(char * dest, int size, char * str) {
+static void my_strcat_s(char * dest, int size, char * str) {
     unsigned int dlen = strlen(dest);
     if (dlen >= size-1) return;
     strncat(dest+dlen, str, size - dlen - 1);
 }
-void fopen_s(FILE ** f, const char * filename, const char * mode) {
-    *f = fopen(filename,mode);
-}
-#endif
+
 
 
 void PrintUsage()
@@ -33,14 +28,15 @@ void PrintUsage()
 	printf("usage: sam [options] Word1 Word2 ....\n");
 	printf("options\n");
 	printf("	-phonetic 		enters phonetic mode. (see below)\n");
-	printf("	-pitch number		set pitch value (default=64)\n");
+    printf("	-pinyin		enter chinese pinyin mode.\n");
+    printf("	-pitch number		set pitch value (default=64)\n");
 	printf("	-speed number		set speed value (default=72)\n");
 	printf("	-throat number		set throat value (default=128)\n");
 	printf("	-mouth number		set mouth value (default=128)\n");
 	printf("	-wav filename		output to wav instead of libsdl\n");
 	printf("	-sing			special treatment of pitch\n");
 	printf("	-debug			print additional debug messages\n");
-	printf("\n");
+    printf("\n");
 
 	
 	printf("     VOWELS                            VOICED CONSONANTS	\n");
@@ -172,6 +168,7 @@ int main(int argc, char **argv)
 {
 	int i;
 	int phonetic = 0;
+    int pinyin = 0;
 
 	char* wavfilename = NULL;
     unsigned char inpu[256];
@@ -189,8 +186,8 @@ int main(int argc, char **argv)
 	{
 		if (argv[i][0] != '-')
 		{
-            strcat_s((char*)inpu, 256, argv[i]);
-            strcat_s((char*)inpu, 256, " ");
+            my_strcat_s((char*)inpu, 256, argv[i]);
+            my_strcat_s((char*)inpu, 256, " ");
 		} else
 		{
 			if (strcmp(&argv[i][1], "wav")==0)
@@ -206,7 +203,11 @@ int main(int argc, char **argv)
 			{
 				phonetic = 1;
 			} else
-			if (strcmp(&argv[i][1], "debug")==0)
+            if (strcmp(&argv[i][1], "pinyin")==0)
+            {
+                pinyin = 1;
+            } else
+            if (strcmp(&argv[i][1], "debug")==0)
 			{
 				debug = 1;
 			} else
@@ -248,14 +249,17 @@ int main(int argc, char **argv)
         if (phonetic) printf("phonetic input: %s\n", inpu);
         else printf("text input: %s\n", inpu);
 	}
-	
-	if (!phonetic)
+    if(pinyin)
+    {
+        PinyinToPhonemes((char*)inpu);
+    }
+    else if (!phonetic)
 	{
-        strcat_s((char*)inpu, 256, "[");
+        my_strcat_s((char*)inpu, 256, "[");
         if (!TextToPhonemes(inpu)) return 1;
 		if (debug)
             printf("phonetic input: %s\n", inpu);
-    } else strcat_s((char*)inpu, 256, "\x9b");
+    } else my_strcat_s((char*)inpu, 256, "\x9b");
 
 #ifdef USESDL
 	if ( SDL_Init(SDL_INIT_AUDIO) < 0 ) 
