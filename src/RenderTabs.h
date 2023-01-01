@@ -26,22 +26,8 @@ extern unsigned char inBlendLength[];
 extern unsigned char sampledConsonantFlags[] ;
 
 
-//tab45056
-extern unsigned char freq1data[];
-
-//tab451356
-extern unsigned char freq2data[];
-
-//tab45216
-extern unsigned char freq3data[];
-
-extern unsigned char ampl1data[];
-
-extern unsigned char ampl2data[];
-
-extern unsigned char ampl3data[];
-
-
+//tab40672
+extern unsigned char stressInputTable[];
 
 //tab42240
 extern unsigned char sinus[];

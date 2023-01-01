@@ -5,8 +5,8 @@
 #include "debug.h"
 #include "sam.h"
 #include "render.h"
-#include "SamTabs.h"
-
+#include "phonemeTabs.h"
+#include "RenderTabs.h"
 enum {
     pR    = 23,
     pD    = 57,

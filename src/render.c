@@ -4,7 +4,7 @@
 
 #include "render.h"
 #include "RenderTabs.h"
-
+#include "phonemeTabs.h"
 #include "debug.h"
 extern int debug;
 
