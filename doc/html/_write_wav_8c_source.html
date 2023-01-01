@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.6"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>sam: F:/github/SAM_jiangshan00001/src/WriteWav.c Source File</title>
+<title>sam: WriteWav.c Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -52,7 +52,7 @@ $(function() {
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &lt;string.h&gt;</span></div>
 <div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &quot;<a class="code" href="_write_wav_8h.html">WriteWav.h</a>&quot;</span></div>
 <div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno"><a class="line" href="_write_wav_8c.html#a2c6e91753b3cc35c9c5df031cb4d4d26">    7</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="_write_wav_8c.html#a2c6e91753b3cc35c9c5df031cb4d4d26">WriteWav</a>(<span class="keywordtype">char</span>* filename, <span class="keywordtype">char</span>* <a class="code hl_variable" href="render_8c.html#aff2566f4c366b48d73479bef43ee4d2e">buffer</a>, <span class="keywordtype">int</span> bufferlength)</div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno"><a class="line" href="_write_wav_8c.html#a2c6e91753b3cc35c9c5df031cb4d4d26">    7</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="_write_wav_8c.html#a2c6e91753b3cc35c9c5df031cb4d4d26">WriteWav</a>(<span class="keywordtype">char</span>* filename, <span class="keywordtype">char</span>* <a class="code hl_variable" href="group___key_vars.html#gaff2566f4c366b48d73479bef43ee4d2e">buffer</a>, <span class="keywordtype">int</span> bufferlength)</div>
 <div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span>{</div>
 <div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> filesize;</div>
 <div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> fmtlength = 16;</div>
@@ -84,13 +84,13 @@ $(function() {
 <div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    <span class="comment">//data chunk</span></div>
 <div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    fwrite(<span class="stringliteral">&quot;data&quot;</span>, 4, 1, file);</div>
 <div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    fwrite(&amp;bufferlength, 4, 1, file);</div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    fwrite(<a class="code hl_variable" href="render_8c.html#aff2566f4c366b48d73479bef43ee4d2e">buffer</a>, bufferlength, 1, file);</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    fwrite(<a class="code hl_variable" href="group___key_vars.html#gaff2566f4c366b48d73479bef43ee4d2e">buffer</a>, bufferlength, 1, file);</div>
 <div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
 <div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    fclose(file);</div>
 <div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>}</div>
 <div class="ttc" id="a_write_wav_8c_html_a2c6e91753b3cc35c9c5df031cb4d4d26"><div class="ttname"><a href="_write_wav_8c.html#a2c6e91753b3cc35c9c5df031cb4d4d26">WriteWav</a></div><div class="ttdeci">void WriteWav(char *filename, char *buffer, int bufferlength)</div><div class="ttdef"><b>Definition:</b> <a href="_write_wav_8c_source.html#l00007">WriteWav.c:7</a></div></div>
 <div class="ttc" id="a_write_wav_8h_html"><div class="ttname"><a href="_write_wav_8h.html">WriteWav.h</a></div></div>
-<div class="ttc" id="arender_8c_html_aff2566f4c366b48d73479bef43ee4d2e"><div class="ttname"><a href="render_8c.html#aff2566f4c366b48d73479bef43ee4d2e">buffer</a></div><div class="ttdeci">char * buffer</div><div class="ttdef"><b>Definition:</b> <a href="sam_8c_source.html#l00038">sam.c:38</a></div></div>
+<div class="ttc" id="agroup___key_vars_html_gaff2566f4c366b48d73479bef43ee4d2e"><div class="ttname"><a href="group___key_vars.html#gaff2566f4c366b48d73479bef43ee4d2e">buffer</a></div><div class="ttdeci">char * buffer</div><div class="ttdoc">buffer</div><div class="ttdef"><b>Definition:</b> <a href="render_8c_source.html#l00061">render.c:61</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

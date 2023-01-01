@@ -1,0 +1,7 @@
+<map id="CreateFrameTransitions" name="CreateFrameTransitions">
+<area shape="rect" id="node1" title=" " alt="" coords="500,5,663,31"/>
+<area shape="rect" id="node2" href="$render_8c.html#a0ad29c7b8fdc78dfc8cc2d4426ce1cda" title="RenderOnce RENDER THE PHONEMES IN THE LIST." alt="" coords="357,5,452,31"/>
+<area shape="rect" id="node3" href="$sam_8c.html#a406d7b8ae89d745877a73eddb4275f73" title="RenderAll input: phonemeindex phonemeLength stress output: buffer." alt="" coords="231,5,309,31"/>
+<area shape="rect" id="node4" href="$sam_8c.html#a52acfd4d941fc7138ce9f63ce5503439" title="SAMMain." alt="" coords="104,5,183,31"/>
+<area shape="rect" id="node5" href="$main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title=" " alt="" coords="5,5,56,31"/>
+</map>

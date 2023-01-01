@@ -6,32 +6,63 @@
 #include "RenderTabs.h"
 #include "phonemeTabs.h"
 #include "debug.h"
-extern int debug;
+#include "sam.h"
 
 //extern unsigned char A, X, Y;
 //extern unsigned char mem44;
 
-extern unsigned char speed;
-extern unsigned char pitch;
-extern int singmode;
+/// @addtogroup KeyVars
+/// @{
+///
 
-
-extern unsigned char phonemeIndexOutput[60]; //tab47296
-extern unsigned char stressOutput[60]; //tab47365
-extern unsigned char phonemeLengthOutput[60]; //tab47416
-
-unsigned char pitches[256]; // tab43008
-
+///
+/// \brief frequency1
+///
 unsigned char frequency1[256];
+///
+/// \brief frequency2
+///
 unsigned char frequency2[256];
+///
+/// \brief frequency3
+///
 unsigned char frequency3[256];
-
+///
+/// \brief amplitude1
+///
 unsigned char amplitude1[256];
+///
+/// \brief amplitude2
+///
 unsigned char amplitude2[256];
+///
+/// \brief amplitude3
+///
 unsigned char amplitude3[256];
+///
+/// \brief pitches
+///
+unsigned char pitches[256];
+///
+/// \brief sampledConsonantFlag
+///
+unsigned char sampledConsonantFlag[256];
 
-unsigned char sampledConsonantFlag[256]; // tab44800
 
+// contains the final soundbuffer
+///
+/// \brief bufferpos
+/// pos of \ref buffer.
+/// unit is 50. bufferpos/50 is the real pos.
+int bufferpos=0;
+///
+/// \brief buffer
+///
+char *buffer = NULL;
+
+
+
+/// @}
 
 void AddInflection(unsigned char mem48, unsigned char X);
 
@@ -40,13 +71,6 @@ unsigned char trans(unsigned char a, unsigned char b)
 {
     return (((unsigned int)a * b) >> 8) << 1;
 }
-
-
-
-
-// contains the final soundbuffer
-extern int bufferpos;
-extern char *buffer;
 
 
 
@@ -67,37 +91,39 @@ void Output(int index, unsigned char A)
 	bufferpos += timetable[oldtimetableindex][index];
 	oldtimetableindex = index;
 	// write a little bit in advance
-	for(k=0; k<5; k++)
-		buffer[bufferpos/50 + k] = (A & 15)*16;
+    for(k=0; k<5; k++){
+        //buffer[bufferpos/50 + k] = (A & 15)*16;
+        buffer[bufferpos/50 + k] = ((A & 0xf)<<4);
+    }
 }
 
 
-static unsigned char RenderVoicedSample(unsigned short hi, unsigned char off, unsigned char phase1)
+static unsigned char RenderVoicedSample(unsigned short hi, unsigned char offset, unsigned char pitch_inv)
 {
 	do {
 		unsigned char bit = 8;
-		unsigned char sample = sampleTable[hi+off];
+        unsigned char sample = consonantSampleTable[hi+offset];
 		do {
 			if ((sample & 128) != 0) Output(3, 26);
 			else Output(4, 6);
 			sample <<= 1;
 		} while(--bit != 0);
-		off++;
-	} while (++phase1 != 0);
-	return off;
+        offset++;
+    } while (++pitch_inv != 0);
+    return offset;
 }
 
-static void RenderUnvoicedSample(unsigned short hi, unsigned char off, unsigned char mem53)
+static void RenderUnvoicedSample(unsigned short hi, unsigned char pitch_inv, unsigned char amp1)
 {
     do {
         unsigned char bit = 8;
-        unsigned char sample = sampleTable[hi+off];
+        unsigned char sample = consonantSampleTable[hi+pitch_inv];
         do {
             if ((sample & 128) != 0) Output(2, 5);
-            else Output(1, mem53);
+            else Output(1, amp1);
             sample <<= 1;
         } while (--bit != 0);
-    } while (++off != 0);
+    } while (++pitch_inv != 0);
 }
 
 
@@ -157,7 +183,7 @@ static void RenderUnvoicedSample(unsigned short hi, unsigned char off, unsigned 
 // For voices samples, samples are interleaved between voiced output.
 
 
-void RenderSample(unsigned char *mem66, unsigned char consonantFlag, unsigned char mem49)
+void RenderConsonantSample(unsigned char *offset, unsigned char consonantFlag, unsigned char frame_index)
 {     
 	// mem49 == current phoneme's index
 
@@ -172,16 +198,16 @@ void RenderSample(unsigned char *mem66, unsigned char consonantFlag, unsigned ch
 	// /H                     3          0x17
 	// /X                     4          0x17
 
-    unsigned short hi = hibyte*256;
+    unsigned short hi = hibyte*0x100;
 	// voiced sample?
-	unsigned char pitchl = consonantFlag & 248;
+    unsigned char pitchl = consonantFlag & 0xf8;
 	if(pitchl == 0) {
         // voiced phoneme: Z*, ZH, V*, DH
-		pitchl = pitches[mem49] >> 4;
-        *mem66 = RenderVoicedSample(hi, *mem66, pitchl ^ 255);
+        pitchl = pitches[frame_index] >> 4;
+        *offset = RenderVoicedSample(hi, *offset, 255-pitchl);
 	}
 	else
-		RenderUnvoicedSample(hi, pitchl^255, tab48426[hibyte]);
+        RenderUnvoicedSample(hi, 255-pitchl, consonantAmp[hibyte]);
 }
 
 
@@ -194,7 +220,7 @@ void RenderSample(unsigned char *mem66, unsigned char consonantFlag, unsigned ch
 //
 // The parameters are copied from the phoneme to the frame verbatim.
 //
-static void CreateFrames()
+void CreateFrames()
 {
 	unsigned char X = 0;
     unsigned int i = 0;
@@ -202,7 +228,7 @@ static void CreateFrames()
         // get the phoneme at the index
         unsigned char phoneme = phonemeIndexOutput[i];
 		unsigned char phase1;
-		unsigned phase2;
+        unsigned plens;
 	
         // if terminal phoneme, exit the loop
         if (phoneme == 255) break;
@@ -211,10 +237,10 @@ static void CreateFrames()
         else if (phoneme == PHONEME_QUESTION) AddInflection(FALLING_INFLECTION, X);
 
         // get the stress amount (more stress = higher pitch)
-        phase1 = tab47492[stressOutput[i] + 1];
+        phase1 = stressToPitchOffset[stressOutput[i] + 1];
 	
         // get number of frames to write
-        phase2 = phonemeLengthOutput[i];
+        plens = phonemeLengthOutput[i];
 	
         // copy from the source to the frames list
         do {
@@ -227,17 +253,17 @@ static void CreateFrames()
             sampledConsonantFlag[X] = sampledConsonantFlags[phoneme];        // phoneme data for sampled consonants
             pitches[X] = pitch + phase1;      // pitch
             ++X;
-        } while(--phase2 != 0);
+        } while(--plens != 0);
         
         ++i;
     }
 }
 
 
-// RESCALE AMPLITUDE
-//
-// Rescale volume from a linear scale to decibels.
-//
+/// RESCALE AMPLITUDE
+///
+/// Rescale volume from a linear scale to decibels.
+///
 void RescaleAmplitude() 
 {
     int i;
@@ -267,28 +293,34 @@ void AssignPitchContour()
     }
 }
 
-
-// RENDER THE PHONEMES IN THE LIST
-//
-// The phoneme list is converted into sound through the steps:
-//
-// 1. Copy each phoneme <length> number of times into the frames list,
-//    where each frame represents 10 milliseconds of sound.
-//
-// 2. Determine the transitions lengths between phonemes, and linearly
-//    interpolate the values across the frames.
-//
-// 3. Offset the pitches by the fundamental frequency.
-//
-// 4. Render the each frame.
-void Render()
+///
+///
+///
+/// \brief RenderOnce RENDER THE PHONEMES IN THE LIST
+///
+/// The phoneme list is converted into sound through the steps:
+///
+/// 1. Copy each phoneme <length> number of times into the frames list,
+///    where each frame represents 10 milliseconds of sound.
+///
+/// 2. Determine the transitions lengths between phonemes, and linearly
+///    interpolate the values across the frames.
+///
+/// 3. Offset the pitches by the fundamental frequency.
+///
+/// 4. Render the each frame.
+///
+/// input: \ref phonemeIndexOutput  \ref phonemeLengthOutput \ref stressOutput
+///
+/// output: \ref buffer  \ref bufferpos
+void RenderOnce()
 {
-    unsigned char t;
+    unsigned char phonemeLens;
 
 	if (phonemeIndexOutput[0] == 255) return; //exit if no data
 
     CreateFrames();
-    t = CreateTransitions();
+    phonemeLens = CreateFrameTransitions();
 
     if (!singmode) AssignPitchContour();
     RescaleAmplitude();
@@ -297,7 +329,7 @@ void Render()
         PrintOutput(sampledConsonantFlag, frequency1, frequency2, frequency3, amplitude1, amplitude2, amplitude3, pitches);
     }
 
-    ProcessFrames(t);
+    ProcessFrames2Buffer(phonemeLens);
 }
 
 

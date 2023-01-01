@@ -5,7 +5,6 @@
 #include "debug.h"
 
 unsigned char A, X;
-extern int debug;
 
 static unsigned char inputtemp[256];   // secure copy of input tab36096
 
@@ -171,12 +170,15 @@ pos36700:
 	// find next rule
 	while ((GetRuleByte(++mem62, 0) & 128) == 0);
 	Y = 0;
-	while(GetRuleByte(mem62, ++Y) != '(');
-	mem66 = Y;
-    while(GetRuleByte(mem62, ++Y) != ')');
+    while(GetRuleByte(mem62, ++Y) != '('){}
+
+    mem66 = Y;
+    while(GetRuleByte(mem62, ++Y) != ')'){}
+
 	mem65 = Y;
-	while((GetRuleByte(mem62, ++Y) & 127) != '=');
-	mem64 = Y;
+    while((GetRuleByte(mem62, ++Y) & 127) != '='){}
+
+    mem64 = Y;
 
 	
 	mem60 = X = mem61;

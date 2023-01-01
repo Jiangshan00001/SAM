@@ -15,28 +15,199 @@ enum {
     END   = 255
 };
 
-unsigned char input[256]; //tab39445
-//standard sam sound
+
+unsigned short flags[]={
+    0x8000 , 0xC100 , 0xC100 , 0xC100 , 0xC100 , 0x00A4 , 0x00A4 , 0x00A4 ,
+    0x00A4 , 0x00A4 , 0x00A4 , 0x0084 , 0x0084 , 0x00A4 , 0x00A4 , 0x0084 ,
+    0x0084 , 0x0084 , 0x0084 , 0x0084 , 0x0084 , 0x0084 , 0x0044 , 0x1044 ,
+    0x1044 , 0x1044 , 0x1044 , 0x084C , 0x0C4C , 0x084C , 0x0448 , 0x404C ,
+
+    0x2440 , 0x2040 , 0x2040 , 0x2440 , 0x0040 , 0x0040 , 0x2444 , 0x2044 ,
+    0x2044 , 0x2444 , 0x2048 , 0x2040 , 0x004C , 0x2044 , 0x0000 , 0x0000 ,
+    0x00B4 , 0x00B4 , 0x00B4 , 0x0094 , 0x0094 , 0x0094 , 0x004E , 0x004E ,
+
+    0x004E , 0x044E , 0x044E , 0x044E , 0x004E , 0x004E , 0x004E , 0x004E ,
+    0x004E , 0x004E , 0x004B , 0x004B , 0x004B , 0x044B , 0x044B , 0x044B ,
+    0x004B , 0x004B , 0x004B , 0x004B , 0x004B , 0x004B , 0x0080 , 0x00C1 ,
+    0x00C1
+};
+
+
+
+/*
+
+Ind  | phoneme |  flags   |
+-----|---------|----------|
+0    |   *     | 00000000 |
+1    |  .*     | 00000000 |
+2    |  ?*     | 00000000 |
+3    |  ,*     | 00000000 |
+4    |  -*     | 00000000 |
+
+VOWELS
+5    |  IY     | 10100100 |
+6    |  IH     | 10100100 |
+7    |  EH     | 10100100 |
+8    |  AE     | 10100100 |
+9    |  AA     | 10100100 |
+10   |  AH     | 10100100 |
+11   |  AO     | 10000100 |
+17   |  OH     | 10000100 |
+12   |  UH     | 10000100 |
+16   |  UX     | 10000100 |
+15   |  ER     | 10000100 |
+13   |  AX     | 10100100 |
+14   |  IX     | 10100100 |
+
+DIPTHONGS
+48   |  EY     | 10110100 |
+49   |  AY     | 10110100 |
+50   |  OY     | 10110100 |
+51   |  AW     | 10010100 |
+52   |  OW     | 10010100 |
+53   |  UW     | 10010100 |
+
+
+21   |  YX     | 10000100 |
+20   |  WX     | 10000100 |
+18   |  RX     | 10000100 |
+19   |  LX     | 10000100 |
+37   |  /X     | 01000000 |
+30   |  DX     | 01001000 |
+
+
+22   |  WH     | 01000100 |
+
+
+VOICED CONSONANTS
+23   |  R*     | 01000100 |
+24   |  L*     | 01000100 |
+25   |  W*     | 01000100 |
+26   |  Y*     | 01000100 |
+27   |  M*     | 01001100 |
+28   |  N*     | 01001100 |
+29   |  NX     | 01001100 |
+54   |  B*     | 01001110 |
+57   |  D*     | 01001110 |
+60   |  G*     | 01001110 |
+44   |  J*     | 01001100 |
+38   |  Z*     | 01000100 |
+39   |  ZH     | 01000100 |
+40   |  V*     | 01000100 |
+41   |  DH     | 01000100 |
+
+unvoiced CONSONANTS
+32   |  S*     | 01000000 |
+33   |  SH     | 01000000 |
+34   |  F*     | 01000000 |
+35   |  TH     | 01000000 |
+66   |  P*     | 01001011 |
+69   |  T*     | 01001011 |
+72   |  K*     | 01001011 |
+42   |  CH     | 01001000 |
+36   |  /H     | 01000000 |
+
+43   |  **     | 01000000 |
+45   |  **     | 01000100 |
+46   |  **     | 00000000 |
+47   |  **     | 00000000 |
+
+
+55   |  **     | 01001110 |
+56   |  **     | 01001110 |
+58   |  **     | 01001110 |
+59   |  **     | 01001110 |
+61   |  **     | 01001110 |
+62   |  **     | 01001110 |
+63   |  GX     | 01001110 |
+64   |  **     | 01001110 |
+65   |  **     | 01001110 |
+67   |  **     | 01001011 |
+68   |  **     | 01001011 |
+70   |  **     | 01001011 |
+71   |  **     | 01001011 |
+73   |  **     | 01001011 |
+74   |  **     | 01001011 |
+75   |  KX     | 01001011 |
+76   |  **     | 01001011 |
+77   |  **     | 01001011 |
+
+
+SPECIAL
+78   |  UL     | 10000000 |
+79   |  UM     | 11000001 |
+80   |  UN     | 11000001 |
+31   |  Q*     | 01001100 |
+
+*/
+/// @addtogroup KeyVars
+/// @{
+///
+
+
+
+///
+/// \brief input user input string
+/// length is 256 fixed.
+/// input english text and then translated to phoneme names string.
+/// if you want to change the length.
+/// \ref input and \ref inputtemp is to be changed.
+unsigned char input[256];
+
+/// \brief standard sam sound speed
+///
 unsigned char speed = 72;
+///
+/// \brief pitch
+///
 unsigned char pitch = 64;
+///
+/// \brief mouth
+///
 unsigned char mouth = 128;
+///
+/// \brief throat
+///
 unsigned char throat = 128;
+///
+/// \brief singmode
+///
 int singmode = 0;
 
-extern int debug;
-
+///
+/// \brief stress
+/// \ref phonemeindex \ref phonemeLength \ref stress  is the phoneme
+/// list
 unsigned char stress[256]; //numbers from 0 to 8
+///
+/// \brief phonemeLength
+/// \ref phonemeindex \ref phonemeLength \ref stress  is the phoneme
+/// list
 unsigned char phonemeLength[256]; //tab40160
+///
+/// \brief phonemeindex
+/// \ref phonemeindex \ref phonemeLength \ref stress  is the phoneme
+/// list
 unsigned char phonemeindex[256];
 
+///
+/// \brief phonemeIndexOutput
+/// copy of \ref phonemeindex
 unsigned char phonemeIndexOutput[60]; //tab47296
+///
+/// \brief stressOutput
+/// copy of \ref stress
 unsigned char stressOutput[60]; //tab47365
+///
+/// \brief phonemeLengthOutput
+/// copy of \ref phonemeLength
 unsigned char phonemeLengthOutput[60]; //tab47416
 
-// contains the final soundbuffer
-int bufferpos=0;
-char *buffer = NULL;
 
+
+///
+/// @}
+///
 
 void SetInput(unsigned char *_input)
 {
@@ -44,7 +215,7 @@ void SetInput(unsigned char *_input)
     size_t  l;
 	l = strlen((char*)_input);
 	if (l > 254) l = 254;
-	for(i=0; i<l; i++)
+    for(i=0; i<(int)l; i++)
 		input[i] = _input[i];
 	input[l] = 0;
 }
@@ -58,16 +229,16 @@ char* GetBuffer(){return buffer;};
 int GetBufferLength(){return bufferpos;};
 
 void Init();
-int Parser1();
-void Parser2();
+int PhonemeStr2PhonemeIdx();
+void PhonemeidxChangeAccordRuleA();
 int SAMMain();
 void CopyStress();
 void SetPhonemeLength();
-void AdjustLengths();
-void Code41240();
+void AdjustLengthsAccordRuleb();
+void CopyStopConsFrame();
 void Insert(unsigned char position, unsigned char mem60, unsigned char mem59, unsigned char mem58);
 void InsertBreath();
-void PrepareOutput();
+void RenderAll();
 void SetMouthThroat(unsigned char mouth, unsigned char throat);
 
 void Init() {
@@ -101,15 +272,18 @@ int SAMMain() {
     /* FIXME: At odds with assignment in Init() */
 	phonemeindex[255] = 32; //to prevent buffer overflow
 
-	if (!Parser1()) return 0;
+    if (!PhonemeStr2PhonemeIdx()) return 0;
 	if (debug) PrintPhonemes(phonemeindex, phonemeLength, stress);
-	Parser2();
+    PhonemeidxChangeAccordRuleA();
 	CopyStress();
 	SetPhonemeLength();
-	AdjustLengths();
-	Code41240();
-	do {
-		if (phonemeindex[X] > 80) {
+    AdjustLengthsAccordRuleb();
+
+    CopyStopConsFrame();
+
+    do {
+        if (phonemeindex[X] > 80)
+        {
 			phonemeindex[X] = END;
 			break; // error: delete all behind it
 		}
@@ -118,24 +292,33 @@ int SAMMain() {
 
 	if (debug) PrintPhonemes(phonemeindex, phonemeLength, stress);
 
-	PrepareOutput();
+    RenderAll();
 	return 1;
 }
 
-void PrepareOutput() {
+///
+/// \brief RenderAll
+/// input: \ref phonemeindex \ref phonemeLength \ref stress
+/// output: \ref buffer
+/// 1. copy from  \ref phonemeindex \ref phonemeLength \ref stress
+/// to \ref phonemeIndexOutput  \ref phonemeLengthOutput \ref stressOutput
+/// and call RenderOnce
+///
+void RenderAll() {
 	unsigned char srcpos  = 0; // Position in source
 	unsigned char destpos = 0; // Position in output
 
 	while(1) {
 		unsigned char A = phonemeindex[srcpos];
         phonemeIndexOutput[destpos] = A;
-        switch(A) {
+        switch(A)
+        {
         case END:
-			Render();
+            RenderOnce();
 			return;
 		case BREAK:
 			phonemeIndexOutput[destpos] = END;
-			Render();
+            RenderOnce();
 			destpos = 0;
             break;
         case 0:
@@ -222,7 +405,7 @@ void CopyStress() {
 	}
 }
 
-void Insert(unsigned char position/*var57*/, unsigned char mem60, unsigned char mem59, unsigned char mem58)
+void Insert(unsigned char position/*var57*/, unsigned char phidx, unsigned char phlen, unsigned char phstress)
 {
 	int i;
 	for(i=253; i >= position; i--) // ML : always keep last safe-guarding 255	
@@ -232,9 +415,9 @@ void Insert(unsigned char position/*var57*/, unsigned char mem60, unsigned char 
 		stress[i+1]        = stress[i];
 	}
 
-	phonemeindex[position]  = mem60;
-	phonemeLength[position] = mem59;
-	stress[position]        = mem58;
+    phonemeindex[position]  = phidx;
+    phonemeLength[position] = phlen;
+    stress[position]        = phstress;
 }
 
 
@@ -266,58 +449,57 @@ signed int wild_match(unsigned char sign1) {
 
 
 
-// The input[] buffer contains a string of phonemes and stress markers along
-// the lines of:
-//
-//     DHAX KAET IHZ AH5GLIY. <0x9B>
-//
-// The byte 0x9B marks the end of the buffer. Some phonemes are 2 bytes 
-// long, such as "DH" and "AX". Others are 1 byte long, such as "T" and "Z". 
-// There are also stress markers, such as "5" and ".".
-//
-// The first character of the phonemes are stored in the table signInputTable1[].
-// The second character of the phonemes are stored in the table signInputTable2[].
-// The stress characters are arranged in low to high stress order in stressInputTable[].
-// 
-// The following process is used to parse the input[] buffer:
-// 
-// Repeat until the <0x9B> character is reached:
-//
-//        First, a search is made for a 2 character match for phonemes that do not
-//        end with the '*' (wildcard) character. On a match, the index of the phoneme 
-//        is added to phonemeIndex[] and the buffer position is advanced 2 bytes.
-//
-//        If this fails, a search is made for a 1 character match against all
-//        phoneme names ending with a '*' (wildcard). If this succeeds, the 
-//        phoneme is added to phonemeIndex[] and the buffer position is advanced
-//        1 byte.
-// 
-//        If this fails, search for a 1 character match in the stressInputTable[].
-//        If this succeeds, the stress value is placed in the last stress[] table
-//        at the same index of the last added phoneme, and the buffer position is
-//        advanced by 1 byte.
-//
-//        If this fails, return a 0.
-//
-// On success:
-//
-//    1. phonemeIndex[] will contain the index of all the phonemes.
-//    2. The last index in phonemeIndex[] will be 255.
-//    3. stress[] will contain the stress value for each phoneme
-
-// input[] holds the string of phonemes, each two bytes wide
-// signInputTable1[] holds the first character of each phoneme
-// signInputTable2[] holds te second character of each phoneme
-// phonemeIndex[] holds the indexes of the phonemes after parsing input[]
-//
-// The parser scans through the input[], finding the names of the phonemes
-// by searching signInputTable1[] and signInputTable2[]. On a match, it
-// copies the index of the phoneme into the phonemeIndexTable[].
-//
-// The character <0x9B> marks the end of text in input[]. When it is reached,
-// the index 255 is placed at the end of the phonemeIndexTable[], and the
-// function returns with a 1 indicating success.
-int Parser1()
+/// The input[] buffer contains a string of phonemes and stress markers along
+/// the lines of:
+///
+///     DHAX KAET IHZ AH5GLIY. <0x9B>
+///
+/// The byte 0x9B marks the end of the buffer. Some phonemes are 2 bytes
+/// long, such as "DH" and "AX". Others are 1 byte long, such as "T" and "Z".
+/// There are also stress markers, such as "5" and ".".
+///
+/// The first character of the phonemes are stored in the table \ref phonemeNameTable1.
+/// The second character of the phonemes are stored in the table \ref phonemeNameTable2.
+/// The stress characters are arranged in low to high stress order in stressInputTable[].
+///
+/// The following process is used to parse the input[] buffer:
+///
+/// Repeat until the <0x9B> character is reached:
+///
+///        First, a search is made for a 2 character match for phonemes that do not
+///        end with the '*' (wildcard) character. On a match, the index of the phoneme
+///        is added to phonemeIndex[] and the buffer position is advanced 2 bytes.
+///
+///        If this fails, a search is made for a 1 character match against all
+///        phoneme names ending with a '*' (wildcard). If this succeeds, the
+///        phoneme is added to phonemeIndex[] and the buffer position is advanced
+///        1 byte.
+///
+///        If this fails, search for a 1 character match in the stressInputTable[].
+///        If this succeeds, the stress value is placed in the last stress[] table
+///        at the same index of the last added phoneme, and the buffer position is
+///        advanced by 1 byte.
+///
+///        If this fails, return a 0.
+///
+/// On success:
+///
+///    1. \ref phonemeIndex will contain the index of all the phonemes.
+///    2. The last index in \ref phonemeIndex will be 255.
+///    3. \ref stress will contain the stress value for each phoneme
+/// \ref input holds the string of phonemes, each two bytes wide
+/// \ref phonemeNameTable1 holds the first character of each phoneme
+/// \ref phonemeNameTable2 holds te second character of each phoneme
+/// \ref phonemeIndex holds the indexes of the phonemes after parsing input[]
+///
+/// The parser scans through the \ref input, finding the names of the phonemes
+/// by searching phonemeNameTable1[] and phonemeNameTable2[]. On a match, it
+/// copies the index of the phoneme into the phonemeIndexTable[].
+///
+/// The character <0x9B> marks the end of text in input[]. When it is reached,
+/// the index 255 is placed at the end of the phonemeIndexTable[], and the
+/// function returns with a 1 indicating success.
+int PhonemeStr2PhonemeIdx()
 {
 	unsigned char sign1;
 	unsigned char position = 0;
@@ -366,20 +548,23 @@ void SetPhonemeLength() {
 	}
 }
 
-void Code41240() {
+void CopyStopConsFrame() {
 	unsigned char pos=0;
 
 	while(phonemeindex[pos] != END) {
 		unsigned char index = phonemeindex[pos];
 
-		if ((flags[index] & FLAG_STOPCONS)) {
-            if ((flags[index] & FLAG_PLOSIVE)) {
+        if ((flags[index] & FLAG_STOPCONS))
+        {
+            if ((flags[index] & FLAG_PLOSIVE))
+            {
                 unsigned char A;
                 unsigned char X = pos;
                 while(!phonemeindex[++X]); /* Skip pause */
                 A = phonemeindex[X];
                 if (A != END) {
-                    if ((flags[A] & 8) || (A == 36) || (A == 37)) {++pos; continue;} // '/H' '/X'
+                    if ((flags[A] & 8) || (A == 36) || (A == 37))
+                    {++pos; continue;} // '/H' '/X'
                 }
                 
             }
@@ -501,7 +686,7 @@ void rule_dipthong(unsigned char p, unsigned short pf, unsigned char pos) {
     else if (p == 44) rule_j(pos);      // Example: JAY
 }
 
-void Parser2() {
+void PhonemeidxChangeAccordRuleA() {
 	unsigned char pos = 0; //mem66;
     unsigned char p;
 
@@ -605,7 +790,7 @@ void Parser2() {
 //         <VOICED STOP CONSONANT> {optional silence} <STOP CONSONANT> - shorten both to 1/2 + 1
 //         <LIQUID CONSONANT> <DIPTHONG> - decrease by 2
 //
-void AdjustLengths() {
+void AdjustLengthsAccordRuleb() {
     // LENGTHEN VOWELS PRECEDING PUNCTUATION
     //
     // Search for punctuation. If found, back up to the first vowel, then

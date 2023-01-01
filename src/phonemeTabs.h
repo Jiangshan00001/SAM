@@ -30,7 +30,7 @@ extern unsigned char phonemeStressedLengthTable[];
 //tab45536???
 extern unsigned char phonemeLengthTable[];
 
-extern unsigned short flags[];
+extern unsigned char sampledConsonantFlags[] ;
 
 //loc_9F8C
 enum {

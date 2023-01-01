@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.6"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>sam: F:/github/SAM_jiangshan00001/src/reciter.h File Reference</title>
+<title>sam: reciter.h File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -51,11 +51,11 @@ $(function() {
 <div class="textblock"><div class="dynheader">
 This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
-<div class="center"><img src="reciter_8h__dep__incl.png" border="0" usemap="#a_f_1_2github_2_s_a_m__jiangshan00001_2src_2reciter_8hdep" alt=""/></div>
-<map name="a_f_1_2github_2_s_a_m__jiangshan00001_2src_2reciter_8hdep" id="a_f_1_2github_2_s_a_m__jiangshan00001_2src_2reciter_8hdep">
-<area shape="rect" title=" " alt="" coords="119,5,321,45"/>
-<area shape="rect" href="main_8c.html" title=" " alt="" coords="5,93,208,133"/>
-<area shape="rect" href="reciter_8c.html" title=" " alt="" coords="232,93,435,133"/>
+<div class="center"><img src="reciter_8h__dep__incl.png" border="0" usemap="#areciter_8hdep" alt=""/></div>
+<map name="areciter_8hdep" id="areciter_8hdep">
+<area shape="rect" title=" " alt="" coords="45,5,115,31"/>
+<area shape="rect" href="main_8c.html" title=" " alt="" coords="5,79,67,104"/>
+<area shape="rect" href="reciter_8c.html" title=" " alt="" coords="91,79,160,104"/>
 </map>
 </div>
 </div>
@@ -63,7 +63,8 @@ This graph shows which files directly or indirectly include this file:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a5df7a21b76d2535300993833112cc806"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="reciter_8h.html#a5df7a21b76d2535300993833112cc806">TextToPhonemes</a> (unsigned char *<a class="el" href="sam_8c.html#a2c4938a0dc3cb22fb7a35768b4c126fa">input</a>)</td></tr>
+<tr class="memitem:a5df7a21b76d2535300993833112cc806"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="reciter_8h.html#a5df7a21b76d2535300993833112cc806">TextToPhonemes</a> (unsigned char *<a class="el" href="group___key_vars.html#ga2c4938a0dc3cb22fb7a35768b4c126fa">input</a>)</td></tr>
+<tr class="memdesc:a5df7a21b76d2535300993833112cc806"><td class="mdescLeft">&#160;</td><td class="mdescRight">TextToPhonemes.  <br /></td></tr>
 <tr class="separator:a5df7a21b76d2535300993833112cc806"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
@@ -83,13 +84,31 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="reciter_8c_source.html#l00082">82</a> of file <a class="el" href="reciter_8c_source.html">reciter.c</a>.</p>
+<p>TextToPhonemes. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">input</td><td>the text to translate. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>output phonemes text to input text to phonemes<ol type="1">
+<li>copy the <a class="el" href="group___key_vars.html#ga2c4938a0dc3cb22fb7a35768b4c126fa">input</a> text to inputtemp.</li>
+<li>translate text in inputtemp to phonemes.</li>
+<li>save phonemes to <a class="el" href="group___key_vars.html#ga2c4938a0dc3cb22fb7a35768b4c126fa">input</a>.</li>
+</ol>
+</dd></dl>
+<p>eg: input: WHO ARE YOU? <br  />
+ output:/HUW AAR YUW? <br  />
+ their is one 155 in the last of the output str before zero. 155 means line end mark? <br  />
+</p>
+
+<p class="definition">Definition at line <a class="el" href="reciter_8c_source.html#l00096">96</a> of file <a class="el" href="reciter_8c_source.html">reciter.c</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="reciter_8h_a5df7a21b76d2535300993833112cc806_cgraph.png" border="0" usemap="#areciter_8h_a5df7a21b76d2535300993833112cc806_cgraph" alt=""/></div>
 <map name="areciter_8h_a5df7a21b76d2535300993833112cc806_cgraph" id="areciter_8h_a5df7a21b76d2535300993833112cc806_cgraph">
-<area shape="rect" title=" " alt="" coords="5,132,128,157"/>
+<area shape="rect" title="TextToPhonemes." alt="" coords="5,132,128,157"/>
 <area shape="rect" href="reciter_8c.html#a99873c93f3f5f7938798ebc32e9326e5" title=" " alt="" coords="176,5,264,31"/>
 <area shape="rect" href="reciter_8c.html#a161e712ec8e04b0e9b96c0f2d7ae6f0e" title=" " alt="" coords="312,156,409,181"/>
 <area shape="rect" href="reciter_8c.html#a53516a8d2b3b7d5a52c08a64bf8eef16" title=" " alt="" coords="179,107,261,132"/>
@@ -103,7 +122,7 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="reciter_8h_a5df7a21b76d2535300993833112cc806_icgraph.png" border="0" usemap="#areciter_8h_a5df7a21b76d2535300993833112cc806_icgraph" alt=""/></div>
 <map name="areciter_8h_a5df7a21b76d2535300993833112cc806_icgraph" id="areciter_8h_a5df7a21b76d2535300993833112cc806_icgraph">
-<area shape="rect" title=" " alt="" coords="104,5,227,31"/>
+<area shape="rect" title="TextToPhonemes." alt="" coords="104,5,227,31"/>
 <area shape="rect" href="main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title=" " alt="" coords="5,5,56,31"/>
 </map>
 </div>

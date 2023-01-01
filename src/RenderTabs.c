@@ -1,12 +1,18 @@
 
-//tab40672
-unsigned char stressInputTable[] =
-{
-    '*', '1', '2', '3', '4', '5', '6', '7', '8'
-};
+///
+/// @addtogroup RenderTabs
+/// @{
+///
+/// their are three types of phonemes @ref phonemeTables.
+///
+/// voiced is calced by : @ref GenerateWaveFromFreqPhase
+///
+/// unvoiced is calced by: @ref RenderConsonantSample
+///
+///
 
-
-//tab42240
+/// sin wave form
+/// 0-255 for one period
 unsigned char sinus[] =
 {
     0x00 , 0x00 , 0x00 , 0x10 , 0x10 , 0x10 , 0x10 , 0x10 ,
@@ -42,7 +48,8 @@ unsigned char sinus[] =
     0xD0 , 0xD0 , 0xE0 , 0xE0 , 0xE0 , 0xE0 , 0xE0 , 0xE0 ,
     0xF0 , 0xF0 , 0xF0 , 0xF0 , 0xF0 , 0xF0 , 0x00 , 0x00 };
 
-//tab42496
+/// rectangle waveform
+/// 0-255 for one period
 unsigned char rectangle[] =
 {
     0x90 , 0x90 , 0x90 , 0x90 , 0x90 , 0x90 , 0x90 , 0x90 ,
@@ -80,7 +87,9 @@ unsigned char rectangle[] =
 };
 
 
-//tab42752
+/// this is a multtable. multtable[l + h*16]= (l * h)/2
+/// as this is unsigned char, for overflow consideration,
+/// the result is changed a little.
 unsigned char multtable[] =
 {
     0x00 , 0x00 , 0x00 , 0x00 , 0x00 , 0x00 , 0x00 , 0x00 ,
@@ -117,8 +126,11 @@ unsigned char multtable[] =
     0xFC , 0xFB , 0xFB , 0xFA , 0xFA , 0xF9 , 0xF9 , 0xF8
 };
 
-//random data ?
-unsigned char sampleTable[0x500] =
+/// this is the consonant sample table.
+///
+/// 256 byte for one sample. 5 samples.
+/// 1 bit for one sample byte. which 1 means high, 0 means low.
+unsigned char consonantSampleTable[0x500] =
 {
     //00
 
@@ -323,21 +335,18 @@ unsigned char sampleTable[0x500] =
     ,  0xFE , 1 , 0xFC , 3 , 0xE0 ,0xF , 0 , 0xFC
 };
 
-
+/// amplitude of every consonant.
 ///
-/// this var rescale the amplitude.
-/// 0-8-->0.4
-/// 8-16-->4-16
-unsigned char amplitudeRescale[] =
+unsigned char consonantAmp[5] = { 0x18, 0x1A, 0x17, 0x17, 0x17 };
+
+//tab40672
+unsigned char stressInputTable[] =
 {
-    0 , 1 , 2 , 2 , 2 , 3 , 3 , 4 ,
-    4 , 5 , 6 , 8 , 9 ,0xB ,0xD ,0xF, 0  //17 elements?
+    '*', '1', '2', '3', '4', '5', '6', '7', '8'
 };
 
 
-unsigned char tab48426[5] = { 0x18, 0x1A, 0x17, 0x17, 0x17 };
-
-unsigned char tab47492[] =
+unsigned char stressToPitchOffset[] =
 {
     0 , 0 , 0xE0 , 0xE6 , 0xEC , 0xF3 , 0xF9 , 0 ,
     6 , 0xC , 6
@@ -345,53 +354,18 @@ unsigned char tab47492[] =
 
 
 
-// Used to decide which phoneme's blend lengths. The candidate with the lower score is selected.
-// tab45856
-unsigned char blendRank[] =
+///
+/// this var rescale the amplitude.
+/// 0-8-->0.4
+/// 8-16-->4-16
+/// Rescale volume from a linear scale to decibels.
+unsigned char amplitudeRescale[] =
 {
-    0 , 0x1F , 0x1F , 0x1F , 0x1F , 2 , 2 , 2 ,
-    2 , 2 , 2 , 2 , 2 , 2 , 5 , 5 ,
-    2 ,0xA , 2 , 8 , 5 , 5 ,0xB ,0xA ,
-    9 , 8 , 8 , 0xA0 , 8 , 8 , 0x17 , 0x1F ,
-    0x12 , 0x12 , 0x12 , 0x12 , 0x1E , 0x1E , 0x14 , 0x14 ,
-    0x14 , 0x14 , 0x17 , 0x17 , 0x1A , 0x1A , 0x1D , 0x1D ,
-    2 , 2 , 2 , 2 , 2 , 2 , 0x1A , 0x1D ,
-    0x1B , 0x1A , 0x1D , 0x1B , 0x1A , 0x1D , 0x1B , 0x1A ,
-    0x1D , 0x1B , 0x17 , 0x1D , 0x17 , 0x17 , 0x1D , 0x17 ,
-    0x17 , 0x1D , 0x17 , 0x17 , 0x1D , 0x17 , 0x17 , 0x17
+    0 , 1 , 2 , 2 , 2 , 3 , 3 , 4 ,
+    4 , 5 , 6 , 8 , 9 ,0xB ,0xD ,0xF, 0  //17 elements?
 };
 
-
-// Number of frames at the end of a phoneme devoted to interpolating to next phoneme's final value
-//tab45696
-unsigned char outBlendLength[] =
-{
-    0 , 2 , 2 , 2 , 2 , 4 , 4 , 4 ,
-    4 , 4 , 4 , 4 , 4 , 4 , 4 , 4 ,
-    4 , 4 , 3 , 2 , 4 , 4 , 2 , 2 ,
-    2 , 2 , 2 , 1 , 1 , 1 , 1 , 1 ,
-    1 , 1 , 1 , 1 , 1 , 1 , 2 , 2 ,
-    2 , 1 , 0 , 1 , 0 , 1 , 0 , 5 ,
-    5 , 5 , 5 , 5 , 4 , 4 , 2 , 0 ,
-    1 , 2 , 0 , 1 , 2 , 0 , 1 , 2 ,
-    0 , 1 , 2 , 0 , 2 , 2 , 0 , 1 ,
-    3 , 0 , 2 , 3 , 0 , 2 , 0xA0 , 0xA0
-};
-
-
-// Number of frames at beginning of a phoneme devoted to interpolating to phoneme's final value
-// tab45776
-unsigned char inBlendLength[] =
-{
-    0 , 2 , 2 , 2 , 2 , 4 , 4 , 4 ,
-    4 , 4 , 4 , 4 , 4 , 4 , 4 , 4 ,
-    4 , 4 , 3 , 3 , 4 , 4 , 3 , 3 ,
-    3 , 3 , 3 , 1 , 2 , 3 , 2 , 1 ,
-    3 , 3 , 3 , 3 , 1 , 1 , 3 , 3 ,
-    3 , 2 , 2 , 3 , 2 , 3 , 0 , 0 ,
-    5 , 5 , 5 , 5 , 4 , 4 , 2 , 0 ,
-    2 , 2 , 0 , 3 , 2 , 0 , 4 , 2 ,
-    0 , 3 , 2 , 0 , 2 , 2 , 0 , 2 ,
-    3 , 0 , 3 , 3 , 0 , 3 , 0xB0 , 0xA0
-};
+///
+/// @}
+///
 

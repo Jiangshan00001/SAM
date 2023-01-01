@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.6"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>sam: F:/github/SAM_jiangshan00001/src/render.h File Reference</title>
+<title>sam: render.h File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -45,20 +45,21 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#define-members">Macros</a> &#124;
-<a href="#func-members">Functions</a>  </div>
+<a href="#func-members">Functions</a> &#124;
+<a href="#var-members">Variables</a>  </div>
   <div class="headertitle"><div class="title">render.h File Reference</div></div>
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><div class="dynheader">
 This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
-<div class="center"><img src="render_8h__dep__incl.png" border="0" usemap="#a_f_1_2github_2_s_a_m__jiangshan00001_2src_2render_8hdep" alt=""/></div>
-<map name="a_f_1_2github_2_s_a_m__jiangshan00001_2src_2render_8hdep" id="a_f_1_2github_2_s_a_m__jiangshan00001_2src_2render_8hdep">
-<area shape="rect" title=" " alt="" coords="345,5,548,45"/>
-<area shape="rect" href="createtransitions_8c.html" title=" " alt="" coords="5,93,208,133"/>
-<area shape="rect" href="processframes_8c.html" title=" " alt="" coords="232,93,435,133"/>
-<area shape="rect" href="render_8c.html" title=" " alt="" coords="459,93,661,133"/>
-<area shape="rect" href="sam_8c.html" title=" " alt="" coords="685,93,888,133"/>
+<div class="center"><img src="render_8h__dep__incl.png" border="0" usemap="#arender_8hdep" alt=""/></div>
+<map name="arender_8hdep" id="arender_8hdep">
+<area shape="rect" title=" " alt="" coords="242,5,311,31"/>
+<area shape="rect" href="createtransitions_8c.html" title=" " alt="" coords="5,79,135,104"/>
+<area shape="rect" href="processframes_8c.html" title=" " alt="" coords="159,79,277,104"/>
+<area shape="rect" href="render_8c.html" title=" " alt="" coords="302,79,371,104"/>
+<area shape="rect" href="sam_8c.html" title=" " alt="" coords="395,79,454,104"/>
 </map>
 </div>
 </div>
@@ -77,16 +78,44 @@ Macros</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a436830dff9fbce05c931c5a6d8d5366d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="render_8h.html#a436830dff9fbce05c931c5a6d8d5366d">Render</a> ()</td></tr>
-<tr class="separator:a436830dff9fbce05c931c5a6d8d5366d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a633822db3e4155e15fe370dfdab4007b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="render_8h.html#a633822db3e4155e15fe370dfdab4007b">SetMouthThroat</a> (unsigned char <a class="el" href="sam_8c.html#afe0b64f5c0c1b2bbf605ebcbf81a2e05">mouth</a>, unsigned char <a class="el" href="sam_8c.html#a698ea7c4243ad2d222a074e6539e6155">throat</a>)</td></tr>
+<tr class="memitem:a0ad29c7b8fdc78dfc8cc2d4426ce1cda"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="render_8h.html#a0ad29c7b8fdc78dfc8cc2d4426ce1cda">RenderOnce</a> ()</td></tr>
+<tr class="memdesc:a0ad29c7b8fdc78dfc8cc2d4426ce1cda"><td class="mdescLeft">&#160;</td><td class="mdescRight">RenderOnce RENDER THE PHONEMES IN THE LIST.  <br /></td></tr>
+<tr class="separator:a0ad29c7b8fdc78dfc8cc2d4426ce1cda"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a633822db3e4155e15fe370dfdab4007b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="render_8h.html#a633822db3e4155e15fe370dfdab4007b">SetMouthThroat</a> (unsigned char <a class="el" href="group___key_vars.html#gafe0b64f5c0c1b2bbf605ebcbf81a2e05">mouth</a>, unsigned char <a class="el" href="group___key_vars.html#ga698ea7c4243ad2d222a074e6539e6155">throat</a>)</td></tr>
 <tr class="separator:a633822db3e4155e15fe370dfdab4007b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af2eb630ca8580671ee4e05b371c67581"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="render_8h.html#af2eb630ca8580671ee4e05b371c67581">ProcessFrames</a> (unsigned char mem48)</td></tr>
-<tr class="separator:af2eb630ca8580671ee4e05b371c67581"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad232ec2ab0875d5113e81e0ca486c6f0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="render_8h.html#ad232ec2ab0875d5113e81e0ca486c6f0">RenderSample</a> (unsigned char *mem66, unsigned char consonantFlag, unsigned char mem49)</td></tr>
-<tr class="separator:ad232ec2ab0875d5113e81e0ca486c6f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3df88492eba845e5ac6aedf0e725143f"><td class="memItemLeft" align="right" valign="top">unsigned char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="render_8h.html#a3df88492eba845e5ac6aedf0e725143f">CreateTransitions</a> ()</td></tr>
-<tr class="separator:a3df88492eba845e5ac6aedf0e725143f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a89957262bf5ea80ed885db231b482717"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="render_8h.html#a89957262bf5ea80ed885db231b482717">ProcessFrames2Buffer</a> (unsigned char frame_len)</td></tr>
+<tr class="separator:a89957262bf5ea80ed885db231b482717"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae519afe69172623d832fcb79a0a18d7e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="render_8h.html#ae519afe69172623d832fcb79a0a18d7e">RenderConsonantSample</a> (unsigned char *mem66, unsigned char consonantFlag, unsigned char mem49)</td></tr>
+<tr class="separator:ae519afe69172623d832fcb79a0a18d7e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab65ab322866c7557b4d5d600489cb592"><td class="memItemLeft" align="right" valign="top">unsigned char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="render_8h.html#ab65ab322866c7557b4d5d600489cb592">CreateFrameTransitions</a> ()</td></tr>
+<tr class="separator:ab65ab322866c7557b4d5d600489cb592"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:ga2c34b1f3e1f07df229ab6500be4b52a9"><td class="memItemLeft" align="right" valign="top">unsigned char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___key_vars.html#ga2c34b1f3e1f07df229ab6500be4b52a9">pitches</a> [256]</td></tr>
+<tr class="memdesc:ga2c34b1f3e1f07df229ab6500be4b52a9"><td class="mdescLeft">&#160;</td><td class="mdescRight">pitches  <br /></td></tr>
+<tr class="separator:ga2c34b1f3e1f07df229ab6500be4b52a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga2a4867bc371f0fdbda34da243fd4c4a3"><td class="memItemLeft" align="right" valign="top">unsigned char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___key_vars.html#ga2a4867bc371f0fdbda34da243fd4c4a3">frequency1</a> [256]</td></tr>
+<tr class="memdesc:ga2a4867bc371f0fdbda34da243fd4c4a3"><td class="mdescLeft">&#160;</td><td class="mdescRight">frequency1  <br /></td></tr>
+<tr class="separator:ga2a4867bc371f0fdbda34da243fd4c4a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga2b40c7f4f2b5e6349bfaff5393a06a7b"><td class="memItemLeft" align="right" valign="top">unsigned char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___key_vars.html#ga2b40c7f4f2b5e6349bfaff5393a06a7b">frequency2</a> [256]</td></tr>
+<tr class="memdesc:ga2b40c7f4f2b5e6349bfaff5393a06a7b"><td class="mdescLeft">&#160;</td><td class="mdescRight">frequency2  <br /></td></tr>
+<tr class="separator:ga2b40c7f4f2b5e6349bfaff5393a06a7b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga828be3b0675f7dffc979c71abe1cb924"><td class="memItemLeft" align="right" valign="top">unsigned char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___key_vars.html#ga828be3b0675f7dffc979c71abe1cb924">frequency3</a> [256]</td></tr>
+<tr class="memdesc:ga828be3b0675f7dffc979c71abe1cb924"><td class="mdescLeft">&#160;</td><td class="mdescRight">frequency3  <br /></td></tr>
+<tr class="separator:ga828be3b0675f7dffc979c71abe1cb924"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga5421b1be23e1339b0c8901cf50602624"><td class="memItemLeft" align="right" valign="top">unsigned char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___key_vars.html#ga5421b1be23e1339b0c8901cf50602624">amplitude1</a> [256]</td></tr>
+<tr class="memdesc:ga5421b1be23e1339b0c8901cf50602624"><td class="mdescLeft">&#160;</td><td class="mdescRight">amplitude1  <br /></td></tr>
+<tr class="separator:ga5421b1be23e1339b0c8901cf50602624"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga5862d226e679b481075da40fe811f2ef"><td class="memItemLeft" align="right" valign="top">unsigned char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___key_vars.html#ga5862d226e679b481075da40fe811f2ef">amplitude2</a> [256]</td></tr>
+<tr class="memdesc:ga5862d226e679b481075da40fe811f2ef"><td class="mdescLeft">&#160;</td><td class="mdescRight">amplitude2  <br /></td></tr>
+<tr class="separator:ga5862d226e679b481075da40fe811f2ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga7639e55bf66fbac05f15ee2431b03a15"><td class="memItemLeft" align="right" valign="top">unsigned char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___key_vars.html#ga7639e55bf66fbac05f15ee2431b03a15">amplitude3</a> [256]</td></tr>
+<tr class="memdesc:ga7639e55bf66fbac05f15ee2431b03a15"><td class="mdescLeft">&#160;</td><td class="mdescRight">amplitude3  <br /></td></tr>
+<tr class="separator:ga7639e55bf66fbac05f15ee2431b03a15"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga3a9ee940662fbb84f1b42a6715100fbb"><td class="memItemLeft" align="right" valign="top">unsigned char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___key_vars.html#ga3a9ee940662fbb84f1b42a6715100fbb">sampledConsonantFlag</a> [256]</td></tr>
+<tr class="memdesc:ga3a9ee940662fbb84f1b42a6715100fbb"><td class="mdescLeft">&#160;</td><td class="mdescRight">sampledConsonantFlag  <br /></td></tr>
+<tr class="separator:ga3a9ee940662fbb84f1b42a6715100fbb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Macro Definition Documentation</h2>
 <a id="a2b93bea052bce0db60d652c549787ae4" name="a2b93bea052bce0db60d652c549787ae4"></a>
@@ -154,14 +183,14 @@ Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Function Documentation</h2>
-<a id="a3df88492eba845e5ac6aedf0e725143f" name="a3df88492eba845e5ac6aedf0e725143f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3df88492eba845e5ac6aedf0e725143f">&#9670;&#160;</a></span>CreateTransitions()</h2>
+<a id="ab65ab322866c7557b4d5d600489cb592" name="ab65ab322866c7557b4d5d600489cb592"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab65ab322866c7557b4d5d600489cb592">&#9670;&#160;</a></span>CreateFrameTransitions()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">unsigned char CreateTransitions </td>
+          <td class="memname">unsigned char CreateFrameTransitions </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -169,132 +198,85 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="createtransitions_8c_source.html#l00139">139</a> of file <a class="el" href="createtransitions_8c_source.html">createtransitions.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="createtransitions_8c_source.html#l00180">180</a> of file <a class="el" href="createtransitions_8c_source.html">createtransitions.c</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="render_8h_a3df88492eba845e5ac6aedf0e725143f_cgraph.png" border="0" usemap="#arender_8h_a3df88492eba845e5ac6aedf0e725143f_cgraph" alt=""/></div>
-<map name="arender_8h_a3df88492eba845e5ac6aedf0e725143f_cgraph" id="arender_8h_a3df88492eba845e5ac6aedf0e725143f_cgraph">
-<area shape="rect" title=" " alt="" coords="5,23,131,48"/>
-<area shape="rect" href="createtransitions_8c.html#af579265fb657a9a7f7d2008616ebfd78" title=" " alt="" coords="344,23,427,48"/>
-<area shape="rect" href="createtransitions_8c.html#a299a1c776846c2d869d5beef21a9ac66" title=" " alt="" coords="475,72,528,98"/>
-<area shape="rect" href="createtransitions_8c.html#aa6291494b0f658f408d911f2b646970d" title=" " alt="" coords="179,23,296,48"/>
-<area shape="rect" href="createtransitions_8c.html#a03f443a24225ecfe1c443deb2ba93a39" title=" " alt="" coords="475,23,527,48"/>
+<div class="center"><img src="render_8h_ab65ab322866c7557b4d5d600489cb592_cgraph.png" border="0" usemap="#arender_8h_ab65ab322866c7557b4d5d600489cb592_cgraph" alt=""/></div>
+<map name="arender_8h_ab65ab322866c7557b4d5d600489cb592_cgraph" id="arender_8h_ab65ab322866c7557b4d5d600489cb592_cgraph">
+<area shape="rect" title=" " alt="" coords="5,23,168,48"/>
+<area shape="rect" href="createtransitions_8c.html#af579265fb657a9a7f7d2008616ebfd78" title=" " alt="" coords="381,23,464,48"/>
+<area shape="rect" href="createtransitions_8c.html#a299a1c776846c2d869d5beef21a9ac66" title=" " alt="" coords="512,72,565,98"/>
+<area shape="rect" href="createtransitions_8c.html#aa6291494b0f658f408d911f2b646970d" title=" " alt="" coords="216,23,333,48"/>
+<area shape="rect" href="createtransitions_8c.html#a03f443a24225ecfe1c443deb2ba93a39" title=" " alt="" coords="513,23,565,48"/>
 </map>
 </div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="render_8h_a3df88492eba845e5ac6aedf0e725143f_icgraph.png" border="0" usemap="#arender_8h_a3df88492eba845e5ac6aedf0e725143f_icgraph" alt=""/></div>
-<map name="arender_8h_a3df88492eba845e5ac6aedf0e725143f_icgraph" id="arender_8h_a3df88492eba845e5ac6aedf0e725143f_icgraph">
-<area shape="rect" title=" " alt="" coords="497,5,623,31"/>
-<area shape="rect" href="render_8c.html#a436830dff9fbce05c931c5a6d8d5366d" title=" " alt="" coords="385,5,449,31"/>
-<area shape="rect" href="sam_8c.html#a5a40ab164da5925154103cf53c16e893" title=" " alt="" coords="231,5,337,31"/>
-<area shape="rect" href="sam_8c.html#a52acfd4d941fc7138ce9f63ce5503439" title=" " alt="" coords="104,5,183,31"/>
+<div class="center"><img src="render_8h_ab65ab322866c7557b4d5d600489cb592_icgraph.png" border="0" usemap="#arender_8h_ab65ab322866c7557b4d5d600489cb592_icgraph" alt=""/></div>
+<map name="arender_8h_ab65ab322866c7557b4d5d600489cb592_icgraph" id="arender_8h_ab65ab322866c7557b4d5d600489cb592_icgraph">
+<area shape="rect" title=" " alt="" coords="500,5,663,31"/>
+<area shape="rect" href="render_8c.html#a0ad29c7b8fdc78dfc8cc2d4426ce1cda" title="RenderOnce RENDER THE PHONEMES IN THE LIST." alt="" coords="357,5,452,31"/>
+<area shape="rect" href="sam_8c.html#a406d7b8ae89d745877a73eddb4275f73" title="RenderAll input: phonemeindex phonemeLength stress output: buffer." alt="" coords="231,5,309,31"/>
+<area shape="rect" href="sam_8c.html#a52acfd4d941fc7138ce9f63ce5503439" title="SAMMain." alt="" coords="104,5,183,31"/>
 <area shape="rect" href="main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title=" " alt="" coords="5,5,56,31"/>
 </map>
 </div>
 
 </div>
 </div>
-<a id="af2eb630ca8580671ee4e05b371c67581" name="af2eb630ca8580671ee4e05b371c67581"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af2eb630ca8580671ee4e05b371c67581">&#9670;&#160;</a></span>ProcessFrames()</h2>
+<a id="a89957262bf5ea80ed885db231b482717" name="a89957262bf5ea80ed885db231b482717"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a89957262bf5ea80ed885db231b482717">&#9670;&#160;</a></span>ProcessFrames2Buffer()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void ProcessFrames </td>
+          <td class="memname">void ProcessFrames2Buffer </td>
           <td>(</td>
           <td class="paramtype">unsigned char&#160;</td>
-          <td class="paramname"><em>mem48</em></td><td>)</td>
+          <td class="paramname"><em>frame_len</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 <p>! was not initialized</p>
+<p>here is vowel or voiced const voice time.</p>
 
-<p class="definition">Definition at line <a class="el" href="processframes_8c_source.html#l00045">45</a> of file <a class="el" href="processframes_8c_source.html">processframes.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="processframes_8c_source.html#l00041">41</a> of file <a class="el" href="processframes_8c_source.html">processframes.c</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="render_8h_af2eb630ca8580671ee4e05b371c67581_cgraph.png" border="0" usemap="#arender_8h_af2eb630ca8580671ee4e05b371c67581_cgraph" alt=""/></div>
-<map name="arender_8h_af2eb630ca8580671ee4e05b371c67581_cgraph" id="arender_8h_af2eb630ca8580671ee4e05b371c67581_cgraph">
-<area shape="rect" title=" " alt="" coords="5,5,120,31"/>
-<area shape="rect" href="render_8c.html#ad232ec2ab0875d5113e81e0ca486c6f0" title=" " alt="" coords="168,5,276,31"/>
+<div class="center"><img src="render_8h_a89957262bf5ea80ed885db231b482717_cgraph.png" border="0" usemap="#arender_8h_a89957262bf5ea80ed885db231b482717_cgraph" alt=""/></div>
+<map name="arender_8h_a89957262bf5ea80ed885db231b482717_cgraph" id="arender_8h_a89957262bf5ea80ed885db231b482717_cgraph">
+<area shape="rect" title=" " alt="" coords="5,5,160,31"/>
+<area shape="rect" href="render_8c.html#a1363164e597bb2c72587d0ee3ce50632" title=" " alt="" coords="208,5,379,31"/>
 </map>
 </div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="render_8h_af2eb630ca8580671ee4e05b371c67581_icgraph.png" border="0" usemap="#arender_8h_af2eb630ca8580671ee4e05b371c67581_icgraph" alt=""/></div>
-<map name="arender_8h_af2eb630ca8580671ee4e05b371c67581_icgraph" id="arender_8h_af2eb630ca8580671ee4e05b371c67581_icgraph">
-<area shape="rect" title=" " alt="" coords="497,5,612,31"/>
-<area shape="rect" href="render_8c.html#a436830dff9fbce05c931c5a6d8d5366d" title=" " alt="" coords="385,5,449,31"/>
-<area shape="rect" href="sam_8c.html#a5a40ab164da5925154103cf53c16e893" title=" " alt="" coords="231,5,337,31"/>
-<area shape="rect" href="sam_8c.html#a52acfd4d941fc7138ce9f63ce5503439" title=" " alt="" coords="104,5,183,31"/>
+<div class="center"><img src="render_8h_a89957262bf5ea80ed885db231b482717_icgraph.png" border="0" usemap="#arender_8h_a89957262bf5ea80ed885db231b482717_icgraph" alt=""/></div>
+<map name="arender_8h_a89957262bf5ea80ed885db231b482717_icgraph" id="arender_8h_a89957262bf5ea80ed885db231b482717_icgraph">
+<area shape="rect" title=" " alt="" coords="500,5,655,31"/>
+<area shape="rect" href="render_8c.html#a0ad29c7b8fdc78dfc8cc2d4426ce1cda" title="RenderOnce RENDER THE PHONEMES IN THE LIST." alt="" coords="357,5,452,31"/>
+<area shape="rect" href="sam_8c.html#a406d7b8ae89d745877a73eddb4275f73" title="RenderAll input: phonemeindex phonemeLength stress output: buffer." alt="" coords="231,5,309,31"/>
+<area shape="rect" href="sam_8c.html#a52acfd4d941fc7138ce9f63ce5503439" title="SAMMain." alt="" coords="104,5,183,31"/>
 <area shape="rect" href="main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title=" " alt="" coords="5,5,56,31"/>
 </map>
 </div>
 
 </div>
 </div>
-<a id="a436830dff9fbce05c931c5a6d8d5366d" name="a436830dff9fbce05c931c5a6d8d5366d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a436830dff9fbce05c931c5a6d8d5366d">&#9670;&#160;</a></span>Render()</h2>
+<a id="ae519afe69172623d832fcb79a0a18d7e" name="ae519afe69172623d832fcb79a0a18d7e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae519afe69172623d832fcb79a0a18d7e">&#9670;&#160;</a></span>RenderConsonantSample()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void Render </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="render_8c_source.html#l00284">284</a> of file <a class="el" href="render_8c_source.html">render.c</a>.</p>
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="render_8h_a436830dff9fbce05c931c5a6d8d5366d_cgraph.png" border="0" usemap="#arender_8h_a436830dff9fbce05c931c5a6d8d5366d_cgraph" alt=""/></div>
-<map name="arender_8h_a436830dff9fbce05c931c5a6d8d5366d_cgraph" id="arender_8h_a436830dff9fbce05c931c5a6d8d5366d_cgraph">
-<area shape="rect" title=" " alt="" coords="5,104,69,129"/>
-<area shape="rect" href="render_8c.html#aefae4d0fa92767fb0905b9064b56970e" title=" " alt="" coords="117,5,256,31"/>
-<area shape="rect" href="createtransitions_8c.html#a3df88492eba845e5ac6aedf0e725143f" title=" " alt="" coords="124,55,249,80"/>
-<area shape="rect" href="debug_8c.html#ae8e10d3873fda9a8201c500d1468f93c" title=" " alt="" coords="143,104,231,129"/>
-<area shape="rect" href="processframes_8c.html#af2eb630ca8580671ee4e05b371c67581" title=" " alt="" coords="129,153,244,179"/>
-<area shape="rect" href="render_8c.html#ae98f347160e1fa60fe000742c6267164" title=" " alt="" coords="123,203,251,228"/>
-<area shape="rect" href="createtransitions_8c.html#af579265fb657a9a7f7d2008616ebfd78" title=" " alt="" coords="469,53,552,79"/>
-<area shape="rect" href="createtransitions_8c.html#a299a1c776846c2d869d5beef21a9ac66" title=" " alt="" coords="600,103,653,128"/>
-<area shape="rect" href="createtransitions_8c.html#aa6291494b0f658f408d911f2b646970d" title=" " alt="" coords="304,53,421,79"/>
-<area shape="rect" href="createtransitions_8c.html#a03f443a24225ecfe1c443deb2ba93a39" title=" " alt="" coords="601,53,653,79"/>
-<area shape="rect" href="render_8c.html#ad232ec2ab0875d5113e81e0ca486c6f0" title=" " alt="" coords="309,155,417,180"/>
-</map>
-</div>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="render_8h_a436830dff9fbce05c931c5a6d8d5366d_icgraph.png" border="0" usemap="#arender_8h_a436830dff9fbce05c931c5a6d8d5366d_icgraph" alt=""/></div>
-<map name="arender_8h_a436830dff9fbce05c931c5a6d8d5366d_icgraph" id="arender_8h_a436830dff9fbce05c931c5a6d8d5366d_icgraph">
-<area shape="rect" title=" " alt="" coords="385,5,449,31"/>
-<area shape="rect" href="sam_8c.html#a5a40ab164da5925154103cf53c16e893" title=" " alt="" coords="231,5,337,31"/>
-<area shape="rect" href="sam_8c.html#a52acfd4d941fc7138ce9f63ce5503439" title=" " alt="" coords="104,5,183,31"/>
-<area shape="rect" href="main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title=" " alt="" coords="5,5,56,31"/>
-</map>
-</div>
-
-</div>
-</div>
-<a id="ad232ec2ab0875d5113e81e0ca486c6f0" name="ad232ec2ab0875d5113e81e0ca486c6f0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad232ec2ab0875d5113e81e0ca486c6f0">&#9670;&#160;</a></span>RenderSample()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void RenderSample </td>
+          <td class="memname">void RenderConsonantSample </td>
           <td>(</td>
           <td class="paramtype">unsigned char *&#160;</td>
           <td class="paramname"><em>mem66</em>, </td>
@@ -319,17 +301,78 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="render_8c_source.html#l00160">160</a> of file <a class="el" href="render_8c_source.html">render.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="render_8c_source.html#l00186">186</a> of file <a class="el" href="render_8c_source.html">render.c</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="render_8h_ad232ec2ab0875d5113e81e0ca486c6f0_icgraph.png" border="0" usemap="#arender_8h_ad232ec2ab0875d5113e81e0ca486c6f0_icgraph" alt=""/></div>
-<map name="arender_8h_ad232ec2ab0875d5113e81e0ca486c6f0_icgraph" id="arender_8h_ad232ec2ab0875d5113e81e0ca486c6f0_icgraph">
-<area shape="rect" title=" " alt="" coords="660,5,768,31"/>
-<area shape="rect" href="processframes_8c.html#af2eb630ca8580671ee4e05b371c67581" title=" " alt="" coords="497,5,612,31"/>
-<area shape="rect" href="render_8c.html#a436830dff9fbce05c931c5a6d8d5366d" title=" " alt="" coords="385,5,449,31"/>
-<area shape="rect" href="sam_8c.html#a5a40ab164da5925154103cf53c16e893" title=" " alt="" coords="231,5,337,31"/>
-<area shape="rect" href="sam_8c.html#a52acfd4d941fc7138ce9f63ce5503439" title=" " alt="" coords="104,5,183,31"/>
+<div class="center"><img src="render_8h_ae519afe69172623d832fcb79a0a18d7e_icgraph.png" border="0" usemap="#arender_8h_ae519afe69172623d832fcb79a0a18d7e_icgraph" alt=""/></div>
+<map name="arender_8h_ae519afe69172623d832fcb79a0a18d7e_icgraph" id="arender_8h_ae519afe69172623d832fcb79a0a18d7e_icgraph">
+<area shape="rect" title=" " alt="" coords="703,5,873,31"/>
+<area shape="rect" href="processframes_8c.html#a89957262bf5ea80ed885db231b482717" title=" " alt="" coords="500,5,655,31"/>
+<area shape="rect" href="render_8c.html#a0ad29c7b8fdc78dfc8cc2d4426ce1cda" title="RenderOnce RENDER THE PHONEMES IN THE LIST." alt="" coords="357,5,452,31"/>
+<area shape="rect" href="sam_8c.html#a406d7b8ae89d745877a73eddb4275f73" title="RenderAll input: phonemeindex phonemeLength stress output: buffer." alt="" coords="231,5,309,31"/>
+<area shape="rect" href="sam_8c.html#a52acfd4d941fc7138ce9f63ce5503439" title="SAMMain." alt="" coords="104,5,183,31"/>
+<area shape="rect" href="main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title=" " alt="" coords="5,5,56,31"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a0ad29c7b8fdc78dfc8cc2d4426ce1cda" name="a0ad29c7b8fdc78dfc8cc2d4426ce1cda"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0ad29c7b8fdc78dfc8cc2d4426ce1cda">&#9670;&#160;</a></span>RenderOnce()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RenderOnce </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>RenderOnce RENDER THE PHONEMES IN THE LIST. </p>
+<p>The phoneme list is converted into sound through the steps:</p>
+<ol type="1">
+<li>Copy each phoneme &lt;length&gt; number of times into the frames list, where each frame represents 10 milliseconds of sound.</li>
+<li>Determine the transitions lengths between phonemes, and linearly interpolate the values across the frames.</li>
+<li>Offset the pitches by the fundamental frequency.</li>
+<li>Render the each frame.</li>
+</ol>
+<p>input: <a class="el" href="group___key_vars.html#ga2899c6ad40214f3f388c249c852177ad">phonemeIndexOutput</a> <a class="el" href="group___key_vars.html#gaff951dd622798f0d94ea7c88023045b6">phonemeLengthOutput</a> <a class="el" href="group___key_vars.html#ga7f2ebe293ccf356517045097a0628c7b">stressOutput</a></p>
+<p>output: <a class="el" href="group___key_vars.html#gaff2566f4c366b48d73479bef43ee4d2e">buffer</a> <a class="el" href="group___key_vars.html#ga28a03f9f2c1351e52c42339bcd507eac">bufferpos</a> </p>
+
+<p class="definition">Definition at line <a class="el" href="render_8c_source.html#l00316">316</a> of file <a class="el" href="render_8c_source.html">render.c</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="render_8h_a0ad29c7b8fdc78dfc8cc2d4426ce1cda_cgraph.png" border="0" usemap="#arender_8h_a0ad29c7b8fdc78dfc8cc2d4426ce1cda_cgraph" alt=""/></div>
+<map name="arender_8h_a0ad29c7b8fdc78dfc8cc2d4426ce1cda_cgraph" id="arender_8h_a0ad29c7b8fdc78dfc8cc2d4426ce1cda_cgraph">
+<area shape="rect" title="RenderOnce RENDER THE PHONEMES IN THE LIST." alt="" coords="5,132,100,157"/>
+<area shape="rect" href="render_8c.html#aefae4d0fa92767fb0905b9064b56970e" title=" " alt="" coords="160,8,299,33"/>
+<area shape="rect" href="render_8c.html#a4b3f4443e5565e3f36ff7465a75671c7" title=" " alt="" coords="177,57,282,83"/>
+<area shape="rect" href="createtransitions_8c.html#ab65ab322866c7557b4d5d600489cb592" title=" " alt="" coords="148,107,311,132"/>
+<area shape="rect" href="debug_8c.html#ae8e10d3873fda9a8201c500d1468f93c" title=" " alt="" coords="185,156,273,181"/>
+<area shape="rect" href="processframes_8c.html#a89957262bf5ea80ed885db231b482717" title=" " alt="" coords="152,205,307,231"/>
+<area shape="rect" href="render_8c.html#ae98f347160e1fa60fe000742c6267164" title=" " alt="" coords="165,255,293,280"/>
+<area shape="rect" href="render_8c.html#a7eba6a007375164be8ba997d67915861" title=" " alt="" coords="395,5,493,31"/>
+<area shape="rect" href="createtransitions_8c.html#af579265fb657a9a7f7d2008616ebfd78" title=" " alt="" coords="577,107,660,132"/>
+<area shape="rect" href="createtransitions_8c.html#a299a1c776846c2d869d5beef21a9ac66" title=" " alt="" coords="708,156,761,181"/>
+<area shape="rect" href="createtransitions_8c.html#aa6291494b0f658f408d911f2b646970d" title=" " alt="" coords="385,107,503,132"/>
+<area shape="rect" href="createtransitions_8c.html#a03f443a24225ecfe1c443deb2ba93a39" title=" " alt="" coords="709,107,761,132"/>
+<area shape="rect" href="render_8c.html#a1363164e597bb2c72587d0ee3ce50632" title=" " alt="" coords="359,208,529,233"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="render_8h_a0ad29c7b8fdc78dfc8cc2d4426ce1cda_icgraph.png" border="0" usemap="#arender_8h_a0ad29c7b8fdc78dfc8cc2d4426ce1cda_icgraph" alt=""/></div>
+<map name="arender_8h_a0ad29c7b8fdc78dfc8cc2d4426ce1cda_icgraph" id="arender_8h_a0ad29c7b8fdc78dfc8cc2d4426ce1cda_icgraph">
+<area shape="rect" title="RenderOnce RENDER THE PHONEMES IN THE LIST." alt="" coords="357,5,452,31"/>
+<area shape="rect" href="sam_8c.html#a406d7b8ae89d745877a73eddb4275f73" title="RenderAll input: phonemeindex phonemeLength stress output: buffer." alt="" coords="231,5,309,31"/>
+<area shape="rect" href="sam_8c.html#a52acfd4d941fc7138ce9f63ce5503439" title="SAMMain." alt="" coords="104,5,183,31"/>
 <area shape="rect" href="main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title=" " alt="" coords="5,5,56,31"/>
 </map>
 </div>
@@ -362,7 +405,7 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="render_8c_source.html#l00337">337</a> of file <a class="el" href="render_8c_source.html">render.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="render_8c_source.html#l00369">369</a> of file <a class="el" href="render_8c_source.html">render.c</a>.</p>
 
 </div>
 </div>

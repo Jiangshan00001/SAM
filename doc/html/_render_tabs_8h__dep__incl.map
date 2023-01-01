@@ -1,4 +1,7 @@
-<map id="F:/github/SAM_jiangshan00001/src/RenderTabs.h" name="F:/github/SAM_jiangshan00001/src/RenderTabs.h">
-<area shape="rect" id="node1" title=" " alt="" coords="5,5,208,45"/>
-<area shape="rect" id="node2" href="$render_8c.html" title=" " alt="" coords="5,93,208,133"/>
+<map id="RenderTabs.h" name="RenderTabs.h">
+<area shape="rect" id="node1" title=" " alt="" coords="225,5,328,31"/>
+<area shape="rect" id="node2" href="$createtransitions_8c.html" title=" " alt="" coords="5,79,135,104"/>
+<area shape="rect" id="node3" href="$processframes_8c.html" title=" " alt="" coords="159,79,277,104"/>
+<area shape="rect" id="node4" href="$render_8c.html" title=" " alt="" coords="302,79,371,104"/>
+<area shape="rect" id="node5" href="$sam_8c.html" title=" " alt="" coords="395,79,454,104"/>
 </map>

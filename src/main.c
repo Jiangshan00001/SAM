@@ -6,16 +6,17 @@
 #include "reciter.h"
 #include "sam.h"
 #include "debug.h"
+#include "WriteWav.h"
 
 #ifdef USESDL
 #include <SDL.h>
 #include <SDL_audio.h>
 #endif
 
+static int my_min(int l, int r) { return l < r ? l : r; }
 
 // Approximations of some Windows functions to ease portability
 #if defined __GNU_LIBRARY__ || defined __GLIBC__
-static int min(int l, int r) { return l < r ? l : r; }
 static void strcat_s(char * dest, int size, char * str) {
     unsigned int dlen = strlen(dest);
     if (dlen >= size-1) return;
@@ -127,7 +128,21 @@ void OutputSound() {}
 
 #endif	
 
-int debug = 0;
+
+/// @addtogroup KeyFuncs
+/// @{
+/// \ref TextToPhonemes -> [ \ref input ] @n
+/// \ref PhonemeStr2PhonemeIdx -> [ \ref phonemeindex,  \ref phonemeLength, \ref stress  ] @n
+/// \ref RenderAll -> [ \ref phonemeIndexOutput,  \ref phonemeLengthOutput, \ref stressOutput ] @n
+/// \ref CreateFrames -> [ \ref frequency1, \ref frequency2, \ref frequency3 \ref amplitude1 \ref amplitude2, \ref amplitude3 \ref pitches \ref sampledConsonantFlag ] @n
+/// \ref ProcessFrames2Buffer -> [ \ref buffer, \ref bufferpos ] @n
+///
+/// @}
+///
+
+
+
+
 
 /// @mainpage sam tech analysis
 /// @ref main
@@ -144,6 +159,11 @@ int debug = 0;
 /// 3 call @ref SAMMain to do other things. @n
 /// @n
 /// @n
+/// @ref KeyFuncs
+/// @ref phonemeTables
+/// @ref RenderTabs
+/// @ref  KeyVars
+///
 /// ref: @n
 /// https://sites.google.com/site/h2obsession/CBM/C128/SAM-128  @n
 /// https://simulationcorner.net/index.php?page=sam  @n
@@ -154,9 +174,9 @@ int main(int argc, char **argv)
 	int phonetic = 0;
 
 	char* wavfilename = NULL;
-	unsigned char input[256];
-	
-	memset(input, 0, 256);
+    unsigned char inpu[256];
+
+    memset(inpu, 0, 256);
 
 	if (argc <= 1)
 	{
@@ -169,8 +189,8 @@ int main(int argc, char **argv)
 	{
 		if (argv[i][0] != '-')
 		{
-			strcat_s((char*)input, 256, argv[i]);
-			strcat_s((char*)input, 256, " ");
+            strcat_s((char*)inpu, 256, argv[i]);
+            strcat_s((char*)inpu, 256, " ");
 		} else
 		{
 			if (strcmp(&argv[i][1], "wav")==0)
@@ -192,22 +212,22 @@ int main(int argc, char **argv)
 			} else
 			if (strcmp(&argv[i][1], "pitch")==0)
 			{
-				SetPitch((unsigned char)min(atoi(argv[i+1]),255));
+                SetPitch((unsigned char)my_min(atoi(argv[i+1]),255));
 				i++;
 			} else
 			if (strcmp(&argv[i][1], "speed")==0)
 			{
-				SetSpeed((unsigned char)min(atoi(argv[i+1]),255));
+                SetSpeed((unsigned char)my_min(atoi(argv[i+1]),255));
 				i++;
 			} else
 			if (strcmp(&argv[i][1], "mouth")==0)
 			{
-				SetMouth((unsigned char)min(atoi(argv[i+1]),255));
+                SetMouth((unsigned char)my_min(atoi(argv[i+1]),255));
 				i++;
 			} else
 			if (strcmp(&argv[i][1], "throat")==0)
 			{
-				SetThroat((unsigned char)min(atoi(argv[i+1]),255));
+                SetThroat((unsigned char)my_min(atoi(argv[i+1]),255));
 				i++;
 			} else
 			{
@@ -219,22 +239,23 @@ int main(int argc, char **argv)
 		i++;
 	} //while
 
-	for(i=0; input[i] != 0; i++)
-		input[i] = (unsigned char)toupper((int)input[i]);
+    for(i=0; inpu[i] != 0; i++){
+        inpu[i] = (unsigned char)toupper((int)inpu[i]);
+    }
 
 	if (debug)
 	{
-		if (phonetic) printf("phonetic input: %s\n", input);
-		else printf("text input: %s\n", input); 
+        if (phonetic) printf("phonetic input: %s\n", inpu);
+        else printf("text input: %s\n", inpu);
 	}
 	
 	if (!phonetic)
 	{
-		strcat_s((char*)input, 256, "[");
-		if (!TextToPhonemes(input)) return 1;
+        strcat_s((char*)inpu, 256, "[");
+        if (!TextToPhonemes(inpu)) return 1;
 		if (debug)
-			printf("phonetic input: %s\n", input);
-	} else strcat_s((char*)input, 256, "\x9b");
+            printf("phonetic input: %s\n", inpu);
+    } else strcat_s((char*)inpu, 256, "\x9b");
 
 #ifdef USESDL
 	if ( SDL_Init(SDL_INIT_AUDIO) < 0 ) 
@@ -245,7 +266,7 @@ int main(int argc, char **argv)
 	atexit(SDL_Quit);
 #endif
 
-	SetInput(input);
+    SetInput(inpu);
 	if (!SAMMain())
 	{
 		PrintUsage();

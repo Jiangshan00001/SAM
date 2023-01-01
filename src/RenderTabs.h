@@ -1,46 +1,26 @@
 #ifndef RENDERTABS_H
 #define RENDERTABS_H
 
-extern unsigned char tab48426[5];
 
-extern unsigned char tab47492[];
+//sin wave
+extern unsigned char sinus[];
 
+//rectangle wave
+extern unsigned char rectangle[];
 
-extern unsigned char amplitudeRescale[];
+//multtable table
+extern unsigned char multtable[];
 
-// Used to decide which phoneme's blend lengths. The candidate with the lower score is selected.
-// tab45856
-extern unsigned char blendRank[] ;
+// consonant sample table
+extern unsigned char consonantSampleTable[0x500];
 
-
-// Number of frames at the end of a phoneme devoted to interpolating to next phoneme's final value
-//tab45696
-extern unsigned char outBlendLength[];
-
-
-// Number of frames at beginning of a phoneme devoted to interpolating to phoneme's final value
-// tab45776
-extern unsigned char inBlendLength[];
-
-
-extern unsigned char sampledConsonantFlags[] ;
-
+extern unsigned char consonantAmp[5];
 
 //tab40672
 extern unsigned char stressInputTable[];
 
-//tab42240
-extern unsigned char sinus[];
+extern unsigned char stressToPitchOffset[];
 
-//tab42496
-extern unsigned char rectangle[];
-
-
-//tab42752
-extern unsigned char multtable[];
-
-//random data ?
-extern unsigned char sampleTable[0x500];
-
+extern unsigned char amplitudeRescale[];
 
 #endif

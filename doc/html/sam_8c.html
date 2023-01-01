@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.6"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>sam: F:/github/SAM_jiangshan00001/src/sam.c File Reference</title>
+<title>sam: sam.c File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -56,20 +56,22 @@ $(function() {
 <code>#include &quot;<a class="el" href="debug_8h_source.html">debug.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="sam_8h_source.html">sam.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="render_8h_source.html">render.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="_sam_tabs_8h_source.html">SamTabs.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="phoneme_tabs_8h_source.html">phonemeTabs.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="_render_tabs_8h_source.html">RenderTabs.h</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for sam.c:</div>
 <div class="dyncontent">
-<div class="center"><img src="sam_8c__incl.png" border="0" usemap="#a_f_1_2github_2_s_a_m__jiangshan00001_2src_2sam_8c" alt=""/></div>
-<map name="a_f_1_2github_2_s_a_m__jiangshan00001_2src_2sam_8c" id="a_f_1_2github_2_s_a_m__jiangshan00001_2src_2sam_8c">
-<area shape="rect" title=" " alt="" coords="203,5,405,45"/>
-<area shape="rect" title=" " alt="" coords="5,93,67,119"/>
-<area shape="rect" title=" " alt="" coords="91,93,157,119"/>
-<area shape="rect" title=" " alt="" coords="181,93,245,119"/>
-<area shape="rect" href="debug_8h.html" title=" " alt="" coords="270,93,338,119"/>
-<area shape="rect" href="sam_8h.html" title=" " alt="" coords="363,93,421,119"/>
-<area shape="rect" href="render_8h.html" title=" " alt="" coords="445,93,515,119"/>
-<area shape="rect" href="_sam_tabs_8h.html" title=" " alt="" coords="539,93,627,119"/>
+<div class="center"><img src="sam_8c__incl.png" border="0" usemap="#asam_8c" alt=""/></div>
+<map name="asam_8c" id="asam_8c">
+<area shape="rect" title=" " alt="" coords="319,5,377,31"/>
+<area shape="rect" title=" " alt="" coords="5,79,67,104"/>
+<area shape="rect" title=" " alt="" coords="91,79,157,104"/>
+<area shape="rect" title=" " alt="" coords="181,79,245,104"/>
+<area shape="rect" href="debug_8h.html" title=" " alt="" coords="270,79,338,104"/>
+<area shape="rect" href="sam_8h.html" title=" " alt="" coords="363,79,421,104"/>
+<area shape="rect" href="render_8h.html" title=" " alt="" coords="445,79,515,104"/>
+<area shape="rect" href="phoneme_tabs_8h.html" title=" " alt="" coords="539,79,653,104"/>
+<area shape="rect" href="_render_tabs_8h.html" title=" " alt="" coords="678,79,781,104"/>
 </map>
 </div>
 </div>
@@ -77,16 +79,16 @@ Include dependency graph for sam.c:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="enum-members" name="enum-members"></a>
 Enumerations</h2></td></tr>
-<tr class="memitem:a06fc87d81c62e9abb8790b6e5713c55b"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom">{ <br />
-&#160;&#160;<a class="el" href="sam_8c.html#a06fc87d81c62e9abb8790b6e5713c55ba17923ea95eb5afc7dcfe83f6ff1c3841">pR</a> = 23
-, <a class="el" href="sam_8c.html#a06fc87d81c62e9abb8790b6e5713c55ba2f8fb8807dd874d5dd3531a088ef42fd">pD</a> = 57
-, <a class="el" href="sam_8c.html#a06fc87d81c62e9abb8790b6e5713c55baf6f1cba941709181304deee22eb9b3a8">pT</a> = 69
-, <a class="el" href="sam_8c.html#a06fc87d81c62e9abb8790b6e5713c55ba9524d094809858b9e4f778763913568a">BREAK</a> = 254
+<tr class="memitem:adf764cbdea00d65edcd07bb9953ad2b7"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom">{ <br />
+&#160;&#160;<a class="el" href="sam_8c.html#adf764cbdea00d65edcd07bb9953ad2b7a17923ea95eb5afc7dcfe83f6ff1c3841">pR</a> = 23
+, <a class="el" href="sam_8c.html#adf764cbdea00d65edcd07bb9953ad2b7a2f8fb8807dd874d5dd3531a088ef42fd">pD</a> = 57
+, <a class="el" href="sam_8c.html#adf764cbdea00d65edcd07bb9953ad2b7af6f1cba941709181304deee22eb9b3a8">pT</a> = 69
+, <a class="el" href="sam_8c.html#adf764cbdea00d65edcd07bb9953ad2b7a9524d094809858b9e4f778763913568a">BREAK</a> = 254
 , <br />
-&#160;&#160;<a class="el" href="sam_8c.html#a06fc87d81c62e9abb8790b6e5713c55badc6f24fd6915a3f2786a1b7045406924">END</a> = 255
+&#160;&#160;<a class="el" href="sam_8c.html#adf764cbdea00d65edcd07bb9953ad2b7adc6f24fd6915a3f2786a1b7045406924">END</a> = 255
 <br />
  }</td></tr>
-<tr class="separator:a06fc87d81c62e9abb8790b6e5713c55b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="separator:adf764cbdea00d65edcd07bb9953ad2b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
@@ -108,27 +110,29 @@ Functions</h2></td></tr>
 <tr class="separator:a8818eca7d792945a071b7a675e8870f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1e3b6d38df0786ccf7f938d60e386aae"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sam_8c.html#a1e3b6d38df0786ccf7f938d60e386aae">Init</a> ()</td></tr>
 <tr class="separator:a1e3b6d38df0786ccf7f938d60e386aae"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3da129bf2b6e02331a1d9208b40da578"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sam_8c.html#a3da129bf2b6e02331a1d9208b40da578">Parser1</a> ()</td></tr>
-<tr class="separator:a3da129bf2b6e02331a1d9208b40da578"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a79331678e0d84f4fb03649c6e0db86ec"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sam_8c.html#a79331678e0d84f4fb03649c6e0db86ec">Parser2</a> ()</td></tr>
-<tr class="separator:a79331678e0d84f4fb03649c6e0db86ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a40456d7745440a6b07ea24682afc06e0"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sam_8c.html#a40456d7745440a6b07ea24682afc06e0">PhonemeStr2PhonemeIdx</a> ()</td></tr>
+<tr class="separator:a40456d7745440a6b07ea24682afc06e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a843f16261e7b7f00c183a9894bbc80c5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sam_8c.html#a843f16261e7b7f00c183a9894bbc80c5">PhonemeidxChangeAccordRuleA</a> ()</td></tr>
+<tr class="separator:a843f16261e7b7f00c183a9894bbc80c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a52acfd4d941fc7138ce9f63ce5503439"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sam_8c.html#a52acfd4d941fc7138ce9f63ce5503439">SAMMain</a> ()</td></tr>
+<tr class="memdesc:a52acfd4d941fc7138ce9f63ce5503439"><td class="mdescLeft">&#160;</td><td class="mdescRight">SAMMain.  <br /></td></tr>
 <tr class="separator:a52acfd4d941fc7138ce9f63ce5503439"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a523213a9eb0d88a5a6ed14508043ea66"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sam_8c.html#a523213a9eb0d88a5a6ed14508043ea66">CopyStress</a> ()</td></tr>
 <tr class="separator:a523213a9eb0d88a5a6ed14508043ea66"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2a142af5843b36f984876cbcea6b716a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sam_8c.html#a2a142af5843b36f984876cbcea6b716a">SetPhonemeLength</a> ()</td></tr>
 <tr class="separator:a2a142af5843b36f984876cbcea6b716a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a66feb45b487e100e5c243157031ada8d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sam_8c.html#a66feb45b487e100e5c243157031ada8d">AdjustLengths</a> ()</td></tr>
-<tr class="separator:a66feb45b487e100e5c243157031ada8d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ada9689724234d529fb4d91ce038a7505"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sam_8c.html#ada9689724234d529fb4d91ce038a7505">Code41240</a> ()</td></tr>
-<tr class="separator:ada9689724234d529fb4d91ce038a7505"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a88e9c2b1d0c8b494fbae4bfbe9bf1d26"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sam_8c.html#a88e9c2b1d0c8b494fbae4bfbe9bf1d26">AdjustLengthsAccordRuleb</a> ()</td></tr>
+<tr class="separator:a88e9c2b1d0c8b494fbae4bfbe9bf1d26"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a65f24cee1d28554b8fd123fe0748059c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sam_8c.html#a65f24cee1d28554b8fd123fe0748059c">CopyStopConsFrame</a> ()</td></tr>
+<tr class="separator:a65f24cee1d28554b8fd123fe0748059c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac4617f9e0f8a788dc7d64fc0fba7881d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sam_8c.html#ac4617f9e0f8a788dc7d64fc0fba7881d">Insert</a> (unsigned char position, unsigned char mem60, unsigned char mem59, unsigned char mem58)</td></tr>
 <tr class="separator:ac4617f9e0f8a788dc7d64fc0fba7881d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab540cb20330545fbf1928b59cb1c7331"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sam_8c.html#ab540cb20330545fbf1928b59cb1c7331">InsertBreath</a> ()</td></tr>
 <tr class="separator:ab540cb20330545fbf1928b59cb1c7331"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5a40ab164da5925154103cf53c16e893"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sam_8c.html#a5a40ab164da5925154103cf53c16e893">PrepareOutput</a> ()</td></tr>
-<tr class="separator:a5a40ab164da5925154103cf53c16e893"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a633822db3e4155e15fe370dfdab4007b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sam_8c.html#a633822db3e4155e15fe370dfdab4007b">SetMouthThroat</a> (unsigned char <a class="el" href="sam_8c.html#afe0b64f5c0c1b2bbf605ebcbf81a2e05">mouth</a>, unsigned char <a class="el" href="sam_8c.html#a698ea7c4243ad2d222a074e6539e6155">throat</a>)</td></tr>
+<tr class="memitem:a406d7b8ae89d745877a73eddb4275f73"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sam_8c.html#a406d7b8ae89d745877a73eddb4275f73">RenderAll</a> ()</td></tr>
+<tr class="memdesc:a406d7b8ae89d745877a73eddb4275f73"><td class="mdescLeft">&#160;</td><td class="mdescRight">RenderAll input: <a class="el" href="group___key_vars.html#gaefba46a7f791a20ea5c00a1a98a2f2b9">phonemeindex</a> <a class="el" href="group___key_vars.html#gaf99fef2cff9b9d6e3b53acc1f62908d7">phonemeLength</a> <a class="el" href="group___key_vars.html#ga13d58956bd4c1133b50ffbf50b70452f">stress</a> output: <a class="el" href="group___key_vars.html#gaff2566f4c366b48d73479bef43ee4d2e">buffer</a>.  <br /></td></tr>
+<tr class="separator:a406d7b8ae89d745877a73eddb4275f73"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a633822db3e4155e15fe370dfdab4007b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sam_8c.html#a633822db3e4155e15fe370dfdab4007b">SetMouthThroat</a> (unsigned char <a class="el" href="group___key_vars.html#gafe0b64f5c0c1b2bbf605ebcbf81a2e05">mouth</a>, unsigned char <a class="el" href="group___key_vars.html#ga698ea7c4243ad2d222a074e6539e6155">throat</a>)</td></tr>
 <tr class="separator:a633822db3e4155e15fe370dfdab4007b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a90f204721557062fcea70e04567f75df"><td class="memItemLeft" align="right" valign="top">signed int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sam_8c.html#a90f204721557062fcea70e04567f75df">full_match</a> (unsigned char sign1, unsigned char sign2)</td></tr>
 <tr class="separator:a90f204721557062fcea70e04567f75df"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -157,40 +161,48 @@ Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
 Variables</h2></td></tr>
-<tr class="memitem:a2c4938a0dc3cb22fb7a35768b4c126fa"><td class="memItemLeft" align="right" valign="top">unsigned char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sam_8c.html#a2c4938a0dc3cb22fb7a35768b4c126fa">input</a> [256]</td></tr>
-<tr class="separator:a2c4938a0dc3cb22fb7a35768b4c126fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa4eab0a1ec935e4bbdf16be9c7963f3c"><td class="memItemLeft" align="right" valign="top">unsigned char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sam_8c.html#aa4eab0a1ec935e4bbdf16be9c7963f3c">speed</a> = 72</td></tr>
-<tr class="separator:aa4eab0a1ec935e4bbdf16be9c7963f3c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a933ad30108cc864162a862eafa1662b0"><td class="memItemLeft" align="right" valign="top">unsigned char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sam_8c.html#a933ad30108cc864162a862eafa1662b0">pitch</a> = 64</td></tr>
-<tr class="separator:a933ad30108cc864162a862eafa1662b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afe0b64f5c0c1b2bbf605ebcbf81a2e05"><td class="memItemLeft" align="right" valign="top">unsigned char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sam_8c.html#afe0b64f5c0c1b2bbf605ebcbf81a2e05">mouth</a> = 128</td></tr>
-<tr class="separator:afe0b64f5c0c1b2bbf605ebcbf81a2e05"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a698ea7c4243ad2d222a074e6539e6155"><td class="memItemLeft" align="right" valign="top">unsigned char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sam_8c.html#a698ea7c4243ad2d222a074e6539e6155">throat</a> = 128</td></tr>
-<tr class="separator:a698ea7c4243ad2d222a074e6539e6155"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acdbe4d3063236db7fcfaab30921c2451"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sam_8c.html#acdbe4d3063236db7fcfaab30921c2451">singmode</a> = 0</td></tr>
-<tr class="separator:acdbe4d3063236db7fcfaab30921c2451"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac3e1795766a80ec63b157951b4b9a7d4"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sam_8c.html#ac3e1795766a80ec63b157951b4b9a7d4">debug</a></td></tr>
-<tr class="separator:ac3e1795766a80ec63b157951b4b9a7d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a13d58956bd4c1133b50ffbf50b70452f"><td class="memItemLeft" align="right" valign="top">unsigned char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sam_8c.html#a13d58956bd4c1133b50ffbf50b70452f">stress</a> [256]</td></tr>
-<tr class="separator:a13d58956bd4c1133b50ffbf50b70452f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af99fef2cff9b9d6e3b53acc1f62908d7"><td class="memItemLeft" align="right" valign="top">unsigned char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sam_8c.html#af99fef2cff9b9d6e3b53acc1f62908d7">phonemeLength</a> [256]</td></tr>
-<tr class="separator:af99fef2cff9b9d6e3b53acc1f62908d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aefba46a7f791a20ea5c00a1a98a2f2b9"><td class="memItemLeft" align="right" valign="top">unsigned char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sam_8c.html#aefba46a7f791a20ea5c00a1a98a2f2b9">phonemeindex</a> [256]</td></tr>
-<tr class="separator:aefba46a7f791a20ea5c00a1a98a2f2b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2899c6ad40214f3f388c249c852177ad"><td class="memItemLeft" align="right" valign="top">unsigned char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sam_8c.html#a2899c6ad40214f3f388c249c852177ad">phonemeIndexOutput</a> [60]</td></tr>
-<tr class="separator:a2899c6ad40214f3f388c249c852177ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7f2ebe293ccf356517045097a0628c7b"><td class="memItemLeft" align="right" valign="top">unsigned char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sam_8c.html#a7f2ebe293ccf356517045097a0628c7b">stressOutput</a> [60]</td></tr>
-<tr class="separator:a7f2ebe293ccf356517045097a0628c7b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aff951dd622798f0d94ea7c88023045b6"><td class="memItemLeft" align="right" valign="top">unsigned char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sam_8c.html#aff951dd622798f0d94ea7c88023045b6">phonemeLengthOutput</a> [60]</td></tr>
-<tr class="separator:aff951dd622798f0d94ea7c88023045b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a28a03f9f2c1351e52c42339bcd507eac"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sam_8c.html#a28a03f9f2c1351e52c42339bcd507eac">bufferpos</a> =0</td></tr>
-<tr class="separator:a28a03f9f2c1351e52c42339bcd507eac"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aff2566f4c366b48d73479bef43ee4d2e"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sam_8c.html#aff2566f4c366b48d73479bef43ee4d2e">buffer</a> = NULL</td></tr>
-<tr class="separator:aff2566f4c366b48d73479bef43ee4d2e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3803a206acdcb2a5274c9adae24b032f"><td class="memItemLeft" align="right" valign="top">unsigned short&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sam_8c.html#a3803a206acdcb2a5274c9adae24b032f">flags</a> []</td></tr>
+<tr class="separator:a3803a206acdcb2a5274c9adae24b032f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga2c4938a0dc3cb22fb7a35768b4c126fa"><td class="memItemLeft" align="right" valign="top">unsigned char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___key_vars.html#ga2c4938a0dc3cb22fb7a35768b4c126fa">input</a> [256]</td></tr>
+<tr class="memdesc:ga2c4938a0dc3cb22fb7a35768b4c126fa"><td class="mdescLeft">&#160;</td><td class="mdescRight">input user input string length is 256 fixed. input english text and then translated to phoneme names string. if you want to change the length. <a class="el" href="group___key_vars.html#ga2c4938a0dc3cb22fb7a35768b4c126fa">input</a> and inputtemp is to be changed.  <br /></td></tr>
+<tr class="separator:ga2c4938a0dc3cb22fb7a35768b4c126fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaa4eab0a1ec935e4bbdf16be9c7963f3c"><td class="memItemLeft" align="right" valign="top">unsigned char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___key_vars.html#gaa4eab0a1ec935e4bbdf16be9c7963f3c">speed</a> = 72</td></tr>
+<tr class="memdesc:gaa4eab0a1ec935e4bbdf16be9c7963f3c"><td class="mdescLeft">&#160;</td><td class="mdescRight">standard sam sound speed  <br /></td></tr>
+<tr class="separator:gaa4eab0a1ec935e4bbdf16be9c7963f3c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga933ad30108cc864162a862eafa1662b0"><td class="memItemLeft" align="right" valign="top">unsigned char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___key_vars.html#ga933ad30108cc864162a862eafa1662b0">pitch</a> = 64</td></tr>
+<tr class="memdesc:ga933ad30108cc864162a862eafa1662b0"><td class="mdescLeft">&#160;</td><td class="mdescRight">pitch  <br /></td></tr>
+<tr class="separator:ga933ad30108cc864162a862eafa1662b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gafe0b64f5c0c1b2bbf605ebcbf81a2e05"><td class="memItemLeft" align="right" valign="top">unsigned char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___key_vars.html#gafe0b64f5c0c1b2bbf605ebcbf81a2e05">mouth</a> = 128</td></tr>
+<tr class="memdesc:gafe0b64f5c0c1b2bbf605ebcbf81a2e05"><td class="mdescLeft">&#160;</td><td class="mdescRight">mouth  <br /></td></tr>
+<tr class="separator:gafe0b64f5c0c1b2bbf605ebcbf81a2e05"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga698ea7c4243ad2d222a074e6539e6155"><td class="memItemLeft" align="right" valign="top">unsigned char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___key_vars.html#ga698ea7c4243ad2d222a074e6539e6155">throat</a> = 128</td></tr>
+<tr class="memdesc:ga698ea7c4243ad2d222a074e6539e6155"><td class="mdescLeft">&#160;</td><td class="mdescRight">throat  <br /></td></tr>
+<tr class="separator:ga698ea7c4243ad2d222a074e6539e6155"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gacdbe4d3063236db7fcfaab30921c2451"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___key_vars.html#gacdbe4d3063236db7fcfaab30921c2451">singmode</a> = 0</td></tr>
+<tr class="memdesc:gacdbe4d3063236db7fcfaab30921c2451"><td class="mdescLeft">&#160;</td><td class="mdescRight">singmode  <br /></td></tr>
+<tr class="separator:gacdbe4d3063236db7fcfaab30921c2451"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga13d58956bd4c1133b50ffbf50b70452f"><td class="memItemLeft" align="right" valign="top">unsigned char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___key_vars.html#ga13d58956bd4c1133b50ffbf50b70452f">stress</a> [256]</td></tr>
+<tr class="memdesc:ga13d58956bd4c1133b50ffbf50b70452f"><td class="mdescLeft">&#160;</td><td class="mdescRight">stress <a class="el" href="group___key_vars.html#gaefba46a7f791a20ea5c00a1a98a2f2b9">phonemeindex</a> <a class="el" href="group___key_vars.html#gaf99fef2cff9b9d6e3b53acc1f62908d7">phonemeLength</a> <a class="el" href="group___key_vars.html#ga13d58956bd4c1133b50ffbf50b70452f">stress</a> is the phoneme list  <br /></td></tr>
+<tr class="separator:ga13d58956bd4c1133b50ffbf50b70452f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaf99fef2cff9b9d6e3b53acc1f62908d7"><td class="memItemLeft" align="right" valign="top">unsigned char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___key_vars.html#gaf99fef2cff9b9d6e3b53acc1f62908d7">phonemeLength</a> [256]</td></tr>
+<tr class="memdesc:gaf99fef2cff9b9d6e3b53acc1f62908d7"><td class="mdescLeft">&#160;</td><td class="mdescRight">phonemeLength <a class="el" href="group___key_vars.html#gaefba46a7f791a20ea5c00a1a98a2f2b9">phonemeindex</a> <a class="el" href="group___key_vars.html#gaf99fef2cff9b9d6e3b53acc1f62908d7">phonemeLength</a> <a class="el" href="group___key_vars.html#ga13d58956bd4c1133b50ffbf50b70452f">stress</a> is the phoneme list  <br /></td></tr>
+<tr class="separator:gaf99fef2cff9b9d6e3b53acc1f62908d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaefba46a7f791a20ea5c00a1a98a2f2b9"><td class="memItemLeft" align="right" valign="top">unsigned char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___key_vars.html#gaefba46a7f791a20ea5c00a1a98a2f2b9">phonemeindex</a> [256]</td></tr>
+<tr class="memdesc:gaefba46a7f791a20ea5c00a1a98a2f2b9"><td class="mdescLeft">&#160;</td><td class="mdescRight">phonemeindex <a class="el" href="group___key_vars.html#gaefba46a7f791a20ea5c00a1a98a2f2b9">phonemeindex</a> <a class="el" href="group___key_vars.html#gaf99fef2cff9b9d6e3b53acc1f62908d7">phonemeLength</a> <a class="el" href="group___key_vars.html#ga13d58956bd4c1133b50ffbf50b70452f">stress</a> is the phoneme list  <br /></td></tr>
+<tr class="separator:gaefba46a7f791a20ea5c00a1a98a2f2b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga2899c6ad40214f3f388c249c852177ad"><td class="memItemLeft" align="right" valign="top">unsigned char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___key_vars.html#ga2899c6ad40214f3f388c249c852177ad">phonemeIndexOutput</a> [60]</td></tr>
+<tr class="memdesc:ga2899c6ad40214f3f388c249c852177ad"><td class="mdescLeft">&#160;</td><td class="mdescRight">phonemeIndexOutput copy of <a class="el" href="group___key_vars.html#gaefba46a7f791a20ea5c00a1a98a2f2b9">phonemeindex</a>  <br /></td></tr>
+<tr class="separator:ga2899c6ad40214f3f388c249c852177ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga7f2ebe293ccf356517045097a0628c7b"><td class="memItemLeft" align="right" valign="top">unsigned char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___key_vars.html#ga7f2ebe293ccf356517045097a0628c7b">stressOutput</a> [60]</td></tr>
+<tr class="memdesc:ga7f2ebe293ccf356517045097a0628c7b"><td class="mdescLeft">&#160;</td><td class="mdescRight">stressOutput copy of <a class="el" href="group___key_vars.html#ga13d58956bd4c1133b50ffbf50b70452f">stress</a>  <br /></td></tr>
+<tr class="separator:ga7f2ebe293ccf356517045097a0628c7b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaff951dd622798f0d94ea7c88023045b6"><td class="memItemLeft" align="right" valign="top">unsigned char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___key_vars.html#gaff951dd622798f0d94ea7c88023045b6">phonemeLengthOutput</a> [60]</td></tr>
+<tr class="memdesc:gaff951dd622798f0d94ea7c88023045b6"><td class="mdescLeft">&#160;</td><td class="mdescRight">phonemeLengthOutput copy of <a class="el" href="group___key_vars.html#gaf99fef2cff9b9d6e3b53acc1f62908d7">phonemeLength</a>  <br /></td></tr>
+<tr class="separator:gaff951dd622798f0d94ea7c88023045b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Enumeration Type Documentation</h2>
-<a id="a06fc87d81c62e9abb8790b6e5713c55b" name="a06fc87d81c62e9abb8790b6e5713c55b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a06fc87d81c62e9abb8790b6e5713c55b">&#9670;&#160;</a></span>anonymous enum</h2>
+<a id="adf764cbdea00d65edcd07bb9953ad2b7" name="adf764cbdea00d65edcd07bb9953ad2b7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adf764cbdea00d65edcd07bb9953ad2b7">&#9670;&#160;</a></span>anonymous enum</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -201,11 +213,11 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a06fc87d81c62e9abb8790b6e5713c55ba17923ea95eb5afc7dcfe83f6ff1c3841" name="a06fc87d81c62e9abb8790b6e5713c55ba17923ea95eb5afc7dcfe83f6ff1c3841"></a>pR&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a06fc87d81c62e9abb8790b6e5713c55ba2f8fb8807dd874d5dd3531a088ef42fd" name="a06fc87d81c62e9abb8790b6e5713c55ba2f8fb8807dd874d5dd3531a088ef42fd"></a>pD&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a06fc87d81c62e9abb8790b6e5713c55baf6f1cba941709181304deee22eb9b3a8" name="a06fc87d81c62e9abb8790b6e5713c55baf6f1cba941709181304deee22eb9b3a8"></a>pT&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a06fc87d81c62e9abb8790b6e5713c55ba9524d094809858b9e4f778763913568a" name="a06fc87d81c62e9abb8790b6e5713c55ba9524d094809858b9e4f778763913568a"></a>BREAK&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a06fc87d81c62e9abb8790b6e5713c55badc6f24fd6915a3f2786a1b7045406924" name="a06fc87d81c62e9abb8790b6e5713c55badc6f24fd6915a3f2786a1b7045406924"></a>END&#160;</td><td class="fielddoc"></td></tr>
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="adf764cbdea00d65edcd07bb9953ad2b7a17923ea95eb5afc7dcfe83f6ff1c3841" name="adf764cbdea00d65edcd07bb9953ad2b7a17923ea95eb5afc7dcfe83f6ff1c3841"></a>pR&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="adf764cbdea00d65edcd07bb9953ad2b7a2f8fb8807dd874d5dd3531a088ef42fd" name="adf764cbdea00d65edcd07bb9953ad2b7a2f8fb8807dd874d5dd3531a088ef42fd"></a>pD&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="adf764cbdea00d65edcd07bb9953ad2b7af6f1cba941709181304deee22eb9b3a8" name="adf764cbdea00d65edcd07bb9953ad2b7af6f1cba941709181304deee22eb9b3a8"></a>pT&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="adf764cbdea00d65edcd07bb9953ad2b7a9524d094809858b9e4f778763913568a" name="adf764cbdea00d65edcd07bb9953ad2b7a9524d094809858b9e4f778763913568a"></a>BREAK&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="adf764cbdea00d65edcd07bb9953ad2b7adc6f24fd6915a3f2786a1b7045406924" name="adf764cbdea00d65edcd07bb9953ad2b7adc6f24fd6915a3f2786a1b7045406924"></a>END&#160;</td><td class="fielddoc"></td></tr>
 </table>
 
 <p class="definition">Definition at line <a class="el" href="sam_8c_source.html#l00010">10</a> of file <a class="el" href="sam_8c_source.html">sam.c</a>.</p>
@@ -213,14 +225,14 @@ Variables</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Function Documentation</h2>
-<a id="a66feb45b487e100e5c243157031ada8d" name="a66feb45b487e100e5c243157031ada8d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a66feb45b487e100e5c243157031ada8d">&#9670;&#160;</a></span>AdjustLengths()</h2>
+<a id="a88e9c2b1d0c8b494fbae4bfbe9bf1d26" name="a88e9c2b1d0c8b494fbae4bfbe9bf1d26"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a88e9c2b1d0c8b494fbae4bfbe9bf1d26">&#9670;&#160;</a></span>AdjustLengthsAccordRuleb()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void AdjustLengths </td>
+          <td class="memname">void AdjustLengthsAccordRuleb </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -228,25 +240,25 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="sam_8c_source.html#l00603">603</a> of file <a class="el" href="sam_8c_source.html">sam.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="sam_8c_source.html#l00793">793</a> of file <a class="el" href="sam_8c_source.html">sam.c</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="sam_8c_a66feb45b487e100e5c243157031ada8d_cgraph.png" border="0" usemap="#asam_8c_a66feb45b487e100e5c243157031ada8d_cgraph" alt=""/></div>
-<map name="asam_8c_a66feb45b487e100e5c243157031ada8d_cgraph" id="asam_8c_a66feb45b487e100e5c243157031ada8d_cgraph">
-<area shape="rect" title=" " alt="" coords="5,22,111,48"/>
-<area shape="rect" href="sam_8c.html#a7a97ad85143e91c1f78c5dc18a4a735d" title=" " alt="" coords="289,22,340,48"/>
-<area shape="rect" href="sam_8c.html#a62160443cd72b2e79a9ccc6f231142c8" title=" " alt="" coords="159,22,241,48"/>
-<area shape="rect" href="sam_8c.html#ace0917bced98190b417dc318d2bda8ec" title=" " alt="" coords="163,72,237,97"/>
+<div class="center"><img src="sam_8c_a88e9c2b1d0c8b494fbae4bfbe9bf1d26_cgraph.png" border="0" usemap="#asam_8c_a88e9c2b1d0c8b494fbae4bfbe9bf1d26_cgraph" alt=""/></div>
+<map name="asam_8c_a88e9c2b1d0c8b494fbae4bfbe9bf1d26_cgraph" id="asam_8c_a88e9c2b1d0c8b494fbae4bfbe9bf1d26_cgraph">
+<area shape="rect" title=" " alt="" coords="5,22,185,47"/>
+<area shape="rect" href="sam_8c.html#a7a97ad85143e91c1f78c5dc18a4a735d" title=" " alt="" coords="364,22,415,47"/>
+<area shape="rect" href="sam_8c.html#a62160443cd72b2e79a9ccc6f231142c8" title=" " alt="" coords="233,22,316,47"/>
+<area shape="rect" href="sam_8c.html#ace0917bced98190b417dc318d2bda8ec" title=" " alt="" coords="237,71,312,97"/>
 </map>
 </div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="sam_8c_a66feb45b487e100e5c243157031ada8d_icgraph.png" border="0" usemap="#asam_8c_a66feb45b487e100e5c243157031ada8d_icgraph" alt=""/></div>
-<map name="asam_8c_a66feb45b487e100e5c243157031ada8d_icgraph" id="asam_8c_a66feb45b487e100e5c243157031ada8d_icgraph">
-<area shape="rect" title=" " alt="" coords="231,5,336,31"/>
-<area shape="rect" href="sam_8c.html#a52acfd4d941fc7138ce9f63ce5503439" title=" " alt="" coords="104,5,183,31"/>
+<div class="center"><img src="sam_8c_a88e9c2b1d0c8b494fbae4bfbe9bf1d26_icgraph.png" border="0" usemap="#asam_8c_a88e9c2b1d0c8b494fbae4bfbe9bf1d26_icgraph" alt=""/></div>
+<map name="asam_8c_a88e9c2b1d0c8b494fbae4bfbe9bf1d26_icgraph" id="asam_8c_a88e9c2b1d0c8b494fbae4bfbe9bf1d26_icgraph">
+<area shape="rect" title=" " alt="" coords="231,5,411,31"/>
+<area shape="rect" href="sam_8c.html#a52acfd4d941fc7138ce9f63ce5503439" title="SAMMain." alt="" coords="104,5,183,31"/>
 <area shape="rect" href="main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title=" " alt="" coords="5,5,56,31"/>
 </map>
 </div>
@@ -285,7 +297,7 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="sam_8c_source.html#l00475">475</a> of file <a class="el" href="sam_8c_source.html">sam.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="sam_8c_source.html#l00665">665</a> of file <a class="el" href="sam_8c_source.html">sam.c</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -300,9 +312,9 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="sam_8c_a10cc5e5260c322bd3c24dc32010cd95d_icgraph.png" border="0" usemap="#asam_8c_a10cc5e5260c322bd3c24dc32010cd95d_icgraph" alt=""/></div>
 <map name="asam_8c_a10cc5e5260c322bd3c24dc32010cd95d_icgraph" id="asam_8c_a10cc5e5260c322bd3c24dc32010cd95d_icgraph">
-<area shape="rect" title=" " alt="" coords="345,5,409,31"/>
-<area shape="rect" href="sam_8c.html#a79331678e0d84f4fb03649c6e0db86ec" title=" " alt="" coords="231,5,297,31"/>
-<area shape="rect" href="sam_8c.html#a52acfd4d941fc7138ce9f63ce5503439" title=" " alt="" coords="104,5,183,31"/>
+<area shape="rect" title=" " alt="" coords="495,5,559,31"/>
+<area shape="rect" href="sam_8c.html#a843f16261e7b7f00c183a9894bbc80c5" title=" " alt="" coords="231,5,447,31"/>
+<area shape="rect" href="sam_8c.html#a52acfd4d941fc7138ce9f63ce5503439" title="SAMMain." alt="" coords="104,5,183,31"/>
 <area shape="rect" href="main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title=" " alt="" coords="5,5,56,31"/>
 </map>
 </div>
@@ -341,7 +353,7 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="sam_8c_source.html#l00390">390</a> of file <a class="el" href="sam_8c_source.html">sam.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="sam_8c_source.html#l00580">580</a> of file <a class="el" href="sam_8c_source.html">sam.c</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -356,23 +368,23 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="sam_8c_aac27ab090818ac9c5619d2870b34050a_icgraph.png" border="0" usemap="#asam_8c_aac27ab090818ac9c5619d2870b34050a_icgraph" alt=""/></div>
 <map name="asam_8c_aac27ab090818ac9c5619d2870b34050a_icgraph" id="asam_8c_aac27ab090818ac9c5619d2870b34050a_icgraph">
-<area shape="rect" title=" " alt="" coords="345,5,440,31"/>
-<area shape="rect" href="sam_8c.html#a79331678e0d84f4fb03649c6e0db86ec" title=" " alt="" coords="231,5,297,31"/>
-<area shape="rect" href="sam_8c.html#a52acfd4d941fc7138ce9f63ce5503439" title=" " alt="" coords="104,5,183,31"/>
+<area shape="rect" title=" " alt="" coords="495,5,589,31"/>
+<area shape="rect" href="sam_8c.html#a843f16261e7b7f00c183a9894bbc80c5" title=" " alt="" coords="231,5,447,31"/>
+<area shape="rect" href="sam_8c.html#a52acfd4d941fc7138ce9f63ce5503439" title="SAMMain." alt="" coords="104,5,183,31"/>
 <area shape="rect" href="main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title=" " alt="" coords="5,5,56,31"/>
 </map>
 </div>
 
 </div>
 </div>
-<a id="ada9689724234d529fb4d91ce038a7505" name="ada9689724234d529fb4d91ce038a7505"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ada9689724234d529fb4d91ce038a7505">&#9670;&#160;</a></span>Code41240()</h2>
+<a id="a65f24cee1d28554b8fd123fe0748059c" name="a65f24cee1d28554b8fd123fe0748059c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a65f24cee1d28554b8fd123fe0748059c">&#9670;&#160;</a></span>CopyStopConsFrame()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void Code41240 </td>
+          <td class="memname">void CopyStopConsFrame </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -380,23 +392,23 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="sam_8c_source.html#l00364">364</a> of file <a class="el" href="sam_8c_source.html">sam.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="sam_8c_source.html#l00551">551</a> of file <a class="el" href="sam_8c_source.html">sam.c</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="sam_8c_ada9689724234d529fb4d91ce038a7505_cgraph.png" border="0" usemap="#asam_8c_ada9689724234d529fb4d91ce038a7505_cgraph" alt=""/></div>
-<map name="asam_8c_ada9689724234d529fb4d91ce038a7505_cgraph" id="asam_8c_ada9689724234d529fb4d91ce038a7505_cgraph">
-<area shape="rect" title=" " alt="" coords="5,5,93,31"/>
-<area shape="rect" href="sam_8c.html#ac4617f9e0f8a788dc7d64fc0fba7881d" title=" " alt="" coords="141,5,196,31"/>
+<div class="center"><img src="sam_8c_a65f24cee1d28554b8fd123fe0748059c_cgraph.png" border="0" usemap="#asam_8c_a65f24cee1d28554b8fd123fe0748059c_cgraph" alt=""/></div>
+<map name="asam_8c_a65f24cee1d28554b8fd123fe0748059c_cgraph" id="asam_8c_a65f24cee1d28554b8fd123fe0748059c_cgraph">
+<area shape="rect" title=" " alt="" coords="5,5,153,31"/>
+<area shape="rect" href="sam_8c.html#ac4617f9e0f8a788dc7d64fc0fba7881d" title=" " alt="" coords="201,5,256,31"/>
 </map>
 </div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="sam_8c_ada9689724234d529fb4d91ce038a7505_icgraph.png" border="0" usemap="#asam_8c_ada9689724234d529fb4d91ce038a7505_icgraph" alt=""/></div>
-<map name="asam_8c_ada9689724234d529fb4d91ce038a7505_icgraph" id="asam_8c_ada9689724234d529fb4d91ce038a7505_icgraph">
-<area shape="rect" title=" " alt="" coords="231,5,319,31"/>
-<area shape="rect" href="sam_8c.html#a52acfd4d941fc7138ce9f63ce5503439" title=" " alt="" coords="104,5,183,31"/>
+<div class="center"><img src="sam_8c_a65f24cee1d28554b8fd123fe0748059c_icgraph.png" border="0" usemap="#asam_8c_a65f24cee1d28554b8fd123fe0748059c_icgraph" alt=""/></div>
+<map name="asam_8c_a65f24cee1d28554b8fd123fe0748059c_icgraph" id="asam_8c_a65f24cee1d28554b8fd123fe0748059c_icgraph">
+<area shape="rect" title=" " alt="" coords="231,5,379,31"/>
+<area shape="rect" href="sam_8c.html#a52acfd4d941fc7138ce9f63ce5503439" title="SAMMain." alt="" coords="104,5,183,31"/>
 <area shape="rect" href="main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title=" " alt="" coords="5,5,56,31"/>
 </map>
 </div>
@@ -418,14 +430,14 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="sam_8c_source.html#l00195">195</a> of file <a class="el" href="sam_8c_source.html">sam.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="sam_8c_source.html#l00383">383</a> of file <a class="el" href="sam_8c_source.html">sam.c</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="sam_8c_a523213a9eb0d88a5a6ed14508043ea66_icgraph.png" border="0" usemap="#asam_8c_a523213a9eb0d88a5a6ed14508043ea66_icgraph" alt=""/></div>
 <map name="asam_8c_a523213a9eb0d88a5a6ed14508043ea66_icgraph" id="asam_8c_a523213a9eb0d88a5a6ed14508043ea66_icgraph">
 <area shape="rect" title=" " alt="" coords="231,5,321,31"/>
-<area shape="rect" href="sam_8c.html#a52acfd4d941fc7138ce9f63ce5503439" title=" " alt="" coords="104,5,183,31"/>
+<area shape="rect" href="sam_8c.html#a52acfd4d941fc7138ce9f63ce5503439" title="SAMMain." alt="" coords="104,5,183,31"/>
 <area shape="rect" href="main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title=" " alt="" coords="5,5,56,31"/>
 </map>
 </div>
@@ -448,23 +460,23 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="sam_8c_source.html#l00397">397</a> of file <a class="el" href="sam_8c_source.html">sam.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="sam_8c_source.html#l00587">587</a> of file <a class="el" href="sam_8c_source.html">sam.c</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="sam_8c_a7a97ad85143e91c1f78c5dc18a4a735d_icgraph.png" border="0" usemap="#asam_8c_a7a97ad85143e91c1f78c5dc18a4a735d_icgraph" alt=""/></div>
 <map name="asam_8c_a7a97ad85143e91c1f78c5dc18a4a735d_icgraph" id="asam_8c_a7a97ad85143e91c1f78c5dc18a4a735d_icgraph">
-<area shape="rect" title=" " alt="" coords="665,208,716,233"/>
-<area shape="rect" href="sam_8c.html#a66feb45b487e100e5c243157031ada8d" title=" " alt="" coords="345,56,451,81"/>
-<area shape="rect" href="sam_8c.html#a10cc5e5260c322bd3c24dc32010cd95d" title=" " alt="" coords="366,208,430,233"/>
-<area shape="rect" href="sam_8c.html#a79331678e0d84f4fb03649c6e0db86ec" title=" " alt="" coords="231,233,297,259"/>
-<area shape="rect" href="sam_8c.html#ace0917bced98190b417dc318d2bda8ec" title=" " alt="" coords="521,5,595,31"/>
-<area shape="rect" href="sam_8c.html#a3feb3c4e31740584ce4f19e13d0a4a5f" title=" " alt="" coords="499,411,617,436"/>
-<area shape="rect" href="sam_8c.html#a98e784b3ef57a741b0813bbad3ce9e3e" title=" " alt="" coords="349,360,447,385"/>
-<area shape="rect" href="sam_8c.html#ab4f993ba77eaee7c38cd6aff59e03f18" title=" " alt="" coords="526,259,590,284"/>
-<area shape="rect" href="sam_8c.html#a0e88828a385faa59dba539ebc4c0aefa" title=" " alt="" coords="369,107,427,132"/>
-<area shape="rect" href="sam_8c.html#a0570ce742ef34c08e486ed3c88c63663" title=" " alt="" coords="531,309,585,335"/>
-<area shape="rect" href="sam_8c.html#a52acfd4d941fc7138ce9f63ce5503439" title=" " alt="" coords="104,208,183,233"/>
+<area shape="rect" title=" " alt="" coords="889,208,940,233"/>
+<area shape="rect" href="sam_8c.html#a88e9c2b1d0c8b494fbae4bfbe9bf1d26" title=" " alt="" coords="495,56,675,81"/>
+<area shape="rect" href="sam_8c.html#a10cc5e5260c322bd3c24dc32010cd95d" title=" " alt="" coords="553,208,617,233"/>
+<area shape="rect" href="sam_8c.html#a843f16261e7b7f00c183a9894bbc80c5" title=" " alt="" coords="231,233,447,259"/>
+<area shape="rect" href="sam_8c.html#ace0917bced98190b417dc318d2bda8ec" title=" " alt="" coords="745,5,819,31"/>
+<area shape="rect" href="sam_8c.html#a3feb3c4e31740584ce4f19e13d0a4a5f" title=" " alt="" coords="723,411,841,436"/>
+<area shape="rect" href="sam_8c.html#a98e784b3ef57a741b0813bbad3ce9e3e" title=" " alt="" coords="535,360,634,385"/>
+<area shape="rect" href="sam_8c.html#ab4f993ba77eaee7c38cd6aff59e03f18" title=" " alt="" coords="750,259,814,284"/>
+<area shape="rect" href="sam_8c.html#a0e88828a385faa59dba539ebc4c0aefa" title=" " alt="" coords="556,107,613,132"/>
+<area shape="rect" href="sam_8c.html#a0570ce742ef34c08e486ed3c88c63663" title=" " alt="" coords="755,309,809,335"/>
+<area shape="rect" href="sam_8c.html#a52acfd4d941fc7138ce9f63ce5503439" title="SAMMain." alt="" coords="104,208,183,233"/>
 <area shape="rect" href="main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title=" " alt="" coords="5,208,56,233"/>
 </map>
 </div>
@@ -487,15 +499,15 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="sam_8c_source.html#l00409">409</a> of file <a class="el" href="sam_8c_source.html">sam.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="sam_8c_source.html#l00599">599</a> of file <a class="el" href="sam_8c_source.html">sam.c</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="sam_8c_a62160443cd72b2e79a9ccc6f231142c8_icgraph.png" border="0" usemap="#asam_8c_a62160443cd72b2e79a9ccc6f231142c8_icgraph" alt=""/></div>
 <map name="asam_8c_a62160443cd72b2e79a9ccc6f231142c8_icgraph" id="asam_8c_a62160443cd72b2e79a9ccc6f231142c8_icgraph">
-<area shape="rect" title=" " alt="" coords="384,5,467,31"/>
-<area shape="rect" href="sam_8c.html#a66feb45b487e100e5c243157031ada8d" title=" " alt="" coords="231,5,336,31"/>
-<area shape="rect" href="sam_8c.html#a52acfd4d941fc7138ce9f63ce5503439" title=" " alt="" coords="104,5,183,31"/>
+<area shape="rect" title=" " alt="" coords="459,5,541,31"/>
+<area shape="rect" href="sam_8c.html#a88e9c2b1d0c8b494fbae4bfbe9bf1d26" title=" " alt="" coords="231,5,411,31"/>
+<area shape="rect" href="sam_8c.html#a52acfd4d941fc7138ce9f63ce5503439" title="SAMMain." alt="" coords="104,5,183,31"/>
 <area shape="rect" href="main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title=" " alt="" coords="5,5,56,31"/>
 </map>
 </div>
@@ -528,7 +540,7 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="sam_8c_source.html#l00401">401</a> of file <a class="el" href="sam_8c_source.html">sam.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="sam_8c_source.html#l00591">591</a> of file <a class="el" href="sam_8c_source.html">sam.c</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -543,9 +555,9 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="sam_8c_ace0917bced98190b417dc318d2bda8ec_icgraph.png" border="0" usemap="#asam_8c_ace0917bced98190b417dc318d2bda8ec_icgraph" alt=""/></div>
 <map name="asam_8c_ace0917bced98190b417dc318d2bda8ec_icgraph" id="asam_8c_ace0917bced98190b417dc318d2bda8ec_icgraph">
-<area shape="rect" title=" " alt="" coords="384,5,459,31"/>
-<area shape="rect" href="sam_8c.html#a66feb45b487e100e5c243157031ada8d" title=" " alt="" coords="231,5,336,31"/>
-<area shape="rect" href="sam_8c.html#a52acfd4d941fc7138ce9f63ce5503439" title=" " alt="" coords="104,5,183,31"/>
+<area shape="rect" title=" " alt="" coords="459,5,533,31"/>
+<area shape="rect" href="sam_8c.html#a88e9c2b1d0c8b494fbae4bfbe9bf1d26" title=" " alt="" coords="231,5,411,31"/>
+<area shape="rect" href="sam_8c.html#a52acfd4d941fc7138ce9f63ce5503439" title="SAMMain." alt="" coords="104,5,183,31"/>
 <area shape="rect" href="main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title=" " alt="" coords="5,5,56,31"/>
 </map>
 </div>
@@ -567,7 +579,7 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="sam_8c_source.html#l00055">55</a> of file <a class="el" href="sam_8c_source.html">sam.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="sam_8c_source.html#l00227">227</a> of file <a class="el" href="sam_8c_source.html">sam.c</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -606,15 +618,15 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="sam_8c_source.html#l00236">236</a> of file <a class="el" href="sam_8c_source.html">sam.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="sam_8c_source.html#l00424">424</a> of file <a class="el" href="sam_8c_source.html">sam.c</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="sam_8c_a90f204721557062fcea70e04567f75df_icgraph.png" border="0" usemap="#asam_8c_a90f204721557062fcea70e04567f75df_icgraph" alt=""/></div>
 <map name="asam_8c_a90f204721557062fcea70e04567f75df_icgraph" id="asam_8c_a90f204721557062fcea70e04567f75df_icgraph">
-<area shape="rect" title=" " alt="" coords="345,5,428,31"/>
-<area shape="rect" href="sam_8c.html#a3da129bf2b6e02331a1d9208b40da578" title=" " alt="" coords="231,5,297,31"/>
-<area shape="rect" href="sam_8c.html#a52acfd4d941fc7138ce9f63ce5503439" title=" " alt="" coords="104,5,183,31"/>
+<area shape="rect" title=" " alt="" coords="453,5,536,31"/>
+<area shape="rect" href="sam_8c.html#a40456d7745440a6b07ea24682afc06e0" title=" " alt="" coords="231,5,405,31"/>
+<area shape="rect" href="sam_8c.html#a52acfd4d941fc7138ce9f63ce5503439" title="SAMMain." alt="" coords="104,5,183,31"/>
 <area shape="rect" href="main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title=" " alt="" coords="5,5,56,31"/>
 </map>
 </div>
@@ -636,7 +648,7 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="sam_8c_source.html#l00056">56</a> of file <a class="el" href="sam_8c_source.html">sam.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="sam_8c_source.html#l00228">228</a> of file <a class="el" href="sam_8c_source.html">sam.c</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -664,7 +676,7 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="sam_8c_source.html#l00057">57</a> of file <a class="el" href="sam_8c_source.html">sam.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="sam_8c_source.html#l00229">229</a> of file <a class="el" href="sam_8c_source.html">sam.c</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -692,7 +704,7 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="sam_8c_source.html#l00072">72</a> of file <a class="el" href="sam_8c_source.html">sam.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="sam_8c_source.html#l00244">244</a> of file <a class="el" href="sam_8c_source.html">sam.c</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -709,7 +721,7 @@ Here is the caller graph for this function:</div>
 <div class="center"><img src="sam_8c_a1e3b6d38df0786ccf7f938d60e386aae_icgraph.png" border="0" usemap="#asam_8c_a1e3b6d38df0786ccf7f938d60e386aae_icgraph" alt=""/></div>
 <map name="asam_8c_a1e3b6d38df0786ccf7f938d60e386aae_icgraph" id="asam_8c_a1e3b6d38df0786ccf7f938d60e386aae_icgraph">
 <area shape="rect" title=" " alt="" coords="231,5,271,31"/>
-<area shape="rect" href="sam_8c.html#a52acfd4d941fc7138ce9f63ce5503439" title=" " alt="" coords="104,5,183,31"/>
+<area shape="rect" href="sam_8c.html#a52acfd4d941fc7138ce9f63ce5503439" title="SAMMain." alt="" coords="104,5,183,31"/>
 <area shape="rect" href="main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title=" " alt="" coords="5,5,56,31"/>
 </map>
 </div>
@@ -754,21 +766,21 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="sam_8c_source.html#l00220">220</a> of file <a class="el" href="sam_8c_source.html">sam.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="sam_8c_source.html#l00408">408</a> of file <a class="el" href="sam_8c_source.html">sam.c</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="sam_8c_ac4617f9e0f8a788dc7d64fc0fba7881d_icgraph.png" border="0" usemap="#asam_8c_ac4617f9e0f8a788dc7d64fc0fba7881d_icgraph" alt=""/></div>
 <map name="asam_8c_ac4617f9e0f8a788dc7d64fc0fba7881d_icgraph" id="asam_8c_ac4617f9e0f8a788dc7d64fc0fba7881d_icgraph">
-<area shape="rect" title=" " alt="" coords="631,157,685,183"/>
-<area shape="rect" href="sam_8c.html#aac27ab090818ac9c5619d2870b34050a" title=" " alt="" coords="374,107,469,132"/>
-<area shape="rect" href="sam_8c.html#a79331678e0d84f4fb03649c6e0db86ec" title=" " alt="" coords="244,183,311,208"/>
-<area shape="rect" href="sam_8c.html#ada9689724234d529fb4d91ce038a7505" title=" " alt="" coords="377,5,465,31"/>
-<area shape="rect" href="sam_8c.html#ab540cb20330545fbf1928b59cb1c7331" title=" " alt="" coords="231,56,324,81"/>
-<area shape="rect" href="sam_8c.html#ab4f993ba77eaee7c38cd6aff59e03f18" title=" " alt="" coords="519,309,583,335"/>
-<area shape="rect" href="sam_8c.html#a98e784b3ef57a741b0813bbad3ce9e3e" title=" " alt="" coords="372,259,471,284"/>
-<area shape="rect" href="sam_8c.html#a0570ce742ef34c08e486ed3c88c63663" title=" " alt="" coords="524,208,577,233"/>
-<area shape="rect" href="sam_8c.html#a52acfd4d941fc7138ce9f63ce5503439" title=" " alt="" coords="104,56,183,81"/>
+<area shape="rect" title=" " alt="" coords="803,157,857,183"/>
+<area shape="rect" href="sam_8c.html#aac27ab090818ac9c5619d2870b34050a" title=" " alt="" coords="521,107,616,132"/>
+<area shape="rect" href="sam_8c.html#a843f16261e7b7f00c183a9894bbc80c5" title=" " alt="" coords="231,183,447,208"/>
+<area shape="rect" href="sam_8c.html#a65f24cee1d28554b8fd123fe0748059c" title=" " alt="" coords="495,5,643,31"/>
+<area shape="rect" href="sam_8c.html#ab540cb20330545fbf1928b59cb1c7331" title=" " alt="" coords="292,56,385,81"/>
+<area shape="rect" href="sam_8c.html#ab4f993ba77eaee7c38cd6aff59e03f18" title=" " alt="" coords="691,309,755,335"/>
+<area shape="rect" href="sam_8c.html#a98e784b3ef57a741b0813bbad3ce9e3e" title=" " alt="" coords="519,259,618,284"/>
+<area shape="rect" href="sam_8c.html#a0570ce742ef34c08e486ed3c88c63663" title=" " alt="" coords="696,208,749,233"/>
+<area shape="rect" href="sam_8c.html#a52acfd4d941fc7138ce9f63ce5503439" title="SAMMain." alt="" coords="104,56,183,81"/>
 <area shape="rect" href="main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title=" " alt="" coords="5,56,56,81"/>
 </map>
 </div>
@@ -790,7 +802,7 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="sam_8c_source.html#l00149">149</a> of file <a class="el" href="sam_8c_source.html">sam.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="sam_8c_source.html#l00337">337</a> of file <a class="el" href="sam_8c_source.html">sam.c</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -806,21 +818,21 @@ Here is the caller graph for this function:</div>
 <div class="center"><img src="sam_8c_ab540cb20330545fbf1928b59cb1c7331_icgraph.png" border="0" usemap="#asam_8c_ab540cb20330545fbf1928b59cb1c7331_icgraph" alt=""/></div>
 <map name="asam_8c_ab540cb20330545fbf1928b59cb1c7331_icgraph" id="asam_8c_ab540cb20330545fbf1928b59cb1c7331_icgraph">
 <area shape="rect" title=" " alt="" coords="231,5,324,31"/>
-<area shape="rect" href="sam_8c.html#a52acfd4d941fc7138ce9f63ce5503439" title=" " alt="" coords="104,5,183,31"/>
+<area shape="rect" href="sam_8c.html#a52acfd4d941fc7138ce9f63ce5503439" title="SAMMain." alt="" coords="104,5,183,31"/>
 <area shape="rect" href="main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title=" " alt="" coords="5,5,56,31"/>
 </map>
 </div>
 
 </div>
 </div>
-<a id="a3da129bf2b6e02331a1d9208b40da578" name="a3da129bf2b6e02331a1d9208b40da578"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3da129bf2b6e02331a1d9208b40da578">&#9670;&#160;</a></span>Parser1()</h2>
+<a id="a843f16261e7b7f00c183a9894bbc80c5" name="a843f16261e7b7f00c183a9894bbc80c5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a843f16261e7b7f00c183a9894bbc80c5">&#9670;&#160;</a></span>PhonemeidxChangeAccordRuleA()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int Parser1 </td>
+          <td class="memname">void PhonemeidxChangeAccordRuleA </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -828,39 +840,112 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="sam_8c_source.html#l00315">315</a> of file <a class="el" href="sam_8c_source.html">sam.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="sam_8c_source.html#l00689">689</a> of file <a class="el" href="sam_8c_source.html">sam.c</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="sam_8c_a3da129bf2b6e02331a1d9208b40da578_cgraph.png" border="0" usemap="#asam_8c_a3da129bf2b6e02331a1d9208b40da578_cgraph" alt=""/></div>
-<map name="asam_8c_a3da129bf2b6e02331a1d9208b40da578_cgraph" id="asam_8c_a3da129bf2b6e02331a1d9208b40da578_cgraph">
-<area shape="rect" title=" " alt="" coords="5,55,72,80"/>
-<area shape="rect" href="sam_8c.html#a90f204721557062fcea70e04567f75df" title=" " alt="" coords="123,5,205,31"/>
-<area shape="rect" href="reciter_8c.html#abc83ada75d16a5fd3d2a3fa965cff671" title=" " alt="" coords="135,55,193,80"/>
-<area shape="rect" href="sam_8c.html#a7e34ce590259426891fe98c8fc0cf77e" title=" " alt="" coords="120,104,208,129"/>
+<div class="center"><img src="sam_8c_a843f16261e7b7f00c183a9894bbc80c5_cgraph.png" border="0" usemap="#asam_8c_a843f16261e7b7f00c183a9894bbc80c5_cgraph" alt=""/></div>
+<map name="asam_8c_a843f16261e7b7f00c183a9894bbc80c5_cgraph" id="asam_8c_a843f16261e7b7f00c183a9894bbc80c5_cgraph">
+<area shape="rect" title=" " alt="" coords="5,253,221,278"/>
+<area shape="rect" href="sam_8c.html#a10cc5e5260c322bd3c24dc32010cd95d" title=" " alt="" coords="443,51,507,77"/>
+<area shape="rect" href="sam_8c.html#a7a97ad85143e91c1f78c5dc18a4a735d" title=" " alt="" coords="585,153,635,178"/>
+<area shape="rect" href="sam_8c.html#aac27ab090818ac9c5619d2870b34050a" title=" " alt="" coords="271,405,366,430"/>
+<area shape="rect" href="sam_8c.html#ac4617f9e0f8a788dc7d64fc0fba7881d" title=" " alt="" coords="583,354,637,379"/>
+<area shape="rect" href="sam_8c.html#a3feb3c4e31740584ce4f19e13d0a4a5f" title=" " alt="" coords="416,153,535,178"/>
+<area shape="rect" href="sam_8c.html#ab4f993ba77eaee7c38cd6aff59e03f18" title=" " alt="" coords="443,354,507,379"/>
+<area shape="rect" href="sam_8c.html#a98e784b3ef57a741b0813bbad3ce9e3e" title=" " alt="" coords="269,253,368,278"/>
+<area shape="rect" href="sam_8c.html#a0570ce742ef34c08e486ed3c88c63663" title=" " alt="" coords="449,305,502,330"/>
+<area shape="rect" href="sam_8c.html#a0e88828a385faa59dba539ebc4c0aefa" title=" " alt="" coords="290,114,347,139"/>
 </map>
 </div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="sam_8c_a3da129bf2b6e02331a1d9208b40da578_icgraph.png" border="0" usemap="#asam_8c_a3da129bf2b6e02331a1d9208b40da578_icgraph" alt=""/></div>
-<map name="asam_8c_a3da129bf2b6e02331a1d9208b40da578_icgraph" id="asam_8c_a3da129bf2b6e02331a1d9208b40da578_icgraph">
-<area shape="rect" title=" " alt="" coords="231,5,297,31"/>
-<area shape="rect" href="sam_8c.html#a52acfd4d941fc7138ce9f63ce5503439" title=" " alt="" coords="104,5,183,31"/>
+<div class="center"><img src="sam_8c_a843f16261e7b7f00c183a9894bbc80c5_icgraph.png" border="0" usemap="#asam_8c_a843f16261e7b7f00c183a9894bbc80c5_icgraph" alt=""/></div>
+<map name="asam_8c_a843f16261e7b7f00c183a9894bbc80c5_icgraph" id="asam_8c_a843f16261e7b7f00c183a9894bbc80c5_icgraph">
+<area shape="rect" title=" " alt="" coords="231,5,447,31"/>
+<area shape="rect" href="sam_8c.html#a52acfd4d941fc7138ce9f63ce5503439" title="SAMMain." alt="" coords="104,5,183,31"/>
 <area shape="rect" href="main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title=" " alt="" coords="5,5,56,31"/>
 </map>
 </div>
 
 </div>
 </div>
-<a id="a79331678e0d84f4fb03649c6e0db86ec" name="a79331678e0d84f4fb03649c6e0db86ec"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a79331678e0d84f4fb03649c6e0db86ec">&#9670;&#160;</a></span>Parser2()</h2>
+<a id="a40456d7745440a6b07ea24682afc06e0" name="a40456d7745440a6b07ea24682afc06e0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a40456d7745440a6b07ea24682afc06e0">&#9670;&#160;</a></span>PhonemeStr2PhonemeIdx()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void Parser2 </td>
+          <td class="memname">int PhonemeStr2PhonemeIdx </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>The input[] buffer contains a string of phonemes and stress markers along the lines of: </p><pre class="fragment">DHAX KAET IHZ AH5GLIY. &lt;0x9B&gt;
+</pre><p> The byte 0x9B marks the end of the buffer. Some phonemes are 2 bytes long, such as "DH" and "AX". Others are 1 byte long, such as "T" and "Z". There are also stress markers, such as "5" and ".".</p>
+<p>The first character of the phonemes are stored in the table <a class="el" href="group__phoneme_tables.html#gaaa67665fecde71cc85ff9f1246a9e129">phonemeNameTable1</a>. The second character of the phonemes are stored in the table phonemeNameTable2. The stress characters are arranged in low to high stress order in stressInputTable[].</p>
+<p>The following process is used to parse the input[] buffer:</p>
+<p>Repeat until the &lt;0x9B&gt; character is reached: </p><pre class="fragment">   First, a search is made for a 2 character match for phonemes that do not
+   end with the '*' (wildcard) character. On a match, the index of the phoneme
+   is added to phonemeIndex[] and the buffer position is advanced 2 bytes.
+
+   If this fails, a search is made for a 1 character match against all
+   phoneme names ending with a '*' (wildcard). If this succeeds, the
+   phoneme is added to phonemeIndex[] and the buffer position is advanced
+   1 byte.
+
+   If this fails, search for a 1 character match in the stressInputTable[].
+   If this succeeds, the stress value is placed in the last stress[] table
+   at the same index of the last added phoneme, and the buffer position is
+   advanced by 1 byte.
+
+   If this fails, return a 0.
+</pre><p> On success:</p>
+<ol type="1">
+<li>phonemeIndex will contain the index of all the phonemes.</li>
+<li>The last index in phonemeIndex will be 255.</li>
+<li><a class="el" href="group___key_vars.html#ga13d58956bd4c1133b50ffbf50b70452f">stress</a> will contain the stress value for each phoneme <a class="el" href="group___key_vars.html#ga2c4938a0dc3cb22fb7a35768b4c126fa">input</a> holds the string of phonemes, each two bytes wide <a class="el" href="group__phoneme_tables.html#gaaa67665fecde71cc85ff9f1246a9e129">phonemeNameTable1</a> holds the first character of each phoneme phonemeNameTable2 holds te second character of each phoneme phonemeIndex holds the indexes of the phonemes after parsing input[]</li>
+</ol>
+<p>The parser scans through the <a class="el" href="group___key_vars.html#ga2c4938a0dc3cb22fb7a35768b4c126fa">input</a>, finding the names of the phonemes by searching phonemeNameTable1[] and phonemeNameTable2[]. On a match, it copies the index of the phoneme into the phonemeIndexTable[].</p>
+<p>The character &lt;0x9B&gt; marks the end of text in input[]. When it is reached, the index 255 is placed at the end of the phonemeIndexTable[], and the function returns with a 1 indicating success. </p>
+
+<p class="definition">Definition at line <a class="el" href="sam_8c_source.html#l00502">502</a> of file <a class="el" href="sam_8c_source.html">sam.c</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="sam_8c_a40456d7745440a6b07ea24682afc06e0_cgraph.png" border="0" usemap="#asam_8c_a40456d7745440a6b07ea24682afc06e0_cgraph" alt=""/></div>
+<map name="asam_8c_a40456d7745440a6b07ea24682afc06e0_cgraph" id="asam_8c_a40456d7745440a6b07ea24682afc06e0_cgraph">
+<area shape="rect" title=" " alt="" coords="5,55,180,80"/>
+<area shape="rect" href="sam_8c.html#a90f204721557062fcea70e04567f75df" title=" " alt="" coords="231,5,313,31"/>
+<area shape="rect" href="reciter_8c.html#abc83ada75d16a5fd3d2a3fa965cff671" title=" " alt="" coords="243,55,301,80"/>
+<area shape="rect" href="sam_8c.html#a7e34ce590259426891fe98c8fc0cf77e" title=" " alt="" coords="228,104,316,129"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="sam_8c_a40456d7745440a6b07ea24682afc06e0_icgraph.png" border="0" usemap="#asam_8c_a40456d7745440a6b07ea24682afc06e0_icgraph" alt=""/></div>
+<map name="asam_8c_a40456d7745440a6b07ea24682afc06e0_icgraph" id="asam_8c_a40456d7745440a6b07ea24682afc06e0_icgraph">
+<area shape="rect" title=" " alt="" coords="231,5,405,31"/>
+<area shape="rect" href="sam_8c.html#a52acfd4d941fc7138ce9f63ce5503439" title="SAMMain." alt="" coords="104,5,183,31"/>
+<area shape="rect" href="main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title=" " alt="" coords="5,5,56,31"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a406d7b8ae89d745877a73eddb4275f73" name="a406d7b8ae89d745877a73eddb4275f73"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a406d7b8ae89d745877a73eddb4275f73">&#9670;&#160;</a></span>RenderAll()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RenderAll </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -868,79 +953,40 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="sam_8c_source.html#l00499">499</a> of file <a class="el" href="sam_8c_source.html">sam.c</a>.</p>
+<p>RenderAll input: <a class="el" href="group___key_vars.html#gaefba46a7f791a20ea5c00a1a98a2f2b9">phonemeindex</a> <a class="el" href="group___key_vars.html#gaf99fef2cff9b9d6e3b53acc1f62908d7">phonemeLength</a> <a class="el" href="group___key_vars.html#ga13d58956bd4c1133b50ffbf50b70452f">stress</a> output: <a class="el" href="group___key_vars.html#gaff2566f4c366b48d73479bef43ee4d2e">buffer</a>. </p>
+<ol type="1">
+<li>copy from <a class="el" href="group___key_vars.html#gaefba46a7f791a20ea5c00a1a98a2f2b9">phonemeindex</a> <a class="el" href="group___key_vars.html#gaf99fef2cff9b9d6e3b53acc1f62908d7">phonemeLength</a> <a class="el" href="group___key_vars.html#ga13d58956bd4c1133b50ffbf50b70452f">stress</a> to <a class="el" href="group___key_vars.html#ga2899c6ad40214f3f388c249c852177ad">phonemeIndexOutput</a> <a class="el" href="group___key_vars.html#gaff951dd622798f0d94ea7c88023045b6">phonemeLengthOutput</a> <a class="el" href="group___key_vars.html#ga7f2ebe293ccf356517045097a0628c7b">stressOutput</a> and call RenderOnce </li>
+</ol>
+
+<p class="definition">Definition at line <a class="el" href="sam_8c_source.html#l00307">307</a> of file <a class="el" href="sam_8c_source.html">sam.c</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="sam_8c_a79331678e0d84f4fb03649c6e0db86ec_cgraph.png" border="0" usemap="#asam_8c_a79331678e0d84f4fb03649c6e0db86ec_cgraph" alt=""/></div>
-<map name="asam_8c_a79331678e0d84f4fb03649c6e0db86ec_cgraph" id="asam_8c_a79331678e0d84f4fb03649c6e0db86ec_cgraph">
-<area shape="rect" title=" " alt="" coords="5,258,72,283"/>
-<area shape="rect" href="sam_8c.html#a10cc5e5260c322bd3c24dc32010cd95d" title=" " alt="" coords="294,56,358,82"/>
-<area shape="rect" href="sam_8c.html#a7a97ad85143e91c1f78c5dc18a4a735d" title=" " alt="" coords="435,158,486,183"/>
-<area shape="rect" href="sam_8c.html#aac27ab090818ac9c5619d2870b34050a" title=" " alt="" coords="122,410,217,435"/>
-<area shape="rect" href="sam_8c.html#ac4617f9e0f8a788dc7d64fc0fba7881d" title=" " alt="" coords="433,359,488,384"/>
-<area shape="rect" href="sam_8c.html#a3feb3c4e31740584ce4f19e13d0a4a5f" title=" " alt="" coords="267,158,385,183"/>
-<area shape="rect" href="sam_8c.html#ab4f993ba77eaee7c38cd6aff59e03f18" title=" " alt="" coords="294,359,358,384"/>
-<area shape="rect" href="sam_8c.html#a98e784b3ef57a741b0813bbad3ce9e3e" title=" " alt="" coords="120,258,219,283"/>
-<area shape="rect" href="sam_8c.html#a0570ce742ef34c08e486ed3c88c63663" title=" " alt="" coords="299,310,353,335"/>
-<area shape="rect" href="sam_8c.html#a0e88828a385faa59dba539ebc4c0aefa" title=" " alt="" coords="141,119,198,144"/>
+<div class="center"><img src="sam_8c_a406d7b8ae89d745877a73eddb4275f73_cgraph.png" border="0" usemap="#asam_8c_a406d7b8ae89d745877a73eddb4275f73_cgraph" alt=""/></div>
+<map name="asam_8c_a406d7b8ae89d745877a73eddb4275f73_cgraph" id="asam_8c_a406d7b8ae89d745877a73eddb4275f73_cgraph">
+<area shape="rect" title="RenderAll input: phonemeindex phonemeLength stress output: buffer." alt="" coords="5,132,84,157"/>
+<area shape="rect" href="render_8c.html#a0ad29c7b8fdc78dfc8cc2d4426ce1cda" title="RenderOnce RENDER THE PHONEMES IN THE LIST." alt="" coords="132,132,227,157"/>
+<area shape="rect" href="render_8c.html#aefae4d0fa92767fb0905b9064b56970e" title=" " alt="" coords="287,8,425,33"/>
+<area shape="rect" href="render_8c.html#a4b3f4443e5565e3f36ff7465a75671c7" title=" " alt="" coords="303,57,409,83"/>
+<area shape="rect" href="createtransitions_8c.html#ab65ab322866c7557b4d5d600489cb592" title=" " alt="" coords="275,107,437,132"/>
+<area shape="rect" href="debug_8c.html#ae8e10d3873fda9a8201c500d1468f93c" title=" " alt="" coords="312,156,400,181"/>
+<area shape="rect" href="processframes_8c.html#a89957262bf5ea80ed885db231b482717" title=" " alt="" coords="279,205,433,231"/>
+<area shape="rect" href="render_8c.html#ae98f347160e1fa60fe000742c6267164" title=" " alt="" coords="292,255,420,280"/>
+<area shape="rect" href="render_8c.html#a7eba6a007375164be8ba997d67915861" title=" " alt="" coords="521,5,620,31"/>
+<area shape="rect" href="createtransitions_8c.html#af579265fb657a9a7f7d2008616ebfd78" title=" " alt="" coords="704,107,787,132"/>
+<area shape="rect" href="createtransitions_8c.html#a299a1c776846c2d869d5beef21a9ac66" title=" " alt="" coords="835,156,888,181"/>
+<area shape="rect" href="createtransitions_8c.html#aa6291494b0f658f408d911f2b646970d" title=" " alt="" coords="512,107,629,132"/>
+<area shape="rect" href="createtransitions_8c.html#a03f443a24225ecfe1c443deb2ba93a39" title=" " alt="" coords="835,107,887,132"/>
+<area shape="rect" href="render_8c.html#a1363164e597bb2c72587d0ee3ce50632" title=" " alt="" coords="485,208,656,233"/>
 </map>
 </div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="sam_8c_a79331678e0d84f4fb03649c6e0db86ec_icgraph.png" border="0" usemap="#asam_8c_a79331678e0d84f4fb03649c6e0db86ec_icgraph" alt=""/></div>
-<map name="asam_8c_a79331678e0d84f4fb03649c6e0db86ec_icgraph" id="asam_8c_a79331678e0d84f4fb03649c6e0db86ec_icgraph">
-<area shape="rect" title=" " alt="" coords="231,5,297,31"/>
-<area shape="rect" href="sam_8c.html#a52acfd4d941fc7138ce9f63ce5503439" title=" " alt="" coords="104,5,183,31"/>
-<area shape="rect" href="main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title=" " alt="" coords="5,5,56,31"/>
-</map>
-</div>
-
-</div>
-</div>
-<a id="a5a40ab164da5925154103cf53c16e893" name="a5a40ab164da5925154103cf53c16e893"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5a40ab164da5925154103cf53c16e893">&#9670;&#160;</a></span>PrepareOutput()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void PrepareOutput </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="sam_8c_source.html#l00120">120</a> of file <a class="el" href="sam_8c_source.html">sam.c</a>.</p>
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="sam_8c_a5a40ab164da5925154103cf53c16e893_cgraph.png" border="0" usemap="#asam_8c_a5a40ab164da5925154103cf53c16e893_cgraph" alt=""/></div>
-<map name="asam_8c_a5a40ab164da5925154103cf53c16e893_cgraph" id="asam_8c_a5a40ab164da5925154103cf53c16e893_cgraph">
-<area shape="rect" title=" " alt="" coords="5,104,112,129"/>
-<area shape="rect" href="render_8c.html#a436830dff9fbce05c931c5a6d8d5366d" title=" " alt="" coords="160,104,224,129"/>
-<area shape="rect" href="render_8c.html#aefae4d0fa92767fb0905b9064b56970e" title=" " alt="" coords="272,5,411,31"/>
-<area shape="rect" href="createtransitions_8c.html#a3df88492eba845e5ac6aedf0e725143f" title=" " alt="" coords="279,55,404,80"/>
-<area shape="rect" href="debug_8c.html#ae8e10d3873fda9a8201c500d1468f93c" title=" " alt="" coords="297,104,385,129"/>
-<area shape="rect" href="processframes_8c.html#af2eb630ca8580671ee4e05b371c67581" title=" " alt="" coords="284,153,399,179"/>
-<area shape="rect" href="render_8c.html#ae98f347160e1fa60fe000742c6267164" title=" " alt="" coords="277,203,405,228"/>
-<area shape="rect" href="createtransitions_8c.html#af579265fb657a9a7f7d2008616ebfd78" title=" " alt="" coords="624,53,707,79"/>
-<area shape="rect" href="createtransitions_8c.html#a299a1c776846c2d869d5beef21a9ac66" title=" " alt="" coords="755,103,808,128"/>
-<area shape="rect" href="createtransitions_8c.html#aa6291494b0f658f408d911f2b646970d" title=" " alt="" coords="459,53,576,79"/>
-<area shape="rect" href="createtransitions_8c.html#a03f443a24225ecfe1c443deb2ba93a39" title=" " alt="" coords="755,53,807,79"/>
-<area shape="rect" href="render_8c.html#ad232ec2ab0875d5113e81e0ca486c6f0" title=" " alt="" coords="463,155,571,180"/>
-</map>
-</div>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="sam_8c_a5a40ab164da5925154103cf53c16e893_icgraph.png" border="0" usemap="#asam_8c_a5a40ab164da5925154103cf53c16e893_icgraph" alt=""/></div>
-<map name="asam_8c_a5a40ab164da5925154103cf53c16e893_icgraph" id="asam_8c_a5a40ab164da5925154103cf53c16e893_icgraph">
-<area shape="rect" title=" " alt="" coords="231,5,337,31"/>
-<area shape="rect" href="sam_8c.html#a52acfd4d941fc7138ce9f63ce5503439" title=" " alt="" coords="104,5,183,31"/>
+<div class="center"><img src="sam_8c_a406d7b8ae89d745877a73eddb4275f73_icgraph.png" border="0" usemap="#asam_8c_a406d7b8ae89d745877a73eddb4275f73_icgraph" alt=""/></div>
+<map name="asam_8c_a406d7b8ae89d745877a73eddb4275f73_icgraph" id="asam_8c_a406d7b8ae89d745877a73eddb4275f73_icgraph">
+<area shape="rect" title="RenderAll input: phonemeindex phonemeLength stress output: buffer." alt="" coords="231,5,309,31"/>
+<area shape="rect" href="sam_8c.html#a52acfd4d941fc7138ce9f63ce5503439" title="SAMMain." alt="" coords="104,5,183,31"/>
 <area shape="rect" href="main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title=" " alt="" coords="5,5,56,31"/>
 </map>
 </div>
@@ -963,7 +1009,7 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="sam_8c_source.html#l00442">442</a> of file <a class="el" href="sam_8c_source.html">sam.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="sam_8c_source.html#l00632">632</a> of file <a class="el" href="sam_8c_source.html">sam.c</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -978,10 +1024,10 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="sam_8c_a3feb3c4e31740584ce4f19e13d0a4a5f_icgraph.png" border="0" usemap="#asam_8c_a3feb3c4e31740584ce4f19e13d0a4a5f_icgraph" alt=""/></div>
 <map name="asam_8c_a3feb3c4e31740584ce4f19e13d0a4a5f_icgraph" id="asam_8c_a3feb3c4e31740584ce4f19e13d0a4a5f_icgraph">
-<area shape="rect" title=" " alt="" coords="492,5,611,31"/>
-<area shape="rect" href="sam_8c.html#a79331678e0d84f4fb03649c6e0db86ec" title=" " alt="" coords="231,5,297,31"/>
-<area shape="rect" href="sam_8c.html#a98e784b3ef57a741b0813bbad3ce9e3e" title=" " alt="" coords="345,31,444,56"/>
-<area shape="rect" href="sam_8c.html#a52acfd4d941fc7138ce9f63ce5503439" title=" " alt="" coords="104,5,183,31"/>
+<area shape="rect" title=" " alt="" coords="641,5,760,31"/>
+<area shape="rect" href="sam_8c.html#a843f16261e7b7f00c183a9894bbc80c5" title=" " alt="" coords="231,5,447,31"/>
+<area shape="rect" href="sam_8c.html#a98e784b3ef57a741b0813bbad3ce9e3e" title=" " alt="" coords="495,31,593,56"/>
+<area shape="rect" href="sam_8c.html#a52acfd4d941fc7138ce9f63ce5503439" title="SAMMain." alt="" coords="104,5,183,31"/>
 <area shape="rect" href="main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title=" " alt="" coords="5,5,56,31"/>
 </map>
 </div>
@@ -1004,7 +1050,7 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="sam_8c_source.html#l00450">450</a> of file <a class="el" href="sam_8c_source.html">sam.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="sam_8c_source.html#l00640">640</a> of file <a class="el" href="sam_8c_source.html">sam.c</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -1020,10 +1066,10 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="sam_8c_ab4f993ba77eaee7c38cd6aff59e03f18_icgraph.png" border="0" usemap="#asam_8c_ab4f993ba77eaee7c38cd6aff59e03f18_icgraph" alt=""/></div>
 <map name="asam_8c_ab4f993ba77eaee7c38cd6aff59e03f18_icgraph" id="asam_8c_ab4f993ba77eaee7c38cd6aff59e03f18_icgraph">
-<area shape="rect" title=" " alt="" coords="492,5,556,31"/>
-<area shape="rect" href="sam_8c.html#a79331678e0d84f4fb03649c6e0db86ec" title=" " alt="" coords="231,5,297,31"/>
-<area shape="rect" href="sam_8c.html#a98e784b3ef57a741b0813bbad3ce9e3e" title=" " alt="" coords="345,31,444,56"/>
-<area shape="rect" href="sam_8c.html#a52acfd4d941fc7138ce9f63ce5503439" title=" " alt="" coords="104,5,183,31"/>
+<area shape="rect" title=" " alt="" coords="641,5,705,31"/>
+<area shape="rect" href="sam_8c.html#a843f16261e7b7f00c183a9894bbc80c5" title=" " alt="" coords="231,5,447,31"/>
+<area shape="rect" href="sam_8c.html#a98e784b3ef57a741b0813bbad3ce9e3e" title=" " alt="" coords="495,31,593,56"/>
+<area shape="rect" href="sam_8c.html#a52acfd4d941fc7138ce9f63ce5503439" title="SAMMain." alt="" coords="104,5,183,31"/>
 <area shape="rect" href="main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title=" " alt="" coords="5,5,56,31"/>
 </map>
 </div>
@@ -1062,7 +1108,7 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="sam_8c_source.html#l00481">481</a> of file <a class="el" href="sam_8c_source.html">sam.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="sam_8c_source.html#l00671">671</a> of file <a class="el" href="sam_8c_source.html">sam.c</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -1081,9 +1127,9 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="sam_8c_a98e784b3ef57a741b0813bbad3ce9e3e_icgraph.png" border="0" usemap="#asam_8c_a98e784b3ef57a741b0813bbad3ce9e3e_icgraph" alt=""/></div>
 <map name="asam_8c_a98e784b3ef57a741b0813bbad3ce9e3e_icgraph" id="asam_8c_a98e784b3ef57a741b0813bbad3ce9e3e_icgraph">
-<area shape="rect" title=" " alt="" coords="345,5,444,31"/>
-<area shape="rect" href="sam_8c.html#a79331678e0d84f4fb03649c6e0db86ec" title=" " alt="" coords="231,5,297,31"/>
-<area shape="rect" href="sam_8c.html#a52acfd4d941fc7138ce9f63ce5503439" title=" " alt="" coords="104,5,183,31"/>
+<area shape="rect" title=" " alt="" coords="495,5,593,31"/>
+<area shape="rect" href="sam_8c.html#a843f16261e7b7f00c183a9894bbc80c5" title=" " alt="" coords="231,5,447,31"/>
+<area shape="rect" href="sam_8c.html#a52acfd4d941fc7138ce9f63ce5503439" title="SAMMain." alt="" coords="104,5,183,31"/>
 <area shape="rect" href="main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title=" " alt="" coords="5,5,56,31"/>
 </map>
 </div>
@@ -1106,7 +1152,7 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="sam_8c_source.html#l00460">460</a> of file <a class="el" href="sam_8c_source.html">sam.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="sam_8c_source.html#l00650">650</a> of file <a class="el" href="sam_8c_source.html">sam.c</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -1121,9 +1167,9 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="sam_8c_a0e88828a385faa59dba539ebc4c0aefa_icgraph.png" border="0" usemap="#asam_8c_a0e88828a385faa59dba539ebc4c0aefa_icgraph" alt=""/></div>
 <map name="asam_8c_a0e88828a385faa59dba539ebc4c0aefa_icgraph" id="asam_8c_a0e88828a385faa59dba539ebc4c0aefa_icgraph">
-<area shape="rect" title=" " alt="" coords="345,5,403,31"/>
-<area shape="rect" href="sam_8c.html#a79331678e0d84f4fb03649c6e0db86ec" title=" " alt="" coords="231,5,297,31"/>
-<area shape="rect" href="sam_8c.html#a52acfd4d941fc7138ce9f63ce5503439" title=" " alt="" coords="104,5,183,31"/>
+<area shape="rect" title=" " alt="" coords="495,5,552,31"/>
+<area shape="rect" href="sam_8c.html#a843f16261e7b7f00c183a9894bbc80c5" title=" " alt="" coords="231,5,447,31"/>
+<area shape="rect" href="sam_8c.html#a52acfd4d941fc7138ce9f63ce5503439" title="SAMMain." alt="" coords="104,5,183,31"/>
 <area shape="rect" href="main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title=" " alt="" coords="5,5,56,31"/>
 </map>
 </div>
@@ -1146,7 +1192,7 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="sam_8c_source.html#l00455">455</a> of file <a class="el" href="sam_8c_source.html">sam.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="sam_8c_source.html#l00645">645</a> of file <a class="el" href="sam_8c_source.html">sam.c</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -1162,10 +1208,10 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="sam_8c_a0570ce742ef34c08e486ed3c88c63663_icgraph.png" border="0" usemap="#asam_8c_a0570ce742ef34c08e486ed3c88c63663_icgraph" alt=""/></div>
 <map name="asam_8c_a0570ce742ef34c08e486ed3c88c63663_icgraph" id="asam_8c_a0570ce742ef34c08e486ed3c88c63663_icgraph">
-<area shape="rect" title=" " alt="" coords="492,5,545,31"/>
-<area shape="rect" href="sam_8c.html#a79331678e0d84f4fb03649c6e0db86ec" title=" " alt="" coords="231,5,297,31"/>
-<area shape="rect" href="sam_8c.html#a98e784b3ef57a741b0813bbad3ce9e3e" title=" " alt="" coords="345,31,444,56"/>
-<area shape="rect" href="sam_8c.html#a52acfd4d941fc7138ce9f63ce5503439" title=" " alt="" coords="104,5,183,31"/>
+<area shape="rect" title=" " alt="" coords="641,5,695,31"/>
+<area shape="rect" href="sam_8c.html#a843f16261e7b7f00c183a9894bbc80c5" title=" " alt="" coords="231,5,447,31"/>
+<area shape="rect" href="sam_8c.html#a98e784b3ef57a741b0813bbad3ce9e3e" title=" " alt="" coords="495,31,593,56"/>
+<area shape="rect" href="sam_8c.html#a52acfd4d941fc7138ce9f63ce5503439" title="SAMMain." alt="" coords="104,5,183,31"/>
 <area shape="rect" href="main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title=" " alt="" coords="5,5,56,31"/>
 </map>
 </div>
@@ -1186,52 +1232,57 @@ Here is the caller graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>SAMMain. </p>
+<dl class="section return"><dt>Returns</dt><dd>main process </dd></dl>
 <p>! is this intended like this?</p>
 
-<p class="definition">Definition at line <a class="el" href="sam_8c_source.html#l00093">93</a> of file <a class="el" href="sam_8c_source.html">sam.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="sam_8c_source.html#l00269">269</a> of file <a class="el" href="sam_8c_source.html">sam.c</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="sam_8c_a52acfd4d941fc7138ce9f63ce5503439_cgraph.png" border="0" usemap="#asam_8c_a52acfd4d941fc7138ce9f63ce5503439_cgraph" alt=""/></div>
 <map name="asam_8c_a52acfd4d941fc7138ce9f63ce5503439_cgraph" id="asam_8c_a52acfd4d941fc7138ce9f63ce5503439_cgraph">
-<area shape="rect" title=" " alt="" coords="5,765,84,790"/>
-<area shape="rect" href="sam_8c.html#a66feb45b487e100e5c243157031ada8d" title=" " alt="" coords="321,61,426,86"/>
-<area shape="rect" href="sam_8c.html#ada9689724234d529fb4d91ce038a7505" title=" " alt="" coords="156,641,244,666"/>
-<area shape="rect" href="sam_8c.html#a523213a9eb0d88a5a6ed14508043ea66" title=" " alt="" coords="155,740,245,765"/>
-<area shape="rect" href="sam_8c.html#a1e3b6d38df0786ccf7f938d60e386aae" title=" " alt="" coords="180,789,220,814"/>
-<area shape="rect" href="sam_8c.html#ab540cb20330545fbf1928b59cb1c7331" title=" " alt="" coords="153,690,247,716"/>
-<area shape="rect" href="sam_8c.html#a3da129bf2b6e02331a1d9208b40da578" title=" " alt="" coords="167,838,233,864"/>
-<area shape="rect" href="sam_8c.html#a79331678e0d84f4fb03649c6e0db86ec" title=" " alt="" coords="167,364,233,389"/>
-<area shape="rect" href="sam_8c.html#a5a40ab164da5925154103cf53c16e893" title=" " alt="" coords="147,888,253,913"/>
-<area shape="rect" href="debug_8c.html#a30f2eb0e9195697234e17e2a70c8b664" title=" " alt="" coords="145,937,255,962"/>
-<area shape="rect" href="sam_8c.html#a2a142af5843b36f984876cbcea6b716a" title=" " alt="" coords="132,986,268,1012"/>
-<area shape="rect" href="sam_8c.html#a7a97ad85143e91c1f78c5dc18a4a735d" title=" " alt="" coords="699,237,749,262"/>
-<area shape="rect" href="sam_8c.html#a62160443cd72b2e79a9ccc6f231142c8" title=" " alt="" coords="507,85,589,110"/>
-<area shape="rect" href="sam_8c.html#ace0917bced98190b417dc318d2bda8ec" title=" " alt="" coords="511,36,585,61"/>
-<area shape="rect" href="sam_8c.html#ac4617f9e0f8a788dc7d64fc0fba7881d" title=" " alt="" coords="697,540,751,565"/>
-<area shape="rect" href="render_8c.html#a633822db3e4155e15fe370dfdab4007b" title=" " alt="" coords="316,742,431,768"/>
-<area shape="rect" href="render_8c.html#abadacf041ce87aa45aea06e799ec2cc8" title=" " alt="" coords="523,742,573,768"/>
-<area shape="rect" href="sam_8c.html#a90f204721557062fcea70e04567f75df" title=" " alt="" coords="332,792,415,817"/>
-<area shape="rect" href="reciter_8c.html#abc83ada75d16a5fd3d2a3fa965cff671" title=" " alt="" coords="344,841,403,866"/>
-<area shape="rect" href="sam_8c.html#a7e34ce590259426891fe98c8fc0cf77e" title=" " alt="" coords="329,890,417,916"/>
-<area shape="rect" href="sam_8c.html#a10cc5e5260c322bd3c24dc32010cd95d" title=" " alt="" coords="341,186,405,212"/>
-<area shape="rect" href="sam_8c.html#aac27ab090818ac9c5619d2870b34050a" title=" " alt="" coords="326,590,421,616"/>
-<area shape="rect" href="sam_8c.html#a3feb3c4e31740584ce4f19e13d0a4a5f" title=" " alt="" coords="489,288,607,313"/>
-<area shape="rect" href="sam_8c.html#ab4f993ba77eaee7c38cd6aff59e03f18" title=" " alt="" coords="516,489,580,514"/>
-<area shape="rect" href="sam_8c.html#a98e784b3ef57a741b0813bbad3ce9e3e" title=" " alt="" coords="324,389,423,414"/>
-<area shape="rect" href="sam_8c.html#a0570ce742ef34c08e486ed3c88c63663" title=" " alt="" coords="521,337,575,362"/>
-<area shape="rect" href="sam_8c.html#a0e88828a385faa59dba539ebc4c0aefa" title=" " alt="" coords="345,237,402,262"/>
-<area shape="rect" href="render_8c.html#a436830dff9fbce05c931c5a6d8d5366d" title=" " alt="" coords="341,940,405,965"/>
-<area shape="rect" href="render_8c.html#aefae4d0fa92767fb0905b9064b56970e" title=" " alt="" coords="479,989,617,1014"/>
-<area shape="rect" href="createtransitions_8c.html#a3df88492eba845e5ac6aedf0e725143f" title=" " alt="" coords="485,1038,611,1064"/>
-<area shape="rect" href="debug_8c.html#ae8e10d3873fda9a8201c500d1468f93c" title=" " alt="" coords="504,841,592,866"/>
-<area shape="rect" href="processframes_8c.html#af2eb630ca8580671ee4e05b371c67581" title=" " alt="" coords="491,890,605,916"/>
-<area shape="rect" href="render_8c.html#ae98f347160e1fa60fe000742c6267164" title=" " alt="" coords="484,940,612,965"/>
-<area shape="rect" href="createtransitions_8c.html#af579265fb657a9a7f7d2008616ebfd78" title=" " alt="" coords="831,1038,913,1064"/>
-<area shape="rect" href="createtransitions_8c.html#a299a1c776846c2d869d5beef21a9ac66" title=" " alt="" coords="961,1088,1015,1113"/>
-<area shape="rect" href="createtransitions_8c.html#aa6291494b0f658f408d911f2b646970d" title=" " alt="" coords="665,1038,783,1064"/>
-<area shape="rect" href="createtransitions_8c.html#a03f443a24225ecfe1c443deb2ba93a39" title=" " alt="" coords="962,1038,1014,1064"/>
-<area shape="rect" href="render_8c.html#ad232ec2ab0875d5113e81e0ca486c6f0" title=" " alt="" coords="670,890,778,916"/>
+<area shape="rect" title="SAMMain." alt="" coords="5,787,84,812"/>
+<area shape="rect" href="sam_8c.html#a88e9c2b1d0c8b494fbae4bfbe9bf1d26" title=" " alt="" coords="396,81,576,107"/>
+<area shape="rect" href="sam_8c.html#a65f24cee1d28554b8fd123fe0748059c" title=" " alt="" coords="166,663,314,688"/>
+<area shape="rect" href="sam_8c.html#a523213a9eb0d88a5a6ed14508043ea66" title=" " alt="" coords="195,761,285,787"/>
+<area shape="rect" href="sam_8c.html#a1e3b6d38df0786ccf7f938d60e386aae" title=" " alt="" coords="220,811,260,836"/>
+<area shape="rect" href="sam_8c.html#ab540cb20330545fbf1928b59cb1c7331" title=" " alt="" coords="193,712,287,737"/>
+<area shape="rect" href="sam_8c.html#a843f16261e7b7f00c183a9894bbc80c5" title=" " alt="" coords="132,385,348,411"/>
+<area shape="rect" href="sam_8c.html#a40456d7745440a6b07ea24682afc06e0" title=" " alt="" coords="153,860,327,885"/>
+<area shape="rect" href="debug_8c.html#a30f2eb0e9195697234e17e2a70c8b664" title=" " alt="" coords="185,909,295,935"/>
+<area shape="rect" href="sam_8c.html#a406d7b8ae89d745877a73eddb4275f73" title="RenderAll input: phonemeindex phonemeLength stress output: buffer." alt="" coords="201,959,279,984"/>
+<area shape="rect" href="sam_8c.html#a2a142af5843b36f984876cbcea6b716a" title=" " alt="" coords="172,1008,308,1033"/>
+<area shape="rect" href="sam_8c.html#a7a97ad85143e91c1f78c5dc18a4a735d" title=" " alt="" coords="895,259,945,284"/>
+<area shape="rect" href="sam_8c.html#a62160443cd72b2e79a9ccc6f231142c8" title=" " alt="" coords="664,5,747,31"/>
+<area shape="rect" href="sam_8c.html#ace0917bced98190b417dc318d2bda8ec" title=" " alt="" coords="668,107,743,132"/>
+<area shape="rect" href="sam_8c.html#ac4617f9e0f8a788dc7d64fc0fba7881d" title=" " alt="" coords="893,561,947,587"/>
+<area shape="rect" href="render_8c.html#a633822db3e4155e15fe370dfdab4007b" title=" " alt="" coords="429,764,543,789"/>
+<area shape="rect" href="render_8c.html#abadacf041ce87aa45aea06e799ec2cc8" title=" " alt="" coords="680,764,731,789"/>
+<area shape="rect" href="sam_8c.html#a10cc5e5260c322bd3c24dc32010cd95d" title=" " alt="" coords="454,208,518,233"/>
+<area shape="rect" href="sam_8c.html#aac27ab090818ac9c5619d2870b34050a" title=" " alt="" coords="439,612,533,637"/>
+<area shape="rect" href="sam_8c.html#a3feb3c4e31740584ce4f19e13d0a4a5f" title=" " alt="" coords="646,309,765,335"/>
+<area shape="rect" href="sam_8c.html#ab4f993ba77eaee7c38cd6aff59e03f18" title=" " alt="" coords="673,359,737,384"/>
+<area shape="rect" href="sam_8c.html#a98e784b3ef57a741b0813bbad3ce9e3e" title=" " alt="" coords="437,411,535,436"/>
+<area shape="rect" href="sam_8c.html#a0570ce742ef34c08e486ed3c88c63663" title=" " alt="" coords="679,511,732,536"/>
+<area shape="rect" href="sam_8c.html#a0e88828a385faa59dba539ebc4c0aefa" title=" " alt="" coords="457,259,515,284"/>
+<area shape="rect" href="sam_8c.html#a90f204721557062fcea70e04567f75df" title=" " alt="" coords="445,813,527,839"/>
+<area shape="rect" href="reciter_8c.html#abc83ada75d16a5fd3d2a3fa965cff671" title=" " alt="" coords="457,863,515,888"/>
+<area shape="rect" href="sam_8c.html#a7e34ce590259426891fe98c8fc0cf77e" title=" " alt="" coords="442,912,530,937"/>
+<area shape="rect" href="render_8c.html#a0ad29c7b8fdc78dfc8cc2d4426ce1cda" title="RenderOnce RENDER THE PHONEMES IN THE LIST." alt="" coords="439,961,533,987"/>
+<area shape="rect" href="render_8c.html#aefae4d0fa92767fb0905b9064b56970e" title=" " alt="" coords="636,837,775,863"/>
+<area shape="rect" href="render_8c.html#a4b3f4443e5565e3f36ff7465a75671c7" title=" " alt="" coords="653,887,758,912"/>
+<area shape="rect" href="createtransitions_8c.html#ab65ab322866c7557b4d5d600489cb592" title=" " alt="" coords="624,936,787,961"/>
+<area shape="rect" href="debug_8c.html#ae8e10d3873fda9a8201c500d1468f93c" title=" " alt="" coords="661,985,749,1011"/>
+<area shape="rect" href="processframes_8c.html#a89957262bf5ea80ed885db231b482717" title=" " alt="" coords="628,1035,783,1060"/>
+<area shape="rect" href="render_8c.html#ae98f347160e1fa60fe000742c6267164" title=" " alt="" coords="641,1084,769,1109"/>
+<area shape="rect" href="render_8c.html#a7eba6a007375164be8ba997d67915861" title=" " alt="" coords="871,835,969,860"/>
+<area shape="rect" href="createtransitions_8c.html#af579265fb657a9a7f7d2008616ebfd78" title=" " alt="" coords="1053,936,1136,961"/>
+<area shape="rect" href="createtransitions_8c.html#a299a1c776846c2d869d5beef21a9ac66" title=" " alt="" coords="1184,887,1237,912"/>
+<area shape="rect" href="createtransitions_8c.html#aa6291494b0f658f408d911f2b646970d" title=" " alt="" coords="861,987,979,1012"/>
+<area shape="rect" href="createtransitions_8c.html#a03f443a24225ecfe1c443deb2ba93a39" title=" " alt="" coords="1185,936,1237,961"/>
+<area shape="rect" href="render_8c.html#a1363164e597bb2c72587d0ee3ce50632" title=" " alt="" coords="835,1036,1005,1061"/>
 </map>
 </div>
 <div class="dynheader">
@@ -1239,7 +1290,7 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="sam_8c_a52acfd4d941fc7138ce9f63ce5503439_icgraph.png" border="0" usemap="#asam_8c_a52acfd4d941fc7138ce9f63ce5503439_icgraph" alt=""/></div>
 <map name="asam_8c_a52acfd4d941fc7138ce9f63ce5503439_icgraph" id="asam_8c_a52acfd4d941fc7138ce9f63ce5503439_icgraph">
-<area shape="rect" title=" " alt="" coords="104,5,183,31"/>
+<area shape="rect" title="SAMMain." alt="" coords="104,5,183,31"/>
 <area shape="rect" href="main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title=" " alt="" coords="5,5,56,31"/>
 </map>
 </div>
@@ -1262,7 +1313,7 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="sam_8c_source.html#l00041">41</a> of file <a class="el" href="sam_8c_source.html">sam.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="sam_8c_source.html#l00212">212</a> of file <a class="el" href="sam_8c_source.html">sam.c</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -1291,7 +1342,7 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="sam_8c_source.html#l00053">53</a> of file <a class="el" href="sam_8c_source.html">sam.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="sam_8c_source.html#l00225">225</a> of file <a class="el" href="sam_8c_source.html">sam.c</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -1330,7 +1381,7 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="render_8c_source.html#l00337">337</a> of file <a class="el" href="render_8c_source.html">render.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="render_8c_source.html#l00369">369</a> of file <a class="el" href="render_8c_source.html">render.c</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -1347,7 +1398,7 @@ Here is the caller graph for this function:</div>
 <map name="asam_8c_a633822db3e4155e15fe370dfdab4007b_icgraph" id="asam_8c_a633822db3e4155e15fe370dfdab4007b_icgraph">
 <area shape="rect" title=" " alt="" coords="319,5,433,31"/>
 <area shape="rect" href="sam_8c.html#a1e3b6d38df0786ccf7f938d60e386aae" title=" " alt="" coords="231,5,271,31"/>
-<area shape="rect" href="sam_8c.html#a52acfd4d941fc7138ce9f63ce5503439" title=" " alt="" coords="104,5,183,31"/>
+<area shape="rect" href="sam_8c.html#a52acfd4d941fc7138ce9f63ce5503439" title="SAMMain." alt="" coords="104,5,183,31"/>
 <area shape="rect" href="main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title=" " alt="" coords="5,5,56,31"/>
 </map>
 </div>
@@ -1369,14 +1420,14 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="sam_8c_source.html#l00351">351</a> of file <a class="el" href="sam_8c_source.html">sam.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="sam_8c_source.html#l00538">538</a> of file <a class="el" href="sam_8c_source.html">sam.c</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="sam_8c_a2a142af5843b36f984876cbcea6b716a_icgraph.png" border="0" usemap="#asam_8c_a2a142af5843b36f984876cbcea6b716a_icgraph" alt=""/></div>
 <map name="asam_8c_a2a142af5843b36f984876cbcea6b716a_icgraph" id="asam_8c_a2a142af5843b36f984876cbcea6b716a_icgraph">
 <area shape="rect" title=" " alt="" coords="231,5,367,31"/>
-<area shape="rect" href="sam_8c.html#a52acfd4d941fc7138ce9f63ce5503439" title=" " alt="" coords="104,5,183,31"/>
+<area shape="rect" href="sam_8c.html#a52acfd4d941fc7138ce9f63ce5503439" title="SAMMain." alt="" coords="104,5,183,31"/>
 <area shape="rect" href="main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title=" " alt="" coords="5,5,56,31"/>
 </map>
 </div>
@@ -1399,7 +1450,7 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="sam_8c_source.html#l00052">52</a> of file <a class="el" href="sam_8c_source.html">sam.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="sam_8c_source.html#l00224">224</a> of file <a class="el" href="sam_8c_source.html">sam.c</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -1428,7 +1479,7 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="sam_8c_source.html#l00051">51</a> of file <a class="el" href="sam_8c_source.html">sam.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="sam_8c_source.html#l00223">223</a> of file <a class="el" href="sam_8c_source.html">sam.c</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -1457,7 +1508,7 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="sam_8c_source.html#l00054">54</a> of file <a class="el" href="sam_8c_source.html">sam.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="sam_8c_source.html#l00226">226</a> of file <a class="el" href="sam_8c_source.html">sam.c</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -1486,15 +1537,15 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="sam_8c_source.html#l00252">252</a> of file <a class="el" href="sam_8c_source.html">sam.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="sam_8c_source.html#l00440">440</a> of file <a class="el" href="sam_8c_source.html">sam.c</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="sam_8c_a7e34ce590259426891fe98c8fc0cf77e_icgraph.png" border="0" usemap="#asam_8c_a7e34ce590259426891fe98c8fc0cf77e_icgraph" alt=""/></div>
 <map name="asam_8c_a7e34ce590259426891fe98c8fc0cf77e_icgraph" id="asam_8c_a7e34ce590259426891fe98c8fc0cf77e_icgraph">
-<area shape="rect" title=" " alt="" coords="345,5,433,31"/>
-<area shape="rect" href="sam_8c.html#a3da129bf2b6e02331a1d9208b40da578" title=" " alt="" coords="231,5,297,31"/>
-<area shape="rect" href="sam_8c.html#a52acfd4d941fc7138ce9f63ce5503439" title=" " alt="" coords="104,5,183,31"/>
+<area shape="rect" title=" " alt="" coords="453,5,541,31"/>
+<area shape="rect" href="sam_8c.html#a40456d7745440a6b07ea24682afc06e0" title=" " alt="" coords="231,5,405,31"/>
+<area shape="rect" href="sam_8c.html#a52acfd4d941fc7138ce9f63ce5503439" title="SAMMain." alt="" coords="104,5,183,31"/>
 <area shape="rect" href="main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title=" " alt="" coords="5,5,56,31"/>
 </map>
 </div>
@@ -1502,251 +1553,34 @@ Here is the caller graph for this function:</div>
 </div>
 </div>
 <h2 class="groupheader">Variable Documentation</h2>
-<a id="aff2566f4c366b48d73479bef43ee4d2e" name="aff2566f4c366b48d73479bef43ee4d2e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aff2566f4c366b48d73479bef43ee4d2e">&#9670;&#160;</a></span>buffer</h2>
+<a id="a3803a206acdcb2a5274c9adae24b032f" name="a3803a206acdcb2a5274c9adae24b032f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3803a206acdcb2a5274c9adae24b032f">&#9670;&#160;</a></span>flags</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">char* buffer = NULL</td>
+          <td class="memname">unsigned short flags[]</td>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="sam_8c_source.html#l00038">38</a> of file <a class="el" href="sam_8c_source.html">sam.c</a>.</p>
-
-</div>
-</div>
-<a id="a28a03f9f2c1351e52c42339bcd507eac" name="a28a03f9f2c1351e52c42339bcd507eac"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a28a03f9f2c1351e52c42339bcd507eac">&#9670;&#160;</a></span>bufferpos</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">int bufferpos =0</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="sam_8c_source.html#l00037">37</a> of file <a class="el" href="sam_8c_source.html">sam.c</a>.</p>
-
-</div>
-</div>
-<a id="ac3e1795766a80ec63b157951b4b9a7d4" name="ac3e1795766a80ec63b157951b4b9a7d4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac3e1795766a80ec63b157951b4b9a7d4">&#9670;&#160;</a></span>debug</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">int debug</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="main_8c_source.html#l00166">166</a> of file <a class="el" href="main_8c_source.html">main.c</a>.</p>
-
-</div>
-</div>
-<a id="a2c4938a0dc3cb22fb7a35768b4c126fa" name="a2c4938a0dc3cb22fb7a35768b4c126fa"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2c4938a0dc3cb22fb7a35768b4c126fa">&#9670;&#160;</a></span>input</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">unsigned char input[256]</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="sam_8c_source.html#l00018">18</a> of file <a class="el" href="sam_8c_source.html">sam.c</a>.</p>
-
-</div>
-</div>
-<a id="afe0b64f5c0c1b2bbf605ebcbf81a2e05" name="afe0b64f5c0c1b2bbf605ebcbf81a2e05"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afe0b64f5c0c1b2bbf605ebcbf81a2e05">&#9670;&#160;</a></span>mouth</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">unsigned char mouth = 128</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="sam_8c_source.html#l00022">22</a> of file <a class="el" href="sam_8c_source.html">sam.c</a>.</p>
-
-</div>
-</div>
-<a id="aefba46a7f791a20ea5c00a1a98a2f2b9" name="aefba46a7f791a20ea5c00a1a98a2f2b9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aefba46a7f791a20ea5c00a1a98a2f2b9">&#9670;&#160;</a></span>phonemeindex</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">unsigned char phonemeindex[256]</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="sam_8c_source.html#l00030">30</a> of file <a class="el" href="sam_8c_source.html">sam.c</a>.</p>
-
-</div>
-</div>
-<a id="a2899c6ad40214f3f388c249c852177ad" name="a2899c6ad40214f3f388c249c852177ad"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2899c6ad40214f3f388c249c852177ad">&#9670;&#160;</a></span>phonemeIndexOutput</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">unsigned char phonemeIndexOutput[60]</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="sam_8c_source.html#l00032">32</a> of file <a class="el" href="sam_8c_source.html">sam.c</a>.</p>
-
-</div>
-</div>
-<a id="af99fef2cff9b9d6e3b53acc1f62908d7" name="af99fef2cff9b9d6e3b53acc1f62908d7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af99fef2cff9b9d6e3b53acc1f62908d7">&#9670;&#160;</a></span>phonemeLength</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">unsigned char phonemeLength[256]</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="sam_8c_source.html#l00029">29</a> of file <a class="el" href="sam_8c_source.html">sam.c</a>.</p>
-
-</div>
-</div>
-<a id="aff951dd622798f0d94ea7c88023045b6" name="aff951dd622798f0d94ea7c88023045b6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aff951dd622798f0d94ea7c88023045b6">&#9670;&#160;</a></span>phonemeLengthOutput</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">unsigned char phonemeLengthOutput[60]</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="sam_8c_source.html#l00034">34</a> of file <a class="el" href="sam_8c_source.html">sam.c</a>.</p>
-
-</div>
-</div>
-<a id="a933ad30108cc864162a862eafa1662b0" name="a933ad30108cc864162a862eafa1662b0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a933ad30108cc864162a862eafa1662b0">&#9670;&#160;</a></span>pitch</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">unsigned char pitch = 64</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="sam_8c_source.html#l00021">21</a> of file <a class="el" href="sam_8c_source.html">sam.c</a>.</p>
-
-</div>
-</div>
-<a id="acdbe4d3063236db7fcfaab30921c2451" name="acdbe4d3063236db7fcfaab30921c2451"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acdbe4d3063236db7fcfaab30921c2451">&#9670;&#160;</a></span>singmode</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">int singmode = 0</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="sam_8c_source.html#l00024">24</a> of file <a class="el" href="sam_8c_source.html">sam.c</a>.</p>
-
-</div>
-</div>
-<a id="aa4eab0a1ec935e4bbdf16be9c7963f3c" name="aa4eab0a1ec935e4bbdf16be9c7963f3c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa4eab0a1ec935e4bbdf16be9c7963f3c">&#9670;&#160;</a></span>speed</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">unsigned char speed = 72</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="sam_8c_source.html#l00020">20</a> of file <a class="el" href="sam_8c_source.html">sam.c</a>.</p>
-
-</div>
-</div>
-<a id="a13d58956bd4c1133b50ffbf50b70452f" name="a13d58956bd4c1133b50ffbf50b70452f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a13d58956bd4c1133b50ffbf50b70452f">&#9670;&#160;</a></span>stress</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">unsigned char stress[256]</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="sam_8c_source.html#l00028">28</a> of file <a class="el" href="sam_8c_source.html">sam.c</a>.</p>
-
-</div>
-</div>
-<a id="a7f2ebe293ccf356517045097a0628c7b" name="a7f2ebe293ccf356517045097a0628c7b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7f2ebe293ccf356517045097a0628c7b">&#9670;&#160;</a></span>stressOutput</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">unsigned char stressOutput[60]</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="sam_8c_source.html#l00033">33</a> of file <a class="el" href="sam_8c_source.html">sam.c</a>.</p>
-
-</div>
-</div>
-<a id="a698ea7c4243ad2d222a074e6539e6155" name="a698ea7c4243ad2d222a074e6539e6155"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a698ea7c4243ad2d222a074e6539e6155">&#9670;&#160;</a></span>throat</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">unsigned char throat = 128</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="sam_8c_source.html#l00023">23</a> of file <a class="el" href="sam_8c_source.html">sam.c</a>.</p>
+<b>Initial value:</b><div class="fragment"><div class="line">={</div>
+<div class="line">    0x8000 , 0xC100 , 0xC100 , 0xC100 , 0xC100 , 0x00A4 , 0x00A4 , 0x00A4 ,</div>
+<div class="line">    0x00A4 , 0x00A4 , 0x00A4 , 0x0084 , 0x0084 , 0x00A4 , 0x00A4 , 0x0084 ,</div>
+<div class="line">    0x0084 , 0x0084 , 0x0084 , 0x0084 , 0x0084 , 0x0084 , 0x0044 , 0x1044 ,</div>
+<div class="line">    0x1044 , 0x1044 , 0x1044 , 0x084C , 0x0C4C , 0x084C , 0x0448 , 0x404C ,</div>
+<div class="line"> </div>
+<div class="line">    0x2440 , 0x2040 , 0x2040 , 0x2440 , 0x0040 , 0x0040 , 0x2444 , 0x2044 ,</div>
+<div class="line">    0x2044 , 0x2444 , 0x2048 , 0x2040 , 0x004C , 0x2044 , 0x0000 , 0x0000 ,</div>
+<div class="line">    0x00B4 , 0x00B4 , 0x00B4 , 0x0094 , 0x0094 , 0x0094 , 0x004E , 0x004E ,</div>
+<div class="line"> </div>
+<div class="line">    0x004E , 0x044E , 0x044E , 0x044E , 0x004E , 0x004E , 0x004E , 0x004E ,</div>
+<div class="line">    0x004E , 0x004E , 0x004B , 0x004B , 0x004B , 0x044B , 0x044B , 0x044B ,</div>
+<div class="line">    0x004B , 0x004B , 0x004B , 0x004B , 0x004B , 0x004B , 0x0080 , 0x00C1 ,</div>
+<div class="line">    0x00C1</div>
+<div class="line">}</div>
+</div><!-- fragment -->
+<p class="definition">Definition at line <a class="el" href="sam_8c_source.html#l00019">19</a> of file <a class="el" href="sam_8c_source.html">sam.c</a>.</p>
 
 </div>
 </div>

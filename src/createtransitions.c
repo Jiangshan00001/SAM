@@ -1,6 +1,9 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "render.h"
+#include "sam.h"
+#include "phonemeTabs.h"
+#include "RenderTabs.h"
 
 // CREATE TRANSITIONS
 //
@@ -36,23 +39,61 @@
 // pitch from the center of the current phoneme to the center of the next
 // phoneme.
 
-// From render.c
-extern unsigned char phonemeIndexOutput[60]; //tab47296
-extern unsigned char phonemeLengthOutput[60]; //tab47416
 
-// from RenderTabs.h
-extern unsigned char blendRank[];
-extern unsigned char outBlendLength[];
-extern unsigned char inBlendLength[];
-extern unsigned char pitches[];
 
-extern unsigned char frequency1[256];
-extern unsigned char frequency2[256];
-extern unsigned char frequency3[256];
+// Used to decide which phoneme's blend lengths. The candidate with the lower score is selected.
+// tab45856
+unsigned char blendRank[] =
+{
+    0 , 0x1F , 0x1F , 0x1F , 0x1F , 2 , 2 , 2 ,
+    2 , 2 , 2 , 2 , 2 , 2 , 5 , 5 ,
+    2 ,0xA , 2 , 8 , 5 , 5 ,0xB ,0xA ,
+    9 , 8 , 8 , 0xA0 , 8 , 8 , 0x17 , 0x1F ,
+    0x12 , 0x12 , 0x12 , 0x12 , 0x1E , 0x1E , 0x14 , 0x14 ,
+    0x14 , 0x14 , 0x17 , 0x17 , 0x1A , 0x1A , 0x1D , 0x1D ,
+    2 , 2 , 2 , 2 , 2 , 2 , 0x1A , 0x1D ,
+    0x1B , 0x1A , 0x1D , 0x1B , 0x1A , 0x1D , 0x1B , 0x1A ,
+    0x1D , 0x1B , 0x17 , 0x1D , 0x17 , 0x17 , 0x1D , 0x17 ,
+    0x17 , 0x1D , 0x17 , 0x17 , 0x1D , 0x17 , 0x17 , 0x17
+};
 
-extern unsigned char amplitude1[256];
-extern unsigned char amplitude2[256];
-extern unsigned char amplitude3[256];
+
+
+
+// Number of frames at the end of a phoneme devoted to interpolating to next phoneme's final value
+//tab45696
+unsigned char outBlendLength[] =
+{
+    0 , 2 , 2 , 2 , 2 , 4 , 4 , 4 ,
+    4 , 4 , 4 , 4 , 4 , 4 , 4 , 4 ,
+    4 , 4 , 3 , 2 , 4 , 4 , 2 , 2 ,
+    2 , 2 , 2 , 1 , 1 , 1 , 1 , 1 ,
+    1 , 1 , 1 , 1 , 1 , 1 , 2 , 2 ,
+    2 , 1 , 0 , 1 , 0 , 1 , 0 , 5 ,
+    5 , 5 , 5 , 5 , 4 , 4 , 2 , 0 ,
+    1 , 2 , 0 , 1 , 2 , 0 , 1 , 2 ,
+    0 , 1 , 2 , 0 , 2 , 2 , 0 , 1 ,
+    3 , 0 , 2 , 3 , 0 , 2 , 0xA0 , 0xA0
+};
+
+
+// Number of frames at beginning of a phoneme devoted to interpolating to phoneme's final value
+// tab45776
+unsigned char inBlendLength[] =
+{
+    0 , 2 , 2 , 2 , 2 , 4 , 4 , 4 ,
+    4 , 4 , 4 , 4 , 4 , 4 , 4 , 4 ,
+    4 , 4 , 3 , 3 , 4 , 4 , 3 , 3 ,
+    3 , 3 , 3 , 1 , 2 , 3 , 2 , 1 ,
+    3 , 3 , 3 , 3 , 1 , 1 , 3 , 3 ,
+    3 , 2 , 2 , 3 , 2 , 3 , 0 , 0 ,
+    5 , 5 , 5 , 5 , 4 , 4 , 2 , 0 ,
+    2 , 2 , 0 , 3 , 2 , 0 , 4 , 2 ,
+    0 , 3 , 2 , 0 , 2 , 2 , 0 , 2 ,
+    3 , 0 , 3 , 3 , 0 , 3 , 0xB0 , 0xA0
+};
+
+
 
 //written by me because of different table positions.
 // mem[47] = ...
@@ -136,7 +177,7 @@ void interpolate_pitch(unsigned char pos, unsigned char mem49, unsigned char pha
 }
 
 
-unsigned char CreateTransitions()
+unsigned char CreateFrameTransitions()
 {
 	unsigned char mem49 = 0; 
 	unsigned char pos = 0;

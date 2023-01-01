@@ -14,24 +14,18 @@ char* GetBuffer();
 int GetBufferLength();
 
 
-//char input[]={"/HAALAOAO MAYN NAAMAEAE IHSTT SAEBAASTTIHAAN \x9b\x9b\0"};
-//unsigned char input[]={"/HAALAOAO \x9b\0"};
-//unsigned char input[]={"AA \x9b\0"};
-//unsigned char input[] = {"GUH5DEHN TAEG\x9b\0"};
+extern unsigned char stress[256]; //numbers from 0 to 8
+extern unsigned char phonemeLength[256]; //tab40160
+extern unsigned char phonemeindex[256];
 
-//unsigned char input[]={"AY5 AEM EY TAO4LXKIHNX KAX4MPYUX4TAH. GOW4 AH/HEH3D PAHNK.MEYK MAY8 DEY.\x9b\0"};
-//unsigned char input[]={"/HEH3LOW2, /HAW AH YUX2 TUXDEY. AY /HOH3P YUX AH FIYLIHNX OW4 KEY.\x9b\0"};
-//unsigned char input[]={"/HEY2, DHIHS IH3Z GREY2T. /HAH /HAH /HAH.AYL BIY5 BAEK.\x9b\0"};
-//unsigned char input[]={"/HAH /HAH /HAH \x9b\0"};
-//unsigned char input[]={"/HAH /HAH /HAH.\x9b\0"};
-//unsigned char input[]={".TUW BIY5Y3,, OHR NAA3T - TUW BIY5IYIY., DHAE4T IHZ DHAH KWEH4SCHAHN.\x9b\0"};
-//unsigned char input[]={"/HEY2, DHIHS \x9b\0"};
+extern unsigned char phonemeIndexOutput[60]; //tab47296
+extern unsigned char stressOutput[60]; //tab47365
+extern unsigned char phonemeLengthOutput[60]; //tab47416
 
-//unsigned char input[]={" IYIHEHAEAAAHAOOHUHUXERAXIX  \x9b\0"};
-//unsigned char input[]={" RLWWYMNNXBDGJZZHVDH \x9b\0"};
-//unsigned char input[]={" SSHFTHPTKCH/H \x9b\0"};
+extern unsigned char speed;
+extern unsigned char pitch;
+extern int singmode;
 
-//unsigned char input[]={" EYAYOYAWOWUW ULUMUNQ YXWXRXLX/XDX\x9b\0"};
-
-
+extern char *buffer;
+extern int bufferpos;
 #endif

@@ -14,4 +14,5 @@ void PrintOutput(
 
 void PrintRule(unsigned short offset);
 
+extern int debug;
 #endif

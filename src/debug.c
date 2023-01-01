@@ -1,7 +1,9 @@
 #include<stdio.h>
+#include "phonemeTabs.h"
 
-extern unsigned char phonemeNameTable1[];
-extern unsigned char PhonemeNameTable2[];
+
+int debug = 0;
+
 
 void PrintPhonemes(unsigned char *phonemeindex, unsigned char *phonemeLength, unsigned char *stress)
 {

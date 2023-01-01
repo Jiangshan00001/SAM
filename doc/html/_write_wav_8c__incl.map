@@ -1,8 +1,8 @@
-<map id="F:/github/SAM_jiangshan00001/src/WriteWav.c" name="F:/github/SAM_jiangshan00001/src/WriteWav.c">
-<area shape="rect" id="node1" title=" " alt="" coords="111,5,313,45"/>
-<area shape="rect" id="node2" title=" " alt="" coords="5,93,67,119"/>
-<area shape="rect" id="node3" title=" " alt="" coords="91,93,155,119"/>
-<area shape="rect" id="node4" title=" " alt="" coords="179,93,245,119"/>
-<area shape="rect" id="node5" title=" " alt="" coords="269,93,334,119"/>
-<area shape="rect" id="node6" href="$_write_wav_8h.html" title=" " alt="" coords="359,93,447,119"/>
+<map id="WriteWav.c" name="WriteWav.c">
+<area shape="rect" id="node1" title=" " alt="" coords="168,5,256,31"/>
+<area shape="rect" id="node2" title=" " alt="" coords="5,79,67,104"/>
+<area shape="rect" id="node3" title=" " alt="" coords="91,79,155,104"/>
+<area shape="rect" id="node4" title=" " alt="" coords="179,79,245,104"/>
+<area shape="rect" id="node5" title=" " alt="" coords="269,79,334,104"/>
+<area shape="rect" id="node6" href="$_write_wav_8h.html" title=" " alt="" coords="359,79,447,104"/>
 </map>

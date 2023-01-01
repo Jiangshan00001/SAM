@@ -1,10 +1,11 @@
-<map id="F:/github/SAM_jiangshan00001/src/sam.c" name="F:/github/SAM_jiangshan00001/src/sam.c">
-<area shape="rect" id="node1" title=" " alt="" coords="203,5,405,45"/>
-<area shape="rect" id="node2" title=" " alt="" coords="5,93,67,119"/>
-<area shape="rect" id="node3" title=" " alt="" coords="91,93,157,119"/>
-<area shape="rect" id="node4" title=" " alt="" coords="181,93,245,119"/>
-<area shape="rect" id="node5" href="$debug_8h.html" title=" " alt="" coords="270,93,338,119"/>
-<area shape="rect" id="node6" href="$sam_8h.html" title=" " alt="" coords="363,93,421,119"/>
-<area shape="rect" id="node7" href="$render_8h.html" title=" " alt="" coords="445,93,515,119"/>
-<area shape="rect" id="node8" href="$_sam_tabs_8h.html" title=" " alt="" coords="539,93,627,119"/>
+<map id="sam.c" name="sam.c">
+<area shape="rect" id="node1" title=" " alt="" coords="319,5,377,31"/>
+<area shape="rect" id="node2" title=" " alt="" coords="5,79,67,104"/>
+<area shape="rect" id="node3" title=" " alt="" coords="91,79,157,104"/>
+<area shape="rect" id="node4" title=" " alt="" coords="181,79,245,104"/>
+<area shape="rect" id="node5" href="$debug_8h.html" title=" " alt="" coords="270,79,338,104"/>
+<area shape="rect" id="node6" href="$sam_8h.html" title=" " alt="" coords="363,79,421,104"/>
+<area shape="rect" id="node7" href="$render_8h.html" title=" " alt="" coords="445,79,515,104"/>
+<area shape="rect" id="node8" href="$phoneme_tabs_8h.html" title=" " alt="" coords="539,79,653,104"/>
+<area shape="rect" id="node9" href="$_render_tabs_8h.html" title=" " alt="" coords="678,79,781,104"/>
 </map>

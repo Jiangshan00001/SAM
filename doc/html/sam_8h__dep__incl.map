@@ -1,5 +1,8 @@
-<map id="F:/github/SAM_jiangshan00001/src/sam.h" name="F:/github/SAM_jiangshan00001/src/sam.h">
-<area shape="rect" id="node1" title=" " alt="" coords="119,5,321,45"/>
-<area shape="rect" id="node2" href="$main_8c.html" title=" " alt="" coords="5,93,208,133"/>
-<area shape="rect" id="node3" href="$sam_8c.html" title=" " alt="" coords="232,93,435,133"/>
+<map id="sam.h" name="sam.h">
+<area shape="rect" id="node1" title=" " alt="" coords="275,5,334,31"/>
+<area shape="rect" id="node2" href="$createtransitions_8c.html" title=" " alt="" coords="5,79,135,104"/>
+<area shape="rect" id="node3" href="$main_8c.html" title=" " alt="" coords="159,79,221,104"/>
+<area shape="rect" id="node4" href="$processframes_8c.html" title=" " alt="" coords="245,79,364,104"/>
+<area shape="rect" id="node5" href="$render_8c.html" title=" " alt="" coords="389,79,458,104"/>
+<area shape="rect" id="node6" href="$sam_8c.html" title=" " alt="" coords="482,79,541,104"/>
 </map>

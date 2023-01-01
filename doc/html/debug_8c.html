@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.6"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>sam: F:/github/SAM_jiangshan00001/src/debug.c File Reference</title>
+<title>sam: debug.c File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -50,13 +50,15 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><code>#include &lt;stdio.h&gt;</code><br />
+<code>#include &quot;<a class="el" href="phoneme_tabs_8h_source.html">phonemeTabs.h</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for debug.c:</div>
 <div class="dyncontent">
-<div class="center"><img src="debug_8c__incl.png" border="0" usemap="#a_f_1_2github_2_s_a_m__jiangshan00001_2src_2debug_8c" alt=""/></div>
-<map name="a_f_1_2github_2_s_a_m__jiangshan00001_2src_2debug_8c" id="a_f_1_2github_2_s_a_m__jiangshan00001_2src_2debug_8c">
-<area shape="rect" title=" " alt="" coords="5,5,208,45"/>
-<area shape="rect" title=" " alt="" coords="76,93,137,119"/>
+<div class="center"><img src="debug_8c__incl.png" border="0" usemap="#adebug_8c" alt=""/></div>
+<map name="adebug_8c" id="adebug_8c">
+<area shape="rect" title=" " alt="" coords="58,5,126,31"/>
+<area shape="rect" title=" " alt="" coords="5,79,67,104"/>
+<area shape="rect" href="phoneme_tabs_8h.html" title=" " alt="" coords="91,79,205,104"/>
 </map>
 </div>
 </div>
@@ -64,7 +66,7 @@ Include dependency graph for debug.c:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a30f2eb0e9195697234e17e2a70c8b664"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="debug_8c.html#a30f2eb0e9195697234e17e2a70c8b664">PrintPhonemes</a> (unsigned char *<a class="el" href="sam_8c.html#aefba46a7f791a20ea5c00a1a98a2f2b9">phonemeindex</a>, unsigned char *<a class="el" href="sam_8c.html#af99fef2cff9b9d6e3b53acc1f62908d7">phonemeLength</a>, unsigned char *<a class="el" href="sam_8c.html#a13d58956bd4c1133b50ffbf50b70452f">stress</a>)</td></tr>
+<tr class="memitem:a30f2eb0e9195697234e17e2a70c8b664"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="debug_8c.html#a30f2eb0e9195697234e17e2a70c8b664">PrintPhonemes</a> (unsigned char *<a class="el" href="group___key_vars.html#gaefba46a7f791a20ea5c00a1a98a2f2b9">phonemeindex</a>, unsigned char *<a class="el" href="group___key_vars.html#gaf99fef2cff9b9d6e3b53acc1f62908d7">phonemeLength</a>, unsigned char *<a class="el" href="group___key_vars.html#ga13d58956bd4c1133b50ffbf50b70452f">stress</a>)</td></tr>
 <tr class="separator:a30f2eb0e9195697234e17e2a70c8b664"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae8e10d3873fda9a8201c500d1468f93c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="debug_8c.html#ae8e10d3873fda9a8201c500d1468f93c">PrintOutput</a> (unsigned char *flag, unsigned char *f1, unsigned char *f2, unsigned char *f3, unsigned char *a1, unsigned char *a2, unsigned char *a3, unsigned char *p)</td></tr>
 <tr class="separator:ae8e10d3873fda9a8201c500d1468f93c"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -75,10 +77,8 @@ Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
 Variables</h2></td></tr>
-<tr class="memitem:a1d84e24a9c97fe9f5c672b0ff644f0f0"><td class="memItemLeft" align="right" valign="top">unsigned char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="debug_8c.html#a1d84e24a9c97fe9f5c672b0ff644f0f0">signInputTable1</a> []</td></tr>
-<tr class="separator:a1d84e24a9c97fe9f5c672b0ff644f0f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad2066bdce31f230e09b1d742822eb00e"><td class="memItemLeft" align="right" valign="top">unsigned char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="debug_8c.html#ad2066bdce31f230e09b1d742822eb00e">signInputTable2</a> []</td></tr>
-<tr class="separator:ad2066bdce31f230e09b1d742822eb00e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac3e1795766a80ec63b157951b4b9a7d4"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="debug_8c.html#ac3e1795766a80ec63b157951b4b9a7d4">debug</a> = 0</td></tr>
+<tr class="separator:ac3e1795766a80ec63b157951b4b9a7d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
 <a id="a161e712ec8e04b0e9b96c0f2d7ae6f0e" name="a161e712ec8e04b0e9b96c0f2d7ae6f0e"></a>
@@ -107,7 +107,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="reciter_8c_source.html#l00029">29</a> of file <a class="el" href="reciter_8c_source.html">reciter.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="reciter_8c_source.html#l00031">31</a> of file <a class="el" href="reciter_8c_source.html">reciter.c</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -115,7 +115,7 @@ Here is the caller graph for this function:</div>
 <map name="adebug_8c_a161e712ec8e04b0e9b96c0f2d7ae6f0e_icgraph" id="adebug_8c_a161e712ec8e04b0e9b96c0f2d7ae6f0e_icgraph">
 <area shape="rect" title=" " alt="" coords="399,31,496,56"/>
 <area shape="rect" href="debug_8c.html#a0e3294f3ae4a3b09e6e90d9d78af5f9a" title=" " alt="" coords="275,5,351,31"/>
-<area shape="rect" href="reciter_8c.html#a5df7a21b76d2535300993833112cc806" title=" " alt="" coords="104,31,227,56"/>
+<area shape="rect" href="reciter_8c.html#a5df7a21b76d2535300993833112cc806" title="TextToPhonemes." alt="" coords="104,31,227,56"/>
 <area shape="rect" href="main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title=" " alt="" coords="5,31,56,56"/>
 </map>
 </div>
@@ -184,16 +184,16 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="debug_8c_source.html#l00036">36</a> of file <a class="el" href="debug_8c_source.html">debug.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="debug_8c_source.html#l00038">38</a> of file <a class="el" href="debug_8c_source.html">debug.c</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="debug_8c_ae8e10d3873fda9a8201c500d1468f93c_icgraph.png" border="0" usemap="#adebug_8c_ae8e10d3873fda9a8201c500d1468f93c_icgraph" alt=""/></div>
 <map name="adebug_8c_ae8e10d3873fda9a8201c500d1468f93c_icgraph" id="adebug_8c_ae8e10d3873fda9a8201c500d1468f93c_icgraph">
-<area shape="rect" title=" " alt="" coords="497,5,585,31"/>
-<area shape="rect" href="render_8c.html#a436830dff9fbce05c931c5a6d8d5366d" title=" " alt="" coords="385,5,449,31"/>
-<area shape="rect" href="sam_8c.html#a5a40ab164da5925154103cf53c16e893" title=" " alt="" coords="231,5,337,31"/>
-<area shape="rect" href="sam_8c.html#a52acfd4d941fc7138ce9f63ce5503439" title=" " alt="" coords="104,5,183,31"/>
+<area shape="rect" title=" " alt="" coords="500,5,588,31"/>
+<area shape="rect" href="render_8c.html#a0ad29c7b8fdc78dfc8cc2d4426ce1cda" title="RenderOnce RENDER THE PHONEMES IN THE LIST." alt="" coords="357,5,452,31"/>
+<area shape="rect" href="sam_8c.html#a406d7b8ae89d745877a73eddb4275f73" title="RenderAll input: phonemeindex phonemeLength stress output: buffer." alt="" coords="231,5,309,31"/>
+<area shape="rect" href="sam_8c.html#a52acfd4d941fc7138ce9f63ce5503439" title="SAMMain." alt="" coords="104,5,183,31"/>
 <area shape="rect" href="main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title=" " alt="" coords="5,5,56,31"/>
 </map>
 </div>
@@ -232,14 +232,14 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="debug_8c_source.html#l00006">6</a> of file <a class="el" href="debug_8c_source.html">debug.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="debug_8c_source.html#l00008">8</a> of file <a class="el" href="debug_8c_source.html">debug.c</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="debug_8c_a30f2eb0e9195697234e17e2a70c8b664_icgraph.png" border="0" usemap="#adebug_8c_a30f2eb0e9195697234e17e2a70c8b664_icgraph" alt=""/></div>
 <map name="adebug_8c_a30f2eb0e9195697234e17e2a70c8b664_icgraph" id="adebug_8c_a30f2eb0e9195697234e17e2a70c8b664_icgraph">
 <area shape="rect" title=" " alt="" coords="231,5,341,31"/>
-<area shape="rect" href="sam_8c.html#a52acfd4d941fc7138ce9f63ce5503439" title=" " alt="" coords="104,5,183,31"/>
+<area shape="rect" href="sam_8c.html#a52acfd4d941fc7138ce9f63ce5503439" title="SAMMain." alt="" coords="104,5,183,31"/>
 <area shape="rect" href="main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title=" " alt="" coords="5,5,56,31"/>
 </map>
 </div>
@@ -262,7 +262,7 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="debug_8c_source.html#l00062">62</a> of file <a class="el" href="debug_8c_source.html">debug.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="debug_8c_source.html#l00064">64</a> of file <a class="el" href="debug_8c_source.html">debug.c</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -278,7 +278,7 @@ Here is the caller graph for this function:</div>
 <div class="center"><img src="debug_8c_a0e3294f3ae4a3b09e6e90d9d78af5f9a_icgraph.png" border="0" usemap="#adebug_8c_a0e3294f3ae4a3b09e6e90d9d78af5f9a_icgraph" alt=""/></div>
 <map name="adebug_8c_a0e3294f3ae4a3b09e6e90d9d78af5f9a_icgraph" id="adebug_8c_a0e3294f3ae4a3b09e6e90d9d78af5f9a_icgraph">
 <area shape="rect" title=" " alt="" coords="275,5,351,31"/>
-<area shape="rect" href="reciter_8c.html#a5df7a21b76d2535300993833112cc806" title=" " alt="" coords="104,5,227,31"/>
+<area shape="rect" href="reciter_8c.html#a5df7a21b76d2535300993833112cc806" title="TextToPhonemes." alt="" coords="104,5,227,31"/>
 <area shape="rect" href="main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title=" " alt="" coords="5,5,56,31"/>
 </map>
 </div>
@@ -286,51 +286,19 @@ Here is the caller graph for this function:</div>
 </div>
 </div>
 <h2 class="groupheader">Variable Documentation</h2>
-<a id="a1d84e24a9c97fe9f5c672b0ff644f0f0" name="a1d84e24a9c97fe9f5c672b0ff644f0f0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1d84e24a9c97fe9f5c672b0ff644f0f0">&#9670;&#160;</a></span>signInputTable1</h2>
+<a id="ac3e1795766a80ec63b157951b4b9a7d4" name="ac3e1795766a80ec63b157951b4b9a7d4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac3e1795766a80ec63b157951b4b9a7d4">&#9670;&#160;</a></span>debug</h2>
 
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">unsigned char signInputTable1[]</td>
+          <td class="memname">int debug = 0</td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_sam_tabs_8h_source.html#l00011">11</a> of file <a class="el" href="_sam_tabs_8h_source.html">SamTabs.h</a>.</p>
-
-</div>
-</div>
-<a id="ad2066bdce31f230e09b1d742822eb00e" name="ad2066bdce31f230e09b1d742822eb00e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad2066bdce31f230e09b1d742822eb00e">&#9670;&#160;</a></span>signInputTable2</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">unsigned char signInputTable2[]</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="_sam_tabs_8h_source.html#l00026">26</a> of file <a class="el" href="_sam_tabs_8h_source.html">SamTabs.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="debug_8c_source.html#l00005">5</a> of file <a class="el" href="debug_8c_source.html">debug.c</a>.</p>
 
 </div>
 </div>
