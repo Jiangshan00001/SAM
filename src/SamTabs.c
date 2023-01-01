@@ -6,7 +6,7 @@ unsigned char stressInputTable[] =
 };
 
 //tab40682
-unsigned char signInputTable1[]={
+unsigned char phonemeNameTable1[]={
     ' ', '.', '?', ',', '-', 'I', 'I', 'E',
     'A', 'A', 'A', 'A', 'U', 'A', 'I', 'E',
     'U', 'O', 'R', 'L', 'W', 'Y', 'W', 'R',
@@ -21,7 +21,7 @@ unsigned char signInputTable1[]={
 };
 
 //tab40763
-unsigned char signInputTable2[] =
+unsigned char PhonemeNameTable2[] =
 {
     '*', '*', '*', '*', '*', 'Y', 'H', 'H',
     'E', 'A', 'H', 'O', 'H', 'X', 'X', 'R',
@@ -34,24 +34,6 @@ unsigned char signInputTable2[] =
     '*', '*', '*', '*', '*', '*', '*', '*',
     '*', '*', '*', 'X', '*', '*', 'L', 'M',
     'N'
-};
-
-//loc_9F8C
-enum {
-    FLAG_PLOSIVE  = 0x0001,
-    FLAG_STOPCONS = 0x0002, /* stop consonant */
-    FLAG_VOICED   = 0x0004,
-    /* 0x08 */
-    FLAG_DIPTHONG = 0x0010,
-    FLAG_DIP_YX   = 0x0020, /* dipthong ending with YX */
-    FLAG_CONSONANT= 0x0040,
-    FLAG_VOWEL    = 0x0080,
-    FLAG_PUNCT    = 0x0100,
-    /* 0x200 */
-    FLAG_ALVEOLAR = 0x0400,
-    FLAG_NASAL    = 0x0800,
-    FLAG_LIQUIC   = 0x1000,  /* liquic consonant */
-    FLAG_FRICATIVE= 0x2000
 };
 
 unsigned short flags[]={

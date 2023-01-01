@@ -1,7 +1,7 @@
 #include<stdio.h>
 
-extern unsigned char signInputTable1[];
-extern unsigned char signInputTable2[];
+extern unsigned char phonemeNameTable1[];
+extern unsigned char PhonemeNameTable2[];
 
 void PrintPhonemes(unsigned char *phonemeindex, unsigned char *phonemeLength, unsigned char *stress)
 {
@@ -18,8 +18,8 @@ void PrintPhonemes(unsigned char *phonemeindex, unsigned char *phonemeLength, un
 		{
 			printf(" %3i      %c%c      %3i       %i\n",
 			phonemeindex[i],
-			signInputTable1[phonemeindex[i]],
-			signInputTable2[phonemeindex[i]],
+            phonemeNameTable1[phonemeindex[i]],
+            PhonemeNameTable2[phonemeindex[i]],
 			phonemeLength[i],
 			stress[i]
 			);

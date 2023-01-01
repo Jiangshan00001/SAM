@@ -1,88 +1,23 @@
 
-unsigned char tab48426[5] = { 0x18, 0x1A, 0x17, 0x17, 0x17 };
 
-unsigned char tab47492[] =
-{
-    0 , 0 , 0xE0 , 0xE6 , 0xEC , 0xF3 , 0xF9 , 0 ,
-    6 , 0xC , 6
-};
-
-
-unsigned char amplitudeRescale[] =
-{
-    0 , 1 , 2 , 2 , 2 , 3 , 3 , 4 ,
-    4 , 5 , 6 , 8 , 9 ,0xB ,0xD ,0xF, 0  //17 elements?
-};
-
-// Used to decide which phoneme's blend lengths. The candidate with the lower score is selected.
-// tab45856
-unsigned char blendRank[] =
-{
-    0 , 0x1F , 0x1F , 0x1F , 0x1F , 2 , 2 , 2 ,
-    2 , 2 , 2 , 2 , 2 , 2 , 5 , 5 ,
-    2 ,0xA , 2 , 8 , 5 , 5 ,0xB ,0xA ,
-    9 , 8 , 8 , 0xA0 , 8 , 8 , 0x17 , 0x1F ,
-    0x12 , 0x12 , 0x12 , 0x12 , 0x1E , 0x1E , 0x14 , 0x14 ,
-    0x14 , 0x14 , 0x17 , 0x17 , 0x1A , 0x1A , 0x1D , 0x1D ,
-    2 , 2 , 2 , 2 , 2 , 2 , 0x1A , 0x1D ,
-    0x1B , 0x1A , 0x1D , 0x1B , 0x1A , 0x1D , 0x1B , 0x1A ,
-    0x1D , 0x1B , 0x17 , 0x1D , 0x17 , 0x17 , 0x1D , 0x17 ,
-    0x17 , 0x1D , 0x17 , 0x17 , 0x1D , 0x17 , 0x17 , 0x17
-};
-
-
-// Number of frames at the end of a phoneme devoted to interpolating to next phoneme's final value
-//tab45696
-unsigned char outBlendLength[] =
-{
-    0 , 2 , 2 , 2 , 2 , 4 , 4 , 4 ,
-    4 , 4 , 4 , 4 , 4 , 4 , 4 , 4 ,
-    4 , 4 , 3 , 2 , 4 , 4 , 2 , 2 ,
-    2 , 2 , 2 , 1 , 1 , 1 , 1 , 1 ,
-    1 , 1 , 1 , 1 , 1 , 1 , 2 , 2 ,
-    2 , 1 , 0 , 1 , 0 , 1 , 0 , 5 ,
-    5 , 5 , 5 , 5 , 4 , 4 , 2 , 0 ,
-    1 , 2 , 0 , 1 , 2 , 0 , 1 , 2 ,
-    0 , 1 , 2 , 0 , 2 , 2 , 0 , 1 ,
-    3 , 0 , 2 , 3 , 0 , 2 , 0xA0 , 0xA0
-};
-
-
-// Number of frames at beginning of a phoneme devoted to interpolating to phoneme's final value
-// tab45776
-unsigned char inBlendLength[] =
-{
-    0 , 2 , 2 , 2 , 2 , 4 , 4 , 4 ,
-    4 , 4 , 4 , 4 , 4 , 4 , 4 , 4 ,
-    4 , 4 , 3 , 3 , 4 , 4 , 3 , 3 ,
-    3 , 3 , 3 , 1 , 2 , 3 , 2 , 1 ,
-    3 , 3 , 3 , 3 , 1 , 1 , 3 , 3 ,
-    3 , 2 , 2 , 3 , 2 , 3 , 0 , 0 ,
-    5 , 5 , 5 , 5 , 4 , 4 , 2 , 0 ,
-    2 , 2 , 0 , 3 , 2 , 0 , 4 , 2 ,
-    0 , 3 , 2 , 0 , 2 , 2 , 0 , 2 ,
-    3 , 0 , 3 , 3 , 0 , 3 , 0xB0 , 0xA0
-};
-
-
-// Looks like it's used as bit flags
-// High bits masked by 248 (11111000)
-//
-// 32: S*    241         11110001
-// 33: SH    226         11100010
-// 34: F*    211         11010011
-// 35: TH    187         10111011
-// 36: /H    124         01111100
-// 37: /X    149         10010101
-// 38: Z*    1           00000001
-// 39: ZH    2           00000010
-// 40: V*    3           00000011
-// 41: DH    3           00000011
-// 43: **    114         01110010
-// 45: **    2           00000010
-// 67: **    27          00011011
-// 70: **    25          00011001
-// tab45936
+/// Looks like it's used as bit flags @n
+/// High bits masked by 248 (11111000) @n
+/// idx ph    flag       flag_bin sample_data_index pitch(for-unvoiced) @n
+/// 32: S*    241         11110001 1 0x1e @n
+/// 33: SH    226         11100010 2 0x1c @n
+/// 34: F*    211         11010011 3 0x1a @n
+/// 35: TH    187         10111011 3 0x17 @n
+/// 36: /H    124         01111100 4 0x0f @n
+/// 37: /X    149         10010101 5 0x12 @n
+/// 38: Z*    1           00000001 1 0x00 @n
+/// 39: ZH    2           00000010 2 0x00 @n
+/// 40: V*    3           00000011 3 0x00 @n
+/// 41: DH    3           00000011 3 0x00 @n
+/// 43: **    114         01110010 2 0x0e @n
+/// 45: **    2           00000010 2 0x00 @n
+/// 67: **    27          00011011 3 0x03 @n
+/// 70: **    25          00011001 1 0x03 @n
+///
 unsigned char sampledConsonantFlags[] =
 {
     0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 ,
@@ -503,3 +438,76 @@ unsigned char sampleTable[0x500] =
     ,	 6 , 0xE0 , 7 , 0xE0 ,0xF , 0xF8 , 6 , 0xC1
     ,  0xFE , 1 , 0xFC , 3 , 0xE0 ,0xF , 0 , 0xFC
 };
+
+
+///
+/// this var rescale the amplitude.
+/// 0-8-->0.4
+/// 8-16-->4-16
+unsigned char amplitudeRescale[] =
+{
+    0 , 1 , 2 , 2 , 2 , 3 , 3 , 4 ,
+    4 , 5 , 6 , 8 , 9 ,0xB ,0xD ,0xF, 0  //17 elements?
+};
+
+
+unsigned char tab48426[5] = { 0x18, 0x1A, 0x17, 0x17, 0x17 };
+
+unsigned char tab47492[] =
+{
+    0 , 0 , 0xE0 , 0xE6 , 0xEC , 0xF3 , 0xF9 , 0 ,
+    6 , 0xC , 6
+};
+
+
+
+// Used to decide which phoneme's blend lengths. The candidate with the lower score is selected.
+// tab45856
+unsigned char blendRank[] =
+{
+    0 , 0x1F , 0x1F , 0x1F , 0x1F , 2 , 2 , 2 ,
+    2 , 2 , 2 , 2 , 2 , 2 , 5 , 5 ,
+    2 ,0xA , 2 , 8 , 5 , 5 ,0xB ,0xA ,
+    9 , 8 , 8 , 0xA0 , 8 , 8 , 0x17 , 0x1F ,
+    0x12 , 0x12 , 0x12 , 0x12 , 0x1E , 0x1E , 0x14 , 0x14 ,
+    0x14 , 0x14 , 0x17 , 0x17 , 0x1A , 0x1A , 0x1D , 0x1D ,
+    2 , 2 , 2 , 2 , 2 , 2 , 0x1A , 0x1D ,
+    0x1B , 0x1A , 0x1D , 0x1B , 0x1A , 0x1D , 0x1B , 0x1A ,
+    0x1D , 0x1B , 0x17 , 0x1D , 0x17 , 0x17 , 0x1D , 0x17 ,
+    0x17 , 0x1D , 0x17 , 0x17 , 0x1D , 0x17 , 0x17 , 0x17
+};
+
+
+// Number of frames at the end of a phoneme devoted to interpolating to next phoneme's final value
+//tab45696
+unsigned char outBlendLength[] =
+{
+    0 , 2 , 2 , 2 , 2 , 4 , 4 , 4 ,
+    4 , 4 , 4 , 4 , 4 , 4 , 4 , 4 ,
+    4 , 4 , 3 , 2 , 4 , 4 , 2 , 2 ,
+    2 , 2 , 2 , 1 , 1 , 1 , 1 , 1 ,
+    1 , 1 , 1 , 1 , 1 , 1 , 2 , 2 ,
+    2 , 1 , 0 , 1 , 0 , 1 , 0 , 5 ,
+    5 , 5 , 5 , 5 , 4 , 4 , 2 , 0 ,
+    1 , 2 , 0 , 1 , 2 , 0 , 1 , 2 ,
+    0 , 1 , 2 , 0 , 2 , 2 , 0 , 1 ,
+    3 , 0 , 2 , 3 , 0 , 2 , 0xA0 , 0xA0
+};
+
+
+// Number of frames at beginning of a phoneme devoted to interpolating to phoneme's final value
+// tab45776
+unsigned char inBlendLength[] =
+{
+    0 , 2 , 2 , 2 , 2 , 4 , 4 , 4 ,
+    4 , 4 , 4 , 4 , 4 , 4 , 4 , 4 ,
+    4 , 4 , 3 , 3 , 4 , 4 , 3 , 3 ,
+    3 , 3 , 3 , 1 , 2 , 3 , 2 , 1 ,
+    3 , 3 , 3 , 3 , 1 , 1 , 3 , 3 ,
+    3 , 2 , 2 , 3 , 2 , 3 , 0 , 0 ,
+    5 , 5 , 5 , 5 , 4 , 4 , 2 , 0 ,
+    2 , 2 , 0 , 3 , 2 , 0 , 4 , 2 ,
+    0 , 3 , 2 , 0 , 2 , 2 , 0 , 2 ,
+    3 , 0 , 3 , 3 , 0 , 3 , 0xB0 , 0xA0
+};
+

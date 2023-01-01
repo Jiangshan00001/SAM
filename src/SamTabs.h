@@ -23,10 +23,10 @@ enum {
 extern unsigned char stressInputTable[];
 
 //tab40682
-extern unsigned char signInputTable1[];
+extern unsigned char phonemeNameTable1[];
 
 //tab40763
-extern unsigned char signInputTable2[];
+extern unsigned char PhonemeNameTable2[];
 
 extern unsigned short flags[];
 

@@ -243,10 +243,10 @@ signed int full_match(unsigned char sign1, unsigned char sign2) {
     do {
         // GET FIRST CHARACTER AT POSITION Y IN signInputTable
         // --> should change name to PhonemeNameTable1
-        unsigned char A = signInputTable1[Y];
+        unsigned char A = phonemeNameTable1[Y];
         
         if (A == sign1) {
-            A = signInputTable2[Y];
+            A = PhonemeNameTable2[Y];
             // NOT A SPECIAL AND MATCHES SECOND CHARACTER?
             if ((A != '*') && (A == sign2)) return Y;
         }
@@ -257,8 +257,8 @@ signed int full_match(unsigned char sign1, unsigned char sign2) {
 signed int wild_match(unsigned char sign1) {
     signed int Y = 0;
     do {
-		if (signInputTable2[Y] == '*') {
-			if (signInputTable1[Y] == sign1) return Y;
+        if (PhonemeNameTable2[Y] == '*') {
+            if (phonemeNameTable1[Y] == sign1) return Y;
 		}
 	} while (++Y != 81);
     return -1;
@@ -407,14 +407,14 @@ void drule_pre(const char *descr, unsigned char X) {
     drule(descr);
     if (debug) {
         printf("PRE\n");
-        printf("phoneme %d (%c%c) length %d\n", X, signInputTable1[phonemeindex[X]], signInputTable2[phonemeindex[X]], phonemeLength[X]);
+        printf("phoneme %d (%c%c) length %d\n", X, phonemeNameTable1[phonemeindex[X]], PhonemeNameTable2[phonemeindex[X]], phonemeLength[X]);
     }
 }
 
 void drule_post(unsigned char X) {
     if (debug) {
         printf("POST\n");
-        printf("phoneme %d (%c%c) length %d\n", X, signInputTable1[phonemeindex[X]], signInputTable2[phonemeindex[X]], phonemeLength[X]);
+        printf("phoneme %d (%c%c) length %d\n", X, phonemeNameTable1[phonemeindex[X]], PhonemeNameTable2[phonemeindex[X]], phonemeLength[X]);
     }
 }
 
@@ -511,7 +511,7 @@ void Parser2() {
 		unsigned short pf;
 		unsigned char prior;
 
-		if (debug) printf("%d: %c%c\n", pos, signInputTable1[p], signInputTable2[p]);
+        if (debug) printf("%d: %c%c\n", pos, phonemeNameTable1[p], PhonemeNameTable2[p]);
 
 		if (p == 0) { // Is phoneme pause?
 			++pos;
@@ -569,7 +569,7 @@ void Parser2() {
                 //      S KX -> S GX
                 // Examples: SPY, STY, SKY, SCOWL
                 
-                if (debug) printf("RULE: S* %c%c -> S* %c%c\n", signInputTable1[p], signInputTable2[p],signInputTable1[p-12], signInputTable2[p-12]);
+                if (debug) printf("RULE: S* %c%c -> S* %c%c\n", phonemeNameTable1[p], PhonemeNameTable2[p],phonemeNameTable1[p-12], PhonemeNameTable2[p-12]);
                 phonemeindex[pos] = p-12;
             } else if (!(pf & FLAG_PLOSIVE)) {
                 p = phonemeindex[pos];
