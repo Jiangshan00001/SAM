@@ -91,6 +91,10 @@ void Init() {
 	phonemeindex[255] = END; //to prevent buffer overflow // ML : changed from 32 to 255 to stop freezing with long inputs
 }
 
+///
+/// \brief SAMMain
+/// \return
+/// main process
 int SAMMain() {
 	unsigned char X = 0; //!! is this intended like this?
 	Init();

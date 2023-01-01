@@ -81,7 +81,19 @@ int handle_ch(unsigned char ch, unsigned char mem) {
     return 0;
 }
 
-
+///
+/// \brief TextToPhonemes
+/// \param input the text to translate.
+/// \return output phonemes text to input
+///  text to phonemes
+/// 1. copy the \ref input text to inputtemp.
+/// 2. translate text in \ref inputtemp to phonemes.
+/// 3. save phonemes to \ref input.
+///
+/// eg: input: WHO ARE YOU? @n
+///     output:/HUW AAR YUW? @n
+///     their is one 155 in the last of the output str before zero. 155 means line end mark? @n
+///
 int TextToPhonemes(unsigned char *input) {
 	unsigned char mem56;      //output position for phonemes
 	unsigned char mem57;
