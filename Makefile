@@ -21,3 +21,6 @@ package:
 
 clean:
 	rm *.o
+
+doc:
+	echo "nothing done"
