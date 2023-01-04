@@ -28,12 +28,12 @@ changes:
 how to say chinese:
 =======
 
-./sam.exe -pinyin ni1hao4a2 -debug -wav nihao.wav
+./sam -pinyin ni1hao4a2 -debug -wav nihao.wav
 
 will speak 你好啊
 
 
-.sam.exe wo4hui4shuo4han4yu4a4  -pinyin -debug -wav tt.wav
+./sam wo4hui4shuo4han4yu4a4  -pinyin -debug -wav tt.wav
 
 will speak 我会说汉语啊
 
