@@ -1,5 +1,5 @@
 <map id="main.c" name="main.c">
-<area shape="rect" id="node1" title=" " alt="" coords="316,5,377,31"/>
+<area shape="rect" id="node1" title=" " alt="" coords="363,5,424,31"/>
 <area shape="rect" id="node2" title=" " alt="" coords="5,79,67,104"/>
 <area shape="rect" id="node3" title=" " alt="" coords="91,79,155,104"/>
 <area shape="rect" id="node4" title=" " alt="" coords="179,79,245,104"/>
@@ -8,4 +8,5 @@
 <area shape="rect" id="node7" href="$sam_8h.html" title=" " alt="" coords="452,79,511,104"/>
 <area shape="rect" id="node8" href="$debug_8h.html" title=" " alt="" coords="535,79,603,104"/>
 <area shape="rect" id="node9" href="$_write_wav_8h.html" title=" " alt="" coords="628,79,716,104"/>
+<area shape="rect" id="node10" href="$pinyintophonemes_8h.html" title=" " alt="" coords="740,79,879,104"/>
 </map>

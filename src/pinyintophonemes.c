@@ -11,6 +11,7 @@ CHAR_P phoneme;
 
 //https://mp.weixin.qq.com/s?__biz=MzAxNjkxOTk2OA==&mid=2247570887&idx=3&sn=008882f45590368e99b022118a396561&chksm=9beee908ac99601efb48a689e8fb313536ff3ce7305622278ee32f1b81b080a583fb05e6cdcf&scene=27
 //http://www.retrobits.net/atari/sam.shtml#ch5.7
+///https://sites.google.com/site/h2obsession/CBM/C128/SAM-128/phonemes
 PINYIN_S g_pinyin_table[]={
 
     /*3字母 韵母*/

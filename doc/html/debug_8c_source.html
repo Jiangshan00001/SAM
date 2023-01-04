@@ -59,74 +59,131 @@ $(function() {
 <div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>    printf(<span class="stringliteral">&quot;===========================================\n&quot;</span>);</div>
 <div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
 <div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>    printf(<span class="stringliteral">&quot;Internal Phoneme presentation:\n\n&quot;</span>);</div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>    printf(<span class="stringliteral">&quot; idx    phoneme  length  stress\n&quot;</span>);</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>    printf(<span class="stringliteral">&quot;no idx    phoneme  length  stress\n&quot;</span>);</div>
 <div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>    printf(<span class="stringliteral">&quot;------------------------------\n&quot;</span>);</div>
 <div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
 <div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    <span class="keywordflow">while</span>((<a class="code hl_variable" href="group___key_vars.html#gaefba46a7f791a20ea5c00a1a98a2f2b9">phonemeindex</a>[i] != 255) &amp;&amp; (i &lt; 255))</div>
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    {</div>
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="group___key_vars.html#gaefba46a7f791a20ea5c00a1a98a2f2b9">phonemeindex</a>[i] &lt; 81)</div>
 <div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>        {</div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>            printf(<span class="stringliteral">&quot; %3i      %c%c      %3i       %i\n&quot;</span>,</div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>            <a class="code hl_variable" href="group___key_vars.html#gaefba46a7f791a20ea5c00a1a98a2f2b9">phonemeindex</a>[i],</div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>            <a class="code hl_variable" href="group__phoneme_tables.html#gaaa67665fecde71cc85ff9f1246a9e129">phonemeNameTable1</a>[<a class="code hl_variable" href="group___key_vars.html#gaefba46a7f791a20ea5c00a1a98a2f2b9">phonemeindex</a>[i]],</div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>            <a class="code hl_variable" href="group__phoneme_tables.html#gae3ac22981973950f66778d0d9cbc0317">PhonemeNameTable2</a>[<a class="code hl_variable" href="group___key_vars.html#gaefba46a7f791a20ea5c00a1a98a2f2b9">phonemeindex</a>[i]],</div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>            <a class="code hl_variable" href="group___key_vars.html#gaf99fef2cff9b9d6e3b53acc1f62908d7">phonemeLength</a>[i],</div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>            <a class="code hl_variable" href="group___key_vars.html#ga13d58956bd4c1133b50ffbf50b70452f">stress</a>[i]</div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>            );</div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>        } <span class="keywordflow">else</span></div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>        {</div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>            printf(<span class="stringliteral">&quot; %3i      ??      %3i       %i\n&quot;</span>, <a class="code hl_variable" href="group___key_vars.html#gaefba46a7f791a20ea5c00a1a98a2f2b9">phonemeindex</a>[i], <a class="code hl_variable" href="group___key_vars.html#gaf99fef2cff9b9d6e3b53acc1f62908d7">phonemeLength</a>[i], <a class="code hl_variable" href="group___key_vars.html#ga13d58956bd4c1133b50ffbf50b70452f">stress</a>[i]);</div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>        }</div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>        i++;</div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    }</div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    printf(<span class="stringliteral">&quot;===========================================\n&quot;</span>);</div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    printf(<span class="stringliteral">&quot;\n&quot;</span>);</div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>}</div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span> </div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno"><a class="line" href="debug_8c.html#ae8e10d3873fda9a8201c500d1468f93c">   38</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="debug_8c.html#ae8e10d3873fda9a8201c500d1468f93c">PrintOutput</a>(</div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> *flag, </div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> *f1, </div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> *f2, </div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> *f3,</div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> *a1, </div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> *a2, </div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> *a3,</div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> *p)</div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>{</div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    <span class="keywordtype">int</span> i = 0;</div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    printf(<span class="stringliteral">&quot;===========================================\n&quot;</span>);</div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    printf(<span class="stringliteral">&quot;Final data for speech output:\n\n&quot;</span>);</div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    printf(<span class="stringliteral">&quot; flags ampl1 freq1 ampl2 freq2 ampl3 freq3 pitch\n&quot;</span>);</div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    printf(<span class="stringliteral">&quot;------------------------------------------------\n&quot;</span>);</div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    <span class="keywordflow">while</span>(i &lt; 255)</div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    {</div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>        printf(<span class="stringliteral">&quot;%5i %5i %5i %5i %5i %5i %5i %5i\n&quot;</span>, flag[i], a1[i], f1[i], a2[i], f2[i], a3[i], f3[i], p[i]);</div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>        i++;</div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    }</div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    printf(<span class="stringliteral">&quot;===========================================\n&quot;</span>);</div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span> </div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>}</div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span> </div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span><span class="keyword">extern</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> <a class="code hl_function" href="debug_8c.html#a161e712ec8e04b0e9b96c0f2d7ae6f0e">GetRuleByte</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">short</span> mem62, <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> Y);</div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span> </div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno"><a class="line" href="debug_8c.html#a0e3294f3ae4a3b09e6e90d9d78af5f9a">   64</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="debug_8c.html#a0e3294f3ae4a3b09e6e90d9d78af5f9a">PrintRule</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">short</span> offset)</div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>{</div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> i = 1;</div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>    <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> <a class="code hl_variable" href="reciter_8c.html#ae79c172b71299c5d272aaea09d553409">A</a> = 0;</div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>    printf(<span class="stringliteral">&quot;Applying rule: &quot;</span>);</div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>    <span class="keywordflow">do</span></div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>    {</div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>        <a class="code hl_variable" href="reciter_8c.html#ae79c172b71299c5d272aaea09d553409">A</a> = <a class="code hl_function" href="debug_8c.html#a161e712ec8e04b0e9b96c0f2d7ae6f0e">GetRuleByte</a>(offset, i);</div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>        <span class="keywordflow">if</span> ((<a class="code hl_variable" href="reciter_8c.html#ae79c172b71299c5d272aaea09d553409">A</a>&amp;127) == <span class="charliteral">&#39;=&#39;</span>) printf(<span class="stringliteral">&quot; -&gt; &quot;</span>); <span class="keywordflow">else</span> printf(<span class="stringliteral">&quot;%c&quot;</span>, <a class="code hl_variable" href="reciter_8c.html#ae79c172b71299c5d272aaea09d553409">A</a>&amp;127);</div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>        i++;</div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>    } <span class="keywordflow">while</span> ((<a class="code hl_variable" href="reciter_8c.html#ae79c172b71299c5d272aaea09d553409">A</a>&amp;128)==0);</div>
-<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>    printf(<span class="stringliteral">&quot;\n&quot;</span>);</div>
-<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>}</div>
-<div class="ttc" id="adebug_8c_html_a0e3294f3ae4a3b09e6e90d9d78af5f9a"><div class="ttname"><a href="debug_8c.html#a0e3294f3ae4a3b09e6e90d9d78af5f9a">PrintRule</a></div><div class="ttdeci">void PrintRule(unsigned short offset)</div><div class="ttdef"><b>Definition:</b> <a href="debug_8c_source.html#l00064">debug.c:64</a></div></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>            printf(<span class="stringliteral">&quot;%3i  %3i      %c%c      %3i       %i\n&quot;</span>,</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>                   i,</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>            <a class="code hl_variable" href="group___key_vars.html#gaefba46a7f791a20ea5c00a1a98a2f2b9">phonemeindex</a>[i],</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>            <a class="code hl_variable" href="group__phoneme_tables.html#gaaa67665fecde71cc85ff9f1246a9e129">phonemeNameTable1</a>[<a class="code hl_variable" href="group___key_vars.html#gaefba46a7f791a20ea5c00a1a98a2f2b9">phonemeindex</a>[i]],</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>            <a class="code hl_variable" href="group__phoneme_tables.html#gae3ac22981973950f66778d0d9cbc0317">PhonemeNameTable2</a>[<a class="code hl_variable" href="group___key_vars.html#gaefba46a7f791a20ea5c00a1a98a2f2b9">phonemeindex</a>[i]],</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>            <a class="code hl_variable" href="group___key_vars.html#gaf99fef2cff9b9d6e3b53acc1f62908d7">phonemeLength</a>[i],</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>            <a class="code hl_variable" href="group___key_vars.html#ga13d58956bd4c1133b50ffbf50b70452f">stress</a>[i]</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>            );</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>        } <span class="keywordflow">else</span></div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>        {</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>            printf(<span class="stringliteral">&quot;%3i %3i      ??      %3i       %i\n&quot;</span>,i, <a class="code hl_variable" href="group___key_vars.html#gaefba46a7f791a20ea5c00a1a98a2f2b9">phonemeindex</a>[i], <a class="code hl_variable" href="group___key_vars.html#gaf99fef2cff9b9d6e3b53acc1f62908d7">phonemeLength</a>[i], <a class="code hl_variable" href="group___key_vars.html#ga13d58956bd4c1133b50ffbf50b70452f">stress</a>[i]);</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>        }</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>        i++;</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    }</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    printf(<span class="stringliteral">&quot;===========================================\n&quot;</span>);</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    printf(<span class="stringliteral">&quot;\n&quot;</span>);</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>}</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span> </div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno"><a class="line" href="debug_8c.html#ae8e10d3873fda9a8201c500d1468f93c">   39</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="debug_8c.html#ae8e10d3873fda9a8201c500d1468f93c">PrintOutput</a>(</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> *flag, </div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> *f1, </div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> *f2, </div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> *f3,</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> *a1, </div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> *a2, </div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> *a3,</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> *p)</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>{</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    <span class="keywordtype">int</span> i = 0;</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    printf(<span class="stringliteral">&quot;===========================================\n&quot;</span>);</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    printf(<span class="stringliteral">&quot;Final data for speech output:\n\n&quot;</span>);</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    printf(<span class="stringliteral">&quot;no flags ampl1 freq1 ampl2 freq2 ampl3 freq3 pitch\n&quot;</span>);</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    printf(<span class="stringliteral">&quot;------------------------------------------------\n&quot;</span>);</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    <span class="keywordflow">while</span>(i &lt; 255)</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    {</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>        printf(<span class="stringliteral">&quot;%5i %5i %5i %5i %5i %5i %5i %5i %5i\n&quot;</span>,i, flag[i], a1[i], f1[i], a2[i], f2[i], a3[i], f3[i], p[i]);</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>        <span class="keywordflow">if</span>((flag[i]==a1[i])&amp;&amp;</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>                (a1[i]==f1[i])&amp;&amp;(f1[i]==a2[i])&amp;&amp;</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>                (a2[i]==f2[i])&amp;&amp;(f2[i]==a3[i])&amp;&amp;(a3[i]==f3[i])&amp;&amp;(f3[i]==0))</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>        i++;</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    }</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    printf(<span class="stringliteral">&quot;===========================================\n&quot;</span>);</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span> </div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>}</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span> </div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span><span class="keyword">extern</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> <a class="code hl_function" href="debug_8c.html#a161e712ec8e04b0e9b96c0f2d7ae6f0e">GetRuleByte</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">short</span> mem62, <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> Y);</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span> </div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno"><a class="line" href="debug_8c.html#a0e3294f3ae4a3b09e6e90d9d78af5f9a">   69</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="debug_8c.html#a0e3294f3ae4a3b09e6e90d9d78af5f9a">PrintRule</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">short</span> offset)</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>{</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>    <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> i = 1;</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>    <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> <a class="code hl_variable" href="reciter_8c.html#ae79c172b71299c5d272aaea09d553409">A</a> = 0;</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>    printf(<span class="stringliteral">&quot;Applying rule: &quot;</span>);</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>    <span class="keywordflow">do</span></div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>    {</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>        <a class="code hl_variable" href="reciter_8c.html#ae79c172b71299c5d272aaea09d553409">A</a> = <a class="code hl_function" href="debug_8c.html#a161e712ec8e04b0e9b96c0f2d7ae6f0e">GetRuleByte</a>(offset, i);</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>        <span class="keywordflow">if</span> ((<a class="code hl_variable" href="reciter_8c.html#ae79c172b71299c5d272aaea09d553409">A</a>&amp;127) == <span class="charliteral">&#39;=&#39;</span>) printf(<span class="stringliteral">&quot; -&gt; &quot;</span>); <span class="keywordflow">else</span> printf(<span class="stringliteral">&quot;%c&quot;</span>, <a class="code hl_variable" href="reciter_8c.html#ae79c172b71299c5d272aaea09d553409">A</a>&amp;127);</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>        i++;</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>    } <span class="keywordflow">while</span> ((<a class="code hl_variable" href="reciter_8c.html#ae79c172b71299c5d272aaea09d553409">A</a>&amp;128)==0);</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>    printf(<span class="stringliteral">&quot;\n&quot;</span>);</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>}</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span> </div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span> </div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span> </div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span> </div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span> </div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno"><a class="line" href="debug_8c.html#a64d28f49232d9fada3edd46309ab6830">   87</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="debug_8c.html#a64d28f49232d9fada3edd46309ab6830">PrintUsage</a>()</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>{</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>    printf(<span class="stringliteral">&quot;usage: sam [options] Word1 Word2 ....\n&quot;</span>);</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>    printf(<span class="stringliteral">&quot;options\n&quot;</span>);</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>    printf(<span class="stringliteral">&quot;    -phonetic       enters phonetic mode. (see below)\n&quot;</span>);</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>    printf(<span class="stringliteral">&quot;    -pinyin     enter chinese pinyin mode.\n&quot;</span>);</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>    printf(<span class="stringliteral">&quot;    -pitch number       set pitch value (default=64)\n&quot;</span>);</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>    printf(<span class="stringliteral">&quot;    -speed number       set speed value (default=72)\n&quot;</span>);</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>    printf(<span class="stringliteral">&quot;    -throat number      set throat value (default=128)\n&quot;</span>);</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>    printf(<span class="stringliteral">&quot;    -mouth number       set mouth value (default=128)\n&quot;</span>);</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>    printf(<span class="stringliteral">&quot;    -wav filename       output to wav instead of libsdl\n&quot;</span>);</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>    printf(<span class="stringliteral">&quot;    -sing           special treatment of pitch\n&quot;</span>);</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>    printf(<span class="stringliteral">&quot;    -debug          print additional debug messages\n&quot;</span>);</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>    printf(<span class="stringliteral">&quot;\n&quot;</span>);</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span> </div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span> </div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>    printf(<span class="stringliteral">&quot;     VOWELS                            VOICED CONSONANTS    \n&quot;</span>);</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>    printf(<span class="stringliteral">&quot;IY           f(ee)t                    R        red     \n&quot;</span>);</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>    printf(<span class="stringliteral">&quot;IH           p(i)n                     L        allow       \n&quot;</span>);</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>    printf(<span class="stringliteral">&quot;EH           beg                       W        away        \n&quot;</span>);</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>    printf(<span class="stringliteral">&quot;AE           Sam                       W        whale       \n&quot;</span>);</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>    printf(<span class="stringliteral">&quot;AA           pot                       Y        you     \n&quot;</span>);</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>    printf(<span class="stringliteral">&quot;AH           b(u)dget                  M        Sam     \n&quot;</span>);</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>    printf(<span class="stringliteral">&quot;AO           t(al)k                    N        man     \n&quot;</span>);</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>    printf(<span class="stringliteral">&quot;OH           cone                      NX       so(ng)      \n&quot;</span>);</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>    printf(<span class="stringliteral">&quot;UH           book                      B        bad     \n&quot;</span>);</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>    printf(<span class="stringliteral">&quot;UX           l(oo)t                    D        dog     \n&quot;</span>);</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>    printf(<span class="stringliteral">&quot;ER           bird                      G        again       \n&quot;</span>);</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>    printf(<span class="stringliteral">&quot;AX           gall(o)n                  J        judge       \n&quot;</span>);</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>    printf(<span class="stringliteral">&quot;IX           dig(i)t                   Z        zoo     \n&quot;</span>);</div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>    printf(<span class="stringliteral">&quot;                       ZH       plea(s)ure  \n&quot;</span>);</div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>    printf(<span class="stringliteral">&quot;   DIPHTHONGS                          V        seven       \n&quot;</span>);</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>    printf(<span class="stringliteral">&quot;EY           m(a)de                    DH       (th)en      \n&quot;</span>);</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>    printf(<span class="stringliteral">&quot;AY           h(igh)                     \n&quot;</span>);</div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>    printf(<span class="stringliteral">&quot;OY           boy                        \n&quot;</span>);</div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>    printf(<span class="stringliteral">&quot;AW           h(ow)                     UNVOICED CONSONANTS  \n&quot;</span>);</div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>    printf(<span class="stringliteral">&quot;OW           slow                      S         Sam        \n&quot;</span>);</div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>    printf(<span class="stringliteral">&quot;UW           crew                      Sh        fish       \n&quot;</span>);</div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>    printf(<span class="stringliteral">&quot;                                       F         fish       \n&quot;</span>);</div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>    printf(<span class="stringliteral">&quot;                                       TH        thin       \n&quot;</span>);</div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>    printf(<span class="stringliteral">&quot; SPECIAL PHONEMES                      P         poke       \n&quot;</span>);</div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>    printf(<span class="stringliteral">&quot;UL           sett(le) (=AXL)           T         talk       \n&quot;</span>);</div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>    printf(<span class="stringliteral">&quot;UM           astron(omy) (=AXM)        K         cake       \n&quot;</span>);</div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>    printf(<span class="stringliteral">&quot;UN           functi(on) (=AXN)         CH        speech     \n&quot;</span>);</div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>    printf(<span class="stringliteral">&quot;Q            kitt-en (glottal stop)    /H        a(h)ead    \n&quot;</span>);</div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>}</div>
+<div class="ttc" id="adebug_8c_html_a0e3294f3ae4a3b09e6e90d9d78af5f9a"><div class="ttname"><a href="debug_8c.html#a0e3294f3ae4a3b09e6e90d9d78af5f9a">PrintRule</a></div><div class="ttdeci">void PrintRule(unsigned short offset)</div><div class="ttdef"><b>Definition:</b> <a href="debug_8c_source.html#l00069">debug.c:69</a></div></div>
 <div class="ttc" id="adebug_8c_html_a161e712ec8e04b0e9b96c0f2d7ae6f0e"><div class="ttname"><a href="debug_8c.html#a161e712ec8e04b0e9b96c0f2d7ae6f0e">GetRuleByte</a></div><div class="ttdeci">unsigned char GetRuleByte(unsigned short mem62, unsigned char Y)</div><div class="ttdef"><b>Definition:</b> <a href="reciter_8c_source.html#l00031">reciter.c:31</a></div></div>
 <div class="ttc" id="adebug_8c_html_a30f2eb0e9195697234e17e2a70c8b664"><div class="ttname"><a href="debug_8c.html#a30f2eb0e9195697234e17e2a70c8b664">PrintPhonemes</a></div><div class="ttdeci">void PrintPhonemes(unsigned char *phonemeindex, unsigned char *phonemeLength, unsigned char *stress)</div><div class="ttdef"><b>Definition:</b> <a href="debug_8c_source.html#l00008">debug.c:8</a></div></div>
+<div class="ttc" id="adebug_8c_html_a64d28f49232d9fada3edd46309ab6830"><div class="ttname"><a href="debug_8c.html#a64d28f49232d9fada3edd46309ab6830">PrintUsage</a></div><div class="ttdeci">void PrintUsage()</div><div class="ttdef"><b>Definition:</b> <a href="debug_8c_source.html#l00087">debug.c:87</a></div></div>
 <div class="ttc" id="adebug_8c_html_ac3e1795766a80ec63b157951b4b9a7d4"><div class="ttname"><a href="debug_8c.html#ac3e1795766a80ec63b157951b4b9a7d4">debug</a></div><div class="ttdeci">int debug</div><div class="ttdef"><b>Definition:</b> <a href="debug_8c_source.html#l00005">debug.c:5</a></div></div>
-<div class="ttc" id="adebug_8c_html_ae8e10d3873fda9a8201c500d1468f93c"><div class="ttname"><a href="debug_8c.html#ae8e10d3873fda9a8201c500d1468f93c">PrintOutput</a></div><div class="ttdeci">void PrintOutput(unsigned char *flag, unsigned char *f1, unsigned char *f2, unsigned char *f3, unsigned char *a1, unsigned char *a2, unsigned char *a3, unsigned char *p)</div><div class="ttdef"><b>Definition:</b> <a href="debug_8c_source.html#l00038">debug.c:38</a></div></div>
+<div class="ttc" id="adebug_8c_html_ae8e10d3873fda9a8201c500d1468f93c"><div class="ttname"><a href="debug_8c.html#ae8e10d3873fda9a8201c500d1468f93c">PrintOutput</a></div><div class="ttdeci">void PrintOutput(unsigned char *flag, unsigned char *f1, unsigned char *f2, unsigned char *f3, unsigned char *a1, unsigned char *a2, unsigned char *a3, unsigned char *p)</div><div class="ttdef"><b>Definition:</b> <a href="debug_8c_source.html#l00039">debug.c:39</a></div></div>
 <div class="ttc" id="agroup___key_vars_html_ga13d58956bd4c1133b50ffbf50b70452f"><div class="ttname"><a href="group___key_vars.html#ga13d58956bd4c1133b50ffbf50b70452f">stress</a></div><div class="ttdeci">unsigned char stress[256]</div><div class="ttdoc">stress phonemeindex phonemeLength stress is the phoneme list</div><div class="ttdef"><b>Definition:</b> <a href="sam_8c_source.html#l00181">sam.c:181</a></div></div>
 <div class="ttc" id="agroup___key_vars_html_gaefba46a7f791a20ea5c00a1a98a2f2b9"><div class="ttname"><a href="group___key_vars.html#gaefba46a7f791a20ea5c00a1a98a2f2b9">phonemeindex</a></div><div class="ttdeci">unsigned char phonemeindex[256]</div><div class="ttdoc">phonemeindex phonemeindex phonemeLength stress is the phoneme list</div><div class="ttdef"><b>Definition:</b> <a href="sam_8c_source.html#l00191">sam.c:191</a></div></div>
 <div class="ttc" id="agroup___key_vars_html_gaf99fef2cff9b9d6e3b53acc1f62908d7"><div class="ttname"><a href="group___key_vars.html#gaf99fef2cff9b9d6e3b53acc1f62908d7">phonemeLength</a></div><div class="ttdeci">unsigned char phonemeLength[256]</div><div class="ttdoc">phonemeLength phonemeindex phonemeLength stress is the phoneme list</div><div class="ttdef"><b>Definition:</b> <a href="sam_8c_source.html#l00186">sam.c:186</a></div></div>
