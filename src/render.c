@@ -241,20 +241,21 @@ void CreateFrames()
 	
         // get number of frames to write
         plens = phonemeLengthOutput[i];
-	
-        // copy from the source to the frames list
-        do {
-            frequency1[X] = freq1data[phoneme];     // F1 frequency
-            frequency2[X] = freq2data[phoneme];     // F2 frequency
-            frequency3[X] = freq3data[phoneme];     // F3 frequency
-            amplitude1[X] = ampl1data[phoneme];     // F1 amplitude
-            amplitude2[X] = ampl2data[phoneme];     // F2 amplitude
-            amplitude3[X] = ampl3data[phoneme];     // F3 amplitude
-            sampledConsonantFlag[X] = sampledConsonantFlags[phoneme];        // phoneme data for sampled consonants
-            pitches[X] = pitch + phase1;      // pitch
-            ++X;
-        } while(--plens != 0);
-        
+        if (plens>0){
+            // copy from the source to the frames list
+            do {
+                frequency1[X] = freq1data[phoneme];     // F1 frequency
+                frequency2[X] = freq2data[phoneme];     // F2 frequency
+                frequency3[X] = freq3data[phoneme];     // F3 frequency
+                amplitude1[X] = ampl1data[phoneme];     // F1 amplitude
+                amplitude2[X] = ampl2data[phoneme];     // F2 amplitude
+                amplitude3[X] = ampl3data[phoneme];     // F3 amplitude
+                sampledConsonantFlag[X] = sampledConsonantFlags[phoneme];        // phoneme data for sampled consonants
+                pitches[X] = pitch + phase1;      // pitch
+                ++X;
+            } while(--plens != 0);
+        }
+
         ++i;
     }
 }

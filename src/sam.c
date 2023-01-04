@@ -289,7 +289,7 @@ int SAMMain(int is_english) {
 		}
 	} while (++X != 0);
 
-    if(is_english)InsertBreath();
+    InsertBreath();
 
 	if (debug) PrintPhonemes(phonemeindex, phonemeLength, stress);
 

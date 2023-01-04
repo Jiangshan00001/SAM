@@ -13,33 +13,34 @@ CHAR_P phoneme;
 //http://www.retrobits.net/atari/sam.shtml#ch5.7
 PINYIN_S g_pinyin_table[]={
 
-    {"ANG", "AEN"},
+    /*3字母 韵母*/
+    {"ANG", "AH2NX"}, //long = LAO4NX AH-bug
     {"ENG", "EHN"},
-    {"ING", "IYN"},
-    {"ONG", "WUN"},
+    {"ING", "NXGUL"},//IYN single = SIH4NXGUL
+    {"ONG", "WAH"},//WUN WAH-one NX-wrong
 
-    {"AI", "EH"},
-    {"EI", "IX"},
-    {"UI", "V"},
+    /*2字母 韵母*/
+    {"AI", "EH"},//air = EH4R
+    {"EI", "IX"},//
+    {"UI", "WEY"},//WE-way WIY-weak
     {"AO", "AO"}, //AO AW
     {"OU", "AA"},
     {"IU", "IHUX"},
     {"IE", "IHEH"},
     {"VE", "IYUW"},
     {"ER", "ER"},
-
-    {"AN", "AE"},//AX
+    {"AN", "AE"},//AX and = AE4ND
     {"EN", "NX"},
     {"IN", "IH"},
     {"UN", "UX"},
     {"VN", "UX"},
 
-
+    /*2字母 声母*/
     {"ZH", "Z"}, //???
     {"CH", "CH"},
     {"SH", "SH"},
 
-
+    /*单字母 声母*/
     //23个: bpmfdtnlgkhjqxzhchshrzcsyw
     {"B", "B"},
     {"P", "P"},
@@ -52,26 +53,25 @@ PINYIN_S g_pinyin_table[]={
     {"G", "G"},
     {"K", "K"},
     {"H", "/H"},
-    {"J", "J"},
+    {"J", "JIH"},//jiffy = JIH4FIY ????
     {"Q", "Q"},
-    {"X", "TH"}, //???
+    {"X", "SEY"}, //??? TH??
 
 
     {"R", "R"},
-    {"Z", "Z"},//Z--zoo DH-->then
+    {"Z", "Z"},//Z--zoo DH-->then ZIH-zip  ZIY-zero
     {"C", "S"},
     {"S", "S"},
     {"Y", "IY"},
     {"W", "UH"},
+    /*单字母 韵母*/
     ///韵母表24个. aoeiuü aieiui aoouiu ieüeer aneninun ang engingong
     {"A", "AH"},
     {"O", "AA"},
     {"E", "ER"},
-    {"I", "IY"},
+    {"I", "IY"},//three = THRIY4
     {"U", "V"},
     {"V", "IYV"},
-
-
 
 
 
@@ -80,6 +80,7 @@ int g_pinyin_table_len = sizeof(g_pinyin_table)/sizeof(g_pinyin_table[0]);
 
 int PinyinToPhonemes(char *inpu)
 {
+    //printf("PinyinToPhonemes start\n");
     int X=0;
     //unsigned char A;
     inputtemp[0] = ' ';
@@ -90,6 +91,7 @@ int PinyinToPhonemes(char *inpu)
 
     for(X=0;X<input_len;++X)
     {
+        //printf("search X=%d\n", X);
         int match_len=0;
         for(int i=0;i<g_pinyin_table_len;++i)
         {
@@ -104,6 +106,7 @@ int PinyinToPhonemes(char *inpu)
         }
         if(match_len==0)
         {
+            //printf("match nothing X=%d\n", X);
             //no match. just stress???
             if((inputtemp[X]>='1')&&(inputtemp[X]<='8'))
             {

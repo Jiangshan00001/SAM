@@ -33,6 +33,11 @@ how to say chinese:
 will speak 你好啊
 
 
+.sam.exe wo4hui4shuo4han4yu4a4  -pinyin -debug -wav tt.wav
+
+will speak 我会说汉语啊
+
+
 
 Compile
 =======
